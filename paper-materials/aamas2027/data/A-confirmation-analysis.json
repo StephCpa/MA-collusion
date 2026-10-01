@@ -1,0 +1,53 @@
+{
+  "primary": {
+    "D_asym": {
+      "complete_blocks": 42,
+      "mean": 0.22569444444444625,
+      "ci": [
+        -0.29943400131924985,
+        0.7508228902081424
+      ],
+      "ci_method": "bonferroni_block_t",
+      "positive_evidence": false,
+      "planned_completion_range": [
+        -3.1987847222222214,
+        4.8415798611111125
+      ]
+    },
+    "J": {
+      "complete_blocks": 40,
+      "mean": 0.23697916666666857,
+      "ci": [
+        -0.31548189605196303,
+        0.7894402293853002
+      ],
+      "ci_method": "bonferroni_block_t",
+      "positive_evidence": false,
+      "planned_completion_range": [
+        -4.8914930555555545,
+        5.687934027777779
+      ]
+    }
+  },
+  "descriptive_deltas": {
+    "LL": {
+      "complete_pairs": 48,
+      "delta_mean": 0.0
+    },
+    "LH": {
+      "complete_pairs": 45,
+      "delta_mean": 0.0
+    },
+    "HL": {
+      "complete_pairs": 45,
+      "delta_mean": 0.42129629629629967
+    },
+    "HH": {
+      "complete_pairs": 46,
+      "delta_mean": 0.0
+    }
+  },
+  "completion_range_is_confidence_interval": false,
+  "execution_amended": true,
+  "execution_note": "Authorized continuation after interruption and interim-result inspection; original failed cells preserved."
+}

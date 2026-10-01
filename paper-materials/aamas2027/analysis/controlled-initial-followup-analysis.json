@@ -1,0 +1,710 @@
+{
+  "scope": "Post-hoc offline derived analysis; no new provider calls; not a registered confirmatory endpoint.",
+  "paid_calls": 0,
+  "sources": {
+    "continuation_cells": "C:\\work\\\u535a\u58eb\u6574\u7406\\\u591a\u667a\u80fd\u4f53\u5171\u8c0b\\artifacts\\controlled-initial-history\\20260927-deepseek-flash-v02-continuation1\\run\\cells.json",
+    "structure_audit": "C:\\work\\\u535a\u58eb\u6574\u7406\\\u591a\u667a\u80fd\u4f53\u5171\u8c0b\\research\\results\\controlled-initial-structure-audit-20260927\\audit.json",
+    "old_four_arm_analysis": "C:\\work\\\u535a\u58eb\u6574\u7406\\\u591a\u667a\u80fd\u4f53\u5171\u8c0b\\artifacts\\history-channel-formal\\20260922-deepseek-flash-v021\\analysis.json"
+  },
+  "windows": {
+    "round0": "programmed initial state",
+    "round1": "first model decision",
+    "assessment": "completed trajectories, rounds 10-29",
+    "conditional": "completed trajectories, adjacent rounds where previous-round rival price = 6.5"
+  },
+  "round0_invariance": {
+    "HH": {
+      "natural": {
+        "trajectories": 48,
+        "state_counts": {
+          "(6.5,6.5)": 48
+        },
+        "expected_state": "(6.5,6.5)",
+        "matches_expected": true
+      },
+      "hide_rival": {
+        "trajectories": 48,
+        "state_counts": {
+          "(6.5,6.5)": 48
+        },
+        "expected_state": "(6.5,6.5)",
+        "matches_expected": true
+      }
+    },
+    "HL": {
+      "natural": {
+        "trajectories": 48,
+        "state_counts": {
+          "(6.5,6)": 48
+        },
+        "expected_state": "(6.5,6)",
+        "matches_expected": true
+      },
+      "hide_rival": {
+        "trajectories": 48,
+        "state_counts": {
+          "(6.5,6)": 48
+        },
+        "expected_state": "(6.5,6)",
+        "matches_expected": true
+      }
+    },
+    "LH": {
+      "natural": {
+        "trajectories": 48,
+        "state_counts": {
+          "(6,6.5)": 48
+        },
+        "expected_state": "(6,6.5)",
+        "matches_expected": true
+      },
+      "hide_rival": {
+        "trajectories": 48,
+        "state_counts": {
+          "(6,6.5)": 48
+        },
+        "expected_state": "(6,6.5)",
+        "matches_expected": true
+      }
+    },
+    "LL": {
+      "natural": {
+        "trajectories": 48,
+        "state_counts": {
+          "(6,6)": 48
+        },
+        "expected_state": "(6,6)",
+        "matches_expected": true
+      },
+      "hide_rival": {
+        "trajectories": 48,
+        "state_counts": {
+          "(6,6)": 48
+        },
+        "expected_state": "(6,6)",
+        "matches_expected": true
+      }
+    }
+  },
+  "round1_by_cell": {
+    "HH-hide_rival": {
+      "trajectories": 47,
+      "state_counts": {
+        "(6.5,6.5)": 47
+      },
+      "equal_price_rounds": 47,
+      "equal_price_fraction": 1.0
+    },
+    "HH-natural": {
+      "trajectories": 48,
+      "state_counts": {
+        "(6.5,6.5)": 48
+      },
+      "equal_price_rounds": 48,
+      "equal_price_fraction": 1.0
+    },
+    "HL-hide_rival": {
+      "trajectories": 48,
+      "state_counts": {
+        "(6.5,5.5)": 1,
+        "(6.5,6)": 46,
+        "(6.5,6.5)": 1
+      },
+      "equal_price_rounds": 1,
+      "equal_price_fraction": 0.020833333333333332
+    },
+    "HL-natural": {
+      "trajectories": 48,
+      "state_counts": {
+        "(6,6)": 30,
+        "(6.5,6)": 17,
+        "(6.5,6.5)": 1
+      },
+      "equal_price_rounds": 31,
+      "equal_price_fraction": 0.6458333333333334
+    },
+    "LH-hide_rival": {
+      "trajectories": 47,
+      "state_counts": {
+        "(6,6.5)": 47
+      },
+      "equal_price_rounds": 0,
+      "equal_price_fraction": 0.0
+    },
+    "LH-natural": {
+      "trajectories": 48,
+      "state_counts": {
+        "(6,6)": 23,
+        "(6,6.5)": 24,
+        "(6.5,6)": 1
+      },
+      "equal_price_rounds": 23,
+      "equal_price_fraction": 0.4791666666666667
+    },
+    "LL-hide_rival": {
+      "trajectories": 48,
+      "state_counts": {
+        "(6,6)": 48
+      },
+      "equal_price_rounds": 48,
+      "equal_price_fraction": 1.0
+    },
+    "LL-natural": {
+      "trajectories": 46,
+      "state_counts": {
+        "(6,6)": 46
+      },
+      "equal_price_rounds": 46,
+      "equal_price_fraction": 1.0
+    }
+  },
+  "round1_paired_sensitivity": {
+    "LL": {
+      "pairs": 46,
+      "tie": {
+        "mean_natural_minus_hide_rival": 0.0,
+        "positive_pairs": 0,
+        "zero_pairs": 46,
+        "negative_pairs": 0
+      },
+      "min": {
+        "mean_natural_minus_hide_rival": 0.0,
+        "positive_pairs": 0,
+        "zero_pairs": 46,
+        "negative_pairs": 0
+      }
+    },
+    "LH": {
+      "pairs": 47,
+      "tie": {
+        "mean_natural_minus_hide_rival": 0.46808510638297873,
+        "positive_pairs": 22,
+        "zero_pairs": 25,
+        "negative_pairs": 0
+      },
+      "min": {
+        "mean_natural_minus_hide_rival": 0.0,
+        "positive_pairs": 0,
+        "zero_pairs": 47,
+        "negative_pairs": 0
+      }
+    },
+    "HL": {
+      "pairs": 48,
+      "tie": {
+        "mean_natural_minus_hide_rival": 0.625,
+        "positive_pairs": 30,
+        "zero_pairs": 18,
+        "negative_pairs": 0
+      },
+      "min": {
+        "mean_natural_minus_hide_rival": 0.010416666666666666,
+        "positive_pairs": 2,
+        "zero_pairs": 45,
+        "negative_pairs": 1
+      }
+    },
+    "HH": {
+      "pairs": 47,
+      "tie": {
+        "mean_natural_minus_hide_rival": 0.0,
+        "positive_pairs": 0,
+        "zero_pairs": 47,
+        "negative_pairs": 0
+      },
+      "min": {
+        "mean_natural_minus_hide_rival": 0.0,
+        "positive_pairs": 0,
+        "zero_pairs": 47,
+        "negative_pairs": 0
+      }
+    }
+  },
+  "assessment_by_cell": {
+    "HH-hide_rival": {
+      "complete_trajectories": 47,
+      "assessment_rounds": 940,
+      "state_counts": {
+        "(6.5,6.5)": 940
+      },
+      "minimum_price_counts": {
+        "6.5": 940
+      },
+      "minimum_price_support": [
+        6.5
+      ],
+      "welfare_support": [
+        281.944444444
+      ],
+      "fraction_min_6.0": 0.0,
+      "fraction_min_6.5": 1.0,
+      "two_point_6.0_6.5": false
+    },
+    "HH-natural": {
+      "complete_trajectories": 48,
+      "assessment_rounds": 960,
+      "state_counts": {
+        "(6.5,6.5)": 960
+      },
+      "minimum_price_counts": {
+        "6.5": 960
+      },
+      "minimum_price_support": [
+        6.5
+      ],
+      "welfare_support": [
+        281.944444444
+      ],
+      "fraction_min_6.0": 0.0,
+      "fraction_min_6.5": 1.0,
+      "two_point_6.0_6.5": false
+    },
+    "HL-hide_rival": {
+      "complete_trajectories": 48,
+      "assessment_rounds": 960,
+      "state_counts": {
+        "(6.5,6)": 960
+      },
+      "minimum_price_counts": {
+        "6": 960
+      },
+      "minimum_price_support": [
+        6.0
+      ],
+      "welfare_support": [
+        311.111111111
+      ],
+      "fraction_min_6.0": 1.0,
+      "fraction_min_6.5": 0.0,
+      "two_point_6.0_6.5": false
+    },
+    "HL-natural": {
+      "complete_trajectories": 48,
+      "assessment_rounds": 960,
+      "state_counts": {
+        "(6,6)": 793,
+        "(6.5,6)": 141,
+        "(6.5,6.5)": 26
+      },
+      "minimum_price_counts": {
+        "6": 934,
+        "6.5": 26
+      },
+      "minimum_price_support": [
+        6.0,
+        6.5
+      ],
+      "welfare_support": [
+        281.944444444,
+        311.111111111
+      ],
+      "fraction_min_6.0": 0.9729166666666667,
+      "fraction_min_6.5": 0.027083333333333334,
+      "two_point_6.0_6.5": true
+    },
+    "LH-hide_rival": {
+      "complete_trajectories": 47,
+      "assessment_rounds": 940,
+      "state_counts": {
+        "(6,6.5)": 940
+      },
+      "minimum_price_counts": {
+        "6": 940
+      },
+      "minimum_price_support": [
+        6.0
+      ],
+      "welfare_support": [
+        311.111111111
+      ],
+      "fraction_min_6.0": 1.0,
+      "fraction_min_6.5": 0.0,
+      "two_point_6.0_6.5": false
+    },
+    "LH-natural": {
+      "complete_trajectories": 48,
+      "assessment_rounds": 960,
+      "state_counts": {
+        "(6,6)": 832,
+        "(6,6.5)": 108,
+        "(6.5,6.5)": 20
+      },
+      "minimum_price_counts": {
+        "6": 940,
+        "6.5": 20
+      },
+      "minimum_price_support": [
+        6.0,
+        6.5
+      ],
+      "welfare_support": [
+        281.944444444,
+        311.111111111
+      ],
+      "fraction_min_6.0": 0.9791666666666666,
+      "fraction_min_6.5": 0.020833333333333332,
+      "two_point_6.0_6.5": true
+    },
+    "LL-hide_rival": {
+      "complete_trajectories": 48,
+      "assessment_rounds": 960,
+      "state_counts": {
+        "(6,6)": 960
+      },
+      "minimum_price_counts": {
+        "6": 960
+      },
+      "minimum_price_support": [
+        6.0
+      ],
+      "welfare_support": [
+        311.111111111
+      ],
+      "fraction_min_6.0": 1.0,
+      "fraction_min_6.5": 0.0,
+      "two_point_6.0_6.5": false
+    },
+    "LL-natural": {
+      "complete_trajectories": 46,
+      "assessment_rounds": 920,
+      "state_counts": {
+        "(6,6)": 920
+      },
+      "minimum_price_counts": {
+        "6": 920
+      },
+      "minimum_price_support": [
+        6.0
+      ],
+      "welfare_support": [
+        311.111111111
+      ],
+      "fraction_min_6.0": 1.0,
+      "fraction_min_6.5": 0.0,
+      "two_point_6.0_6.5": false
+    }
+  },
+  "conditional_on_previous_rival_6.5": [
+    {
+      "initial": "HH",
+      "arm": "hide_rival",
+      "seller": "seller_a",
+      "observations": 1363,
+      "counts": {
+        "match_6.5": 1363
+      },
+      "fractions": {
+        "match_6.5": 1.0,
+        "one_step_undercut_6.0": 0.0,
+        "profit_max_undercut_5.5": 0.0,
+        "other": 0.0
+      }
+    },
+    {
+      "initial": "HH",
+      "arm": "hide_rival",
+      "seller": "seller_b",
+      "observations": 1363,
+      "counts": {
+        "match_6.5": 1363
+      },
+      "fractions": {
+        "match_6.5": 1.0,
+        "one_step_undercut_6.0": 0.0,
+        "profit_max_undercut_5.5": 0.0,
+        "other": 0.0
+      }
+    },
+    {
+      "initial": "HH",
+      "arm": "natural",
+      "seller": "seller_a",
+      "observations": 1392,
+      "counts": {
+        "match_6.5": 1392
+      },
+      "fractions": {
+        "match_6.5": 1.0,
+        "one_step_undercut_6.0": 0.0,
+        "profit_max_undercut_5.5": 0.0,
+        "other": 0.0
+      }
+    },
+    {
+      "initial": "HH",
+      "arm": "natural",
+      "seller": "seller_b",
+      "observations": 1392,
+      "counts": {
+        "match_6.5": 1392
+      },
+      "fractions": {
+        "match_6.5": 1.0,
+        "one_step_undercut_6.0": 0.0,
+        "profit_max_undercut_5.5": 0.0,
+        "other": 0.0
+      }
+    },
+    {
+      "initial": "HL",
+      "arm": "hide_rival",
+      "seller": "seller_a",
+      "observations": 1,
+      "counts": {
+        "match_6.5": 1
+      },
+      "fractions": {
+        "match_6.5": 1.0,
+        "one_step_undercut_6.0": 0.0,
+        "profit_max_undercut_5.5": 0.0,
+        "other": 0.0
+      }
+    },
+    {
+      "initial": "HL",
+      "arm": "hide_rival",
+      "seller": "seller_b",
+      "observations": 1392,
+      "counts": {
+        "match_6.5": 1,
+        "one_step_undercut_6.0": 1390,
+        "profit_max_undercut_5.5": 1
+      },
+      "fractions": {
+        "match_6.5": 0.0007183908045977011,
+        "one_step_undercut_6.0": 0.9985632183908046,
+        "profit_max_undercut_5.5": 0.0007183908045977011,
+        "other": 0.0
+      }
+    },
+    {
+      "initial": "HL",
+      "arm": "natural",
+      "seller": "seller_a",
+      "observations": 30,
+      "counts": {
+        "match_6.5": 30
+      },
+      "fractions": {
+        "match_6.5": 1.0,
+        "one_step_undercut_6.0": 0.0,
+        "profit_max_undercut_5.5": 0.0,
+        "other": 0.0
+      }
+    },
+    {
+      "initial": "HL",
+      "arm": "natural",
+      "seller": "seller_b",
+      "observations": 330,
+      "counts": {
+        "match_6.5": 33,
+        "one_step_undercut_6.0": 297
+      },
+      "fractions": {
+        "match_6.5": 0.1,
+        "one_step_undercut_6.0": 0.9,
+        "profit_max_undercut_5.5": 0.0,
+        "other": 0.0
+      }
+    },
+    {
+      "initial": "LH",
+      "arm": "hide_rival",
+      "seller": "seller_a",
+      "observations": 1363,
+      "counts": {
+        "one_step_undercut_6.0": 1363
+      },
+      "fractions": {
+        "match_6.5": 0.0,
+        "one_step_undercut_6.0": 1.0,
+        "profit_max_undercut_5.5": 0.0,
+        "other": 0.0
+      }
+    },
+    {
+      "initial": "LH",
+      "arm": "natural",
+      "seller": "seller_a",
+      "observations": 286,
+      "counts": {
+        "match_6.5": 28,
+        "one_step_undercut_6.0": 258
+      },
+      "fractions": {
+        "match_6.5": 0.0979020979020979,
+        "one_step_undercut_6.0": 0.9020979020979021,
+        "profit_max_undercut_5.5": 0.0,
+        "other": 0.0
+      }
+    },
+    {
+      "initial": "LH",
+      "arm": "natural",
+      "seller": "seller_b",
+      "observations": 28,
+      "counts": {
+        "match_6.5": 28
+      },
+      "fractions": {
+        "match_6.5": 1.0,
+        "one_step_undercut_6.0": 0.0,
+        "profit_max_undercut_5.5": 0.0,
+        "other": 0.0
+      }
+    }
+  ],
+  "paired_block_sensitivity_natural_minus_hide_rival": {
+    "LH": {
+      "pairs": 47,
+      "tie": {
+        "mean_natural_minus_hide_rival": 0.8851063829787235,
+        "sd": 0.3090861167491473,
+        "t_interval_95": [
+          0.7943552994958023,
+          0.9758574664616446
+        ],
+        "positive_pairs": 44,
+        "zero_pairs": 3,
+        "negative_pairs": 0
+      },
+      "hhi": {
+        "mean_natural_minus_hide_rival": -0.44255319148936173,
+        "sd": 0.15454305837457366,
+        "t_interval_95": [
+          -0.4879287332308223,
+          -0.39717764974790115
+        ],
+        "positive_pairs": 0,
+        "zero_pairs": 3,
+        "negative_pairs": 44
+      },
+      "min": {
+        "mean_natural_minus_hide_rival": 0.010638297872340425,
+        "sd": 0.07293249574894728,
+        "t_interval_95": [
+          -0.01077548505632541,
+          0.03205208080100626
+        ],
+        "positive_pairs": 1,
+        "zero_pairs": 46,
+        "negative_pairs": 0
+      }
+    },
+    "HL": {
+      "pairs": 48,
+      "tie": {
+        "mean_natural_minus_hide_rival": 0.853125,
+        "sd": 0.3325283942443463,
+        "t_interval_95": [
+          0.7565688195084237,
+          0.9496811804915763
+        ],
+        "positive_pairs": 46,
+        "zero_pairs": 2,
+        "negative_pairs": 0
+      },
+      "hhi": {
+        "mean_natural_minus_hide_rival": -0.4265625,
+        "sd": 0.16626419712217316,
+        "t_interval_95": [
+          -0.4748405902457882,
+          -0.37828440975421185
+        ],
+        "positive_pairs": 0,
+        "zero_pairs": 2,
+        "negative_pairs": 46
+      },
+      "min": {
+        "mean_natural_minus_hide_rival": 0.013541666666666655,
+        "sd": 0.07346991230554446,
+        "t_interval_95": [
+          -0.007791772029283292,
+          0.0348751053626166
+        ],
+        "positive_pairs": 3,
+        "zero_pairs": 45,
+        "negative_pairs": 0
+      }
+    }
+  },
+  "operating_point_benchmark": {
+    "joint_profit_max_symmetric_price": 5.5,
+    "joint_profit_max_per_firm": 112.5,
+    "joint_profit_max_welfare": 337.5,
+    "observed_symmetric_states": {
+      "6.0": {
+        "market_min": 6.0,
+        "welfare": 311.1111111111111,
+        "consumer_surplus": 88.88888888888889,
+        "industry_profit": 222.22222222222223,
+        "seller_a_profit": 111.11111111111111,
+        "seller_b_profit": 111.11111111111111,
+        "profit_hhi": 0.5
+      },
+      "6.5": {
+        "market_min": 6.5,
+        "welfare": 281.9444444444444,
+        "consumer_surplus": 68.05555555555554,
+        "industry_profit": 213.88888888888886,
+        "seller_a_profit": 106.94444444444443,
+        "seller_b_profit": 106.94444444444443,
+        "profit_hhi": 0.5
+      }
+    }
+  },
+  "registered_context": {
+    "D_asym": {
+      "complete_blocks": 47,
+      "mean": 0.713652482269507,
+      "ci": [
+        -0.2979232628724062,
+        1.7252282274114201
+      ],
+      "ci_method": "bonferroni_block_t",
+      "positive_evidence": false,
+      "planned_completion_range": [
+        0.6228298611111143,
+        1.0460069444444475
+      ]
+    },
+    "J": {
+      "complete_blocks": 45,
+      "mean": 0.7129629629629664,
+      "ci": [
+        -0.3443382665003243,
+        1.770264192426257
+      ],
+      "ci_method": "bonferroni_block_t",
+      "positive_evidence": false,
+      "planned_completion_range": [
+        -1.2065972222222203,
+        1.6710069444444464
+      ]
+    },
+    "old_simple_contrast": {
+      "complete_mean": 4.053030303030308,
+      "complete_bootstrap_interval": [
+        -0.12079782196970991,
+        8.146306818181841
+      ],
+      "planned_completion_bounds": [
+        -0.896267361111116,
+        9.598524305555552
+      ],
+      "complete_primary_interval": [
+        -0.31391842729968733,
+        8.41997903336026
+      ],
+      "complete_direction_positive": false
+    }
+  },
+  "guardrails": [
+    "Round 0 is programmed and therefore cannot provide an arm-effect test.",
+    "Round-1 and conditional action counts are descriptive; model decisions are simultaneous and not a causal mediation estimate.",
+    "Assessment-round counts repeat within trajectories and are not independent samples.",
+    "Paired t intervals are sensitivity summaries only; they do not replace the registered welfare estimands.",
+    "A two-point welfare support reflects the settlement/grid in this run and does not identify preferences above the 6.5 ceiling."
+  ]
+}

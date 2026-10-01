@@ -1,0 +1,15 @@
+{
+  "state": "finished_with_missing",
+  "utc": "2026-10-01T10:43:57.996012+00:00",
+  "pid": 88276,
+  "model": "deepseek-flash",
+  "stop_reason": null,
+  "counts": {
+    "completed": 376,
+    "failed": 8
+  },
+  "requests": 21998,
+  "segment_requests": 3944,
+  "accounted_or_reserved_cny": 42.956636,
+  "execution_amended": true
+}

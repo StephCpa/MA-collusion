@@ -1,0 +1,36 @@
+{
+  "generated": "2026-09-28",
+  "paid_calls": 0,
+  "source_files": [
+    "research\\results\\controlled-initial-structure-audit-20260927\\audit.json",
+    "research\\results\\controlled-initial-supervision-targets-20260928\\target_manifest.json",
+    "research\\results\\review-followup-20260927\\checks.json"
+  ],
+  "figures": [
+    {
+      "id": "fig1",
+      "files": [
+        "fig1-equivalence-and-structure.png",
+        "fig1-equivalence-and-structure.pdf"
+      ],
+      "caption": "Aggregate-equivalent states and asymmetric-cell joint-state counts."
+    },
+    {
+      "id": "fig2",
+      "files": [
+        "fig2-welfare-versus-structure.png",
+        "fig2-welfare-versus-structure.pdf"
+      ],
+      "caption": "Block-level welfare contrasts alongside descriptive equal-price and profit-concentration summaries."
+    },
+    {
+      "id": "fig3",
+      "files": [
+        "fig3-transition-direction.png",
+        "fig3-transition-direction.pdf"
+      ],
+      "caption": "Observed downward and upward tie-formation events; repeated events are not independent samples."
+    }
+  ],
+  "not_inferential": "Figures 2B\u2013C and Figure 3 are descriptive summaries; no new statistical test is introduced."
+}

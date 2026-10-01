@@ -1,0 +1,23 @@
+{
+  "id": "framework-observability",
+  "message": "A display intervention can change hidden joint-action structure and seller allocation while aggregate welfare remains unchanged; a strategic harmful-coordination claim therefore requires a counterfactual beyond outcome-only monitoring.",
+  "audience": "AAMAS reviewers and researchers studying multi-agent evaluation, coordination, and algorithmic pricing",
+  "reading_order": "left_to_right_then_top_to_bottom",
+  "canvas": {"width_in": 16, "height_in": 5.4, "aspect_ratio": 2.96},
+  "stages": [
+    {"id": "input", "label": "Display policy", "color": "blue"},
+    {"id": "process", "label": "Model decision", "color": "purple"},
+    {"id": "trajectory", "label": "Joint trajectory", "color": "green"},
+    {"id": "targets", "label": "T1/T2/T3 measurement surfaces", "color": "green/purple/orange"},
+    {"id": "gate", "label": "T4 strategic harmful coordination gate", "color": "red"}
+  ],
+  "connector_grammar": {
+    "solid": "measurement flow",
+    "dashed": "blind spot or qualification",
+    "crossings": 0
+  },
+  "editable_source": "research/build_framework_figure_20260929.py",
+  "exports": ["framework-observability.pdf", "framework-observability.png"],
+  "claims_added": false,
+  "evidence_added": false
+}
