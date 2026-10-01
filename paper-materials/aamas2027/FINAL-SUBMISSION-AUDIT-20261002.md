@@ -14,8 +14,8 @@ resource or an author decision.
 | Manuscript compilation | local `pdflatex` + BibTeX, three LaTeX passes | 8 pages; no undefined citations/references or overfull boxes |
 | Anonymity scan | `check_materials.py` plus PDF text inspection | anonymous author line only; no private path, key or named repository in candidate text |
 | Public JSON metadata | `tools/sanitize_request_metadata.py` and `tools/sanitize_four_arm_ledger.py` | provider request IDs, logical request IDs and system fingerprints removed |
-| Supplement integrity | `aamas2027-supplement-v0.3.zip/package-manifest.json` | 97 archive entries, 96 manifest files, zero hash/size mismatches |
-| Offline handoff | `releases/MA-collusion-submission-candidate-20261002.bundle` | verified complete Git bundle at commit `8b1f1c8` |
+| Supplement integrity | `aamas2027-supplement-v0.3.zip/package-manifest.json` | 99 archive entries, 98 manifest files, zero hash/size mismatches |
+| Offline handoff | `releases/MA-collusion-submission-candidate-20261002.bundle` | verified complete Git bundle at commit `49778b2` |
 
 The public data therefore supports reproduction of the reported structural,
 observability and bounded welfare analyses without exposing provider request
