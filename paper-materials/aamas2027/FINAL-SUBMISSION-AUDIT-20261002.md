@@ -17,6 +17,7 @@ resource or an author decision.
 | Four-arm leading indicator | `tools/four_arm_leading_indicator.py --check` | natural capture-minus-tie welfare `-27.942`; blindness metrics reproduced |
 | Classical-agent baseline | `tools/qlearning_baseline.py --render-only` | seeded offline output reproduced; explicitly non-LLM baseline, not pooled with manuscript estimates |
 | Manuscript compilation | local `pdflatex` + BibTeX, three LaTeX passes | 8 pages; no undefined citations/references or overfull boxes |
+| Citation-key integrity | offline extraction of `\\cite{}` keys against the BibTeX file | 25 cited keys, 25 bibliography entries; no missing or uncited entries |
 | Anonymity scan | `check_materials.py` plus PDF text inspection | anonymous author line only; no private path, key or named repository in candidate text |
 | Public JSON metadata | `tools/sanitize_request_metadata.py` and `tools/sanitize_four_arm_ledger.py` | provider request IDs, logical request IDs and system fingerprints removed |
 | Supplement integrity | `aamas2027-supplement-v0.3.zip/package-manifest.json` and `tools/verify_supplement.py` | 105 archive entries, 104 manifest files, zero hash/size mismatches and zero metadata-key hits |
