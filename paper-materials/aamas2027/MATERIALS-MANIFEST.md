@@ -35,7 +35,7 @@
 ## Data
 
 - `data/A-confirmation-*` — Candidate A ledger, frozen analysis and status.
-- `data/four-arm-history-channel/` — four-arm ledger and registered analysis (uploaded 2026-10-01; one private path in `analysis.json` replaced by a project-relative path).
+- `data/four-arm-history-channel/` — four-arm ledger and registered analysis (uploaded 2026-10-01; one private path in `analysis.json` replaced by a project-relative path; provider request IDs and system fingerprints removed from the public ledger).
 - `data/original-controlled-initial/` — metadata-free derived ledger for the original controlled-initial descriptive comparisons; raw request metadata excluded.
 
 ## Tools (offline; no provider calls)
@@ -47,6 +47,7 @@
 - `tools/settlement_generalization.py` — exact welfare-blindness arithmetic for more sellers and captive consumers.
 - `tools/qlearning_baseline.py` — seeded Q-learning baseline under the four display arms, with programmed-start and impulse evaluations.
 - `tools/sanitize_controlled_initial_ledger.py`, `tools/controlled_initial_descriptives.py` and `tools/build_original_descriptive_figures.py` — create, summarize and visualize the public controlled-initial ledger without provider metadata.
+- `tools/sanitize_four_arm_ledger.py` — removes provider request IDs, logical request IDs and system fingerprints while retaining fields required by the offline four-arm checks.
 - `tools/build_fig3_direction.py` — regenerates Figure 3.
 - `tools/check_materials.py` — manuscript-to-analysis number check, citation/figure check, anonymity scan, optional PDF page/overfull check.
 
@@ -54,7 +55,7 @@
 
 - Candidate A independent-confirmation protocol (execution status note added; frozen text preserved);
 - B1--B4 feedback-surface 2x2 protocol;
-- anonymous AAMAS supplementary ZIP v0.3 (refreshed 2026-10-02; 96 archive entries, 2.34 MB compressed) and v0.1 (unchanged, for provenance); v0.2 is superseded and remains in git history.
+- anonymous AAMAS supplementary ZIP v0.3 (refreshed 2026-10-02; 97 archive entries, 2.23 MB compressed) and v0.1 (unchanged, for provenance); v0.2 is superseded and remains in git history.
 
 ## Review response
 
