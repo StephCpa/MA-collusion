@@ -12,7 +12,7 @@ added. It is a verification log, not a new inferential analysis.
 | `verify_supplement.py` | passed; 105 archive entries; 104 manifest files; zero hash mismatches; zero metadata-key hits |
 | `qlearning_baseline.py --render-only` | seeded offline baseline reproduced; natural arm welfare 404.0, hide-rival welfare 444.4; positive-control responder lowering 85% at gate-passing ties |
 | `settlement_generalization.py --check` | passed; blind-share sequence for 2/3/4 sellers `[0.080, 0.139, 0.194]`; captive-share resolution boundary reproduced |
-| project regression (`pytest -q`) | 386 passed in 64.19 s |
+| project regression (`pytest -q`) | 386 passed in 64.65 s on the latest post-artifact rerun |
 
 All checks were run from the local candidate workspace. The rerun confirms
 that the manuscript-facing numbers and the sealed public package remain
