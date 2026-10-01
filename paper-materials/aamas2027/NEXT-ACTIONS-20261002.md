@@ -11,6 +11,9 @@
 
 ## Author actions before submission
 
+Use `AUTHOR-SUBMISSION-DECISIONS-20261002.md` as the sign-off form; it keeps
+author-certified facts separate from experimental provenance.
+
 1. Supply the official AAMAS template archive or run the migration from a
    network-enabled environment. Recompile and rerun the PDF/page/anonymity
    checks; do not alter layout parameters in the staging source.
