@@ -10,6 +10,7 @@ added. It is a verification log, not a new inferential analysis.
 | `four_arm_leading_indicator.py --check` | passed; natural capture-minus-tie `-27.941667`; blindness metrics reproduced |
 | `structural_leave_one_block_out.py` | 42 complete blocks; full mean `0.830357`; leave-one-out range `[0.826220, 0.850000]`; all positive |
 | `verify_supplement.py` | passed; 105 archive entries; 104 manifest files; zero hash mismatches; zero metadata-key hits |
+| `qlearning_baseline.py --render-only` | seeded offline baseline reproduced; natural arm welfare 404.0, hide-rival welfare 444.4; positive-control responder lowering 85% at gate-passing ties |
 | project regression (`pytest -q`) | 386 passed in 64.19 s |
 
 All checks were run from the local candidate workspace. The rerun confirms
