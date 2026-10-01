@@ -41,6 +41,9 @@ current forced-deviation probe found no qualifying response.
 3. Preserve the missing pre-analysis selection record for the candidate
    `delta_W=5` margin as a limitation, unless collaborators locate the original
    dated record.
+4. Complete the author-side AAMAS checks for AI-assisted methodology
+   disclosure (exact tool/version and prompts, if applicable) and dual/thin-
+   slice overlap with the authors' other submissions.
 
 No further paid experiment is required for the paper's current bounded claim.
 A grid-extension or T4 positive-control run would be a separate study and

@@ -63,6 +63,7 @@
 - `REVIEW-RESPONSE-20261001.md` — point-by-point response and the list of corrections.
 - `SUBMISSION-GATES-20261002.md` — current status of template, provenance, anonymity and optional-experiment gates.
 - `FINAL-SUBMISSION-AUDIT-20261002.md` — evidence freeze for compilation, anonymity, public metadata sanitization, supplement integrity and the remaining external gates.
+- `AAMAS-REQUIREMENTS-CHECK-20261002.md` — official submission-rule check, including the AI-assisted methodology disclosure and dual-submission author checks.
 - `INTEGRITY-AUDIT-20261002.md` — claim/evidence, numeric, citation-key and artifact-integrity audit.
 - `DELIVERY-STATUS-20261002.md` — local branch and remote-delivery status.
 
