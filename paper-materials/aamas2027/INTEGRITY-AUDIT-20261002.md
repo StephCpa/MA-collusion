@@ -58,9 +58,10 @@ made.
 - **Provenance:** attach the δW selection record and original completion-range
   selection record if available. Otherwise retain the current candidate/limited
   wording.
-- **Data availability:** add the original controlled-initial ledger and figure
-  builder if the original descriptive counts are expected to be independently
-  regenerated.
+- **Data availability (partly resolved):** a metadata-free original
+  controlled-initial ledger and descriptive summarizer are now included. The
+  original figure builder and private raw request archive remain excluded, so
+  the original figure-generation path is still not fully public.
 
 No numerical or claim wording was silently changed during this audit.
 
