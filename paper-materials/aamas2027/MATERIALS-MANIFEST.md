@@ -55,6 +55,7 @@
 ## Review response
 
 - `REVIEW-RESPONSE-20261001.md` — point-by-point response and the list of corrections.
+- `SUBMISSION-GATES-20261002.md` — current status of template, provenance, anonymity and optional-experiment gates.
 
 Raw provider request/response logs are excluded by design. The trajectory
 ledger is included because it is the primary data object needed to inspect the
