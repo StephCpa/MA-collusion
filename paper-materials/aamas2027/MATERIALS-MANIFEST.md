@@ -10,7 +10,8 @@
 
 - `figures/fig1-equivalence-and-structure.*` (original run)
 - `figures/fig2-welfare-versus-structure.*` (regenerated 2026-10-01 with the replication; `tools/build_fig2_replication.py`)
-- `figures/fig3-transition-direction.*` (original run)
+- `figures/fig3-direction-and-leading-indicator.*` (new 2026-10-01; `tools/build_fig3_direction.py`)
+- `figures/fig3-transition-direction.*` (original-run counts; retired from the manuscript, kept for the supplement)
 - `figures/framework-observability.*`
 - accompanying captions and figure manifests.
 
@@ -23,20 +24,32 @@
 - X1/X2 statistical qualification (gap-direction label corrected);
 - fixed-history qualification;
 - offline initial-state baseline ("absorbing" wording removed);
-- reproducibility metadata register.
+- reproducibility metadata register;
+- four-arm reproduction, leading-indicator test and monitor-blindness metric (`analysis/four-arm-leading-indicator-20261001.*`, new);
+- settlement generalization to 3–4 sellers and captive consumers (`analysis/settlement-generalization-20261001.*`, new);
+- Q-learning classical-agent baseline under the four display arms (`analysis/qlearning-baseline-20261001.*`, new).
+
+## Data
+
+- `data/A-confirmation-*` — Candidate A ledger, frozen analysis and status.
+- `data/four-arm-history-channel/` — four-arm ledger and registered analysis (uploaded 2026-10-01; one private path in `analysis.json` replaced by a project-relative path).
 
 ## Tools (offline; no provider calls)
 
 - `tools/observability_certificate.py` — derives the T1 partition and separating observables, evaluates the T4 operating-point gate, re-settles every ledger round.
 - `tools/candidate_a_structural.py` — reproduces `data/A-confirmation-analysis.json` exactly (never writes it) and computes the protocol structural primary `D_tie`.
 - `tools/build_fig2_replication.py` — regenerates Figure 2 byte-reproducibly.
+- `tools/four_arm_leading_indicator.py` — reproduces the registered four-arm contrasts, runs the leading-indicator test and the blindness metric.
+- `tools/settlement_generalization.py` — exact welfare-blindness arithmetic for more sellers and captive consumers.
+- `tools/qlearning_baseline.py` — seeded Q-learning baseline under the four display arms, with programmed-start and impulse evaluations.
+- `tools/build_fig3_direction.py` — regenerates Figure 3.
 - `tools/check_materials.py` — manuscript-to-analysis number check, citation/figure check, anonymity scan, optional PDF page/overfull check.
 
 ## Protocols and supplement
 
 - Candidate A independent-confirmation protocol (execution status note added; frozen text preserved);
 - B1--B4 feedback-surface 2x2 protocol;
-- anonymous AAMAS supplementary ZIP v0.2 (current) and v0.1 (unchanged, for provenance).
+- anonymous AAMAS supplementary ZIP v0.3 (current) and v0.1 (unchanged, for provenance); v0.2 is superseded and remains in git history.
 
 ## Review response
 

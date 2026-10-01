@@ -59,7 +59,7 @@
   "directional_decision_threshold": 0.0,
   "bootstrap_role": "sensitivity_only",
   "not_registered": false,
-  "registration": "C:\\work\\博士整理\\多智能体共谋\\artifacts\\history-channel-formal\\20260922-deepseek-flash-v021\\registration.json",
+  "registration": "artifacts/history-channel-formal/20260922-deepseek-flash-v021/registration.json",
   "stop_reason": "unclassified_error",
   "accounted_or_reserved_cny": 20.596208
 }

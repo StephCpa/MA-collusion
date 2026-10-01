@@ -25,7 +25,7 @@
 \begin{document}
 
 \begin{abstract}
-Aggregate welfare can remain unchanged while a multi-agent system changes how it occupies and shares joint-action states. We quantify this observability boundary in a repeated two-seller pricing environment with public peer-history displays. An exhaustive audit of the finite action grid showed that 100 ordered price states collapse into 10 classes with identical minimum-price welfare observables; inside a class, only seller-level observables separate states. In a controlled-initial comparison, the natural-display arm produced equal-price assessment states in 88.8\% and 85.3\% of repeated assessment rounds in the two asymmetric cells, whereas the hide-rival arm produced none. At the block level, the paired equal-price differences were 0.885 and 0.853, while paired minimum-price differences were only 0.011 and 0.014. An independent replication on the same deployment confirmed the structural contrast ($D_{\mathrm{tie}}=0.830$, 95\% CI [0.743, 0.917], 42 blocks) while the registered welfare contrasts stayed near zero; welfare equivalence remained inconclusive under the registered missingness bound. A fixed-history diagnostic showed that the response to history order depended on the rival background (corrected difference-in-differences 0.546 price units). A best-response probe established current-profit competence, and a matched forced-deviation probe found no next-round response at the tested operating point. The results identify information-dependent joint-action structure that aggregate welfare alone cannot resolve. They do not identify collusion or strategic harmful coordination: the observed high-price ties lie above the joint-profit optimum, where a deviation test cannot separate strategic sustainment from anchoring.
+Aggregate welfare can remain unchanged while a multi-agent system changes how it occupies and shares joint-action states. We quantify this observability boundary in a repeated two-seller pricing environment with public peer-history displays. Exhaustive enumeration shows that 100 ordered price states collapse into 10 classes with identical welfare observables; inside a class, only seller-level observables separate states. In a controlled-initial comparison, natural display produced equal-price states in 88.8\% and 85.3\% of assessment rounds in the two asymmetric cells and hiding the rival's history produced none; block-paired equal-price differences were 0.885 and 0.853, while minimum-price differences were only 0.011 and 0.014. An independent replication confirmed the structural contrast ($D_{\mathrm{tie}}=0.830$, 95\% CI [0.743, 0.917], 42 blocks) while registered welfare contrasts stayed near zero, with equivalence inconclusive under the registered missingness bound. In an earlier study with model-chosen starting states, the same welfare-equivalent capture states instead resolved upward into 6.5 ties, so structure predicted a later welfare loss of 27.9 units that welfare could not reveal. A fixed-history diagnostic showed that the response to history order depended on the rival background (corrected difference-in-differences 0.546 price units). A best-response probe established current-profit competence, and a forced-deviation probe found no next-round response at the tested operating point. The results identify information-dependent joint-action structure that aggregate welfare alone cannot resolve, but not collusion: the observed high-price ties lie above the joint-profit optimum, where a deviation test cannot separate strategic sustainment from anchoring.
 \end{abstract}
 
 \keywords{multi-agent systems, generative agents, coordination, agent evaluation, algorithmic pricing, observability}
@@ -40,17 +40,17 @@ The measurement problem is particularly sharp in homogeneous Bertrand environmen
 
 We ask when welfare-only monitoring misses changes in joint actions in generative multi-agent systems. We test whether peer-history display changes closed-loop outcomes or joint price-state structure and seller-profit allocation, and we define the evidence needed for a strategic interpretation.
 
-We show that display policy changes joint-state persistence and seller-profit allocation inside minimum-price equivalence classes, and that this structural contrast replicates in an independent run while the minimum price changes little. The effect appears at the first model decision and persists in the assessment window. A fixed-history diagnostic provides a complementary semantic test: the action response to history order depends on the rival background. Together, the studies show why outcome aggregates, action structure and strategic response must be evaluated separately.
+We show that display policy changes joint-state persistence and seller-profit allocation inside minimum-price equivalence classes, that the effect appears at the first model decision and replicates while the minimum price changes little, and that whether such structure later becomes visible in welfare depends on how agents resolve unequal states. Outcome aggregates, action structure and strategic response must therefore be evaluated separately.
 
 The paper makes four contributions:
 \begin{enumerate}[leftmargin=*,itemsep=1pt,topsep=2pt]
     \item We derive the action-grid equivalence classes induced by the settlement rule, identify exactly which observables separate states inside a class, and validate the settlement against every recorded round of a trajectory ledger.
-    \item We report a controlled-initial closed-loop comparison in which the hide-rival arm changes early and persistent joint-state structure while leaving minimum-price welfare nearly unchanged, and an independent replication that confirms the structural contrast.
+    \item We report a controlled-initial closed-loop comparison in which the hide-rival arm changes early and persistent joint-state structure while leaving minimum-price welfare nearly unchanged, an independent replication that confirms the structural contrast, and evidence from a study with model-chosen starts that welfare-equivalent states with different structure have different welfare futures.
     \item We isolate background-dependent history conditioning with a fixed-history diagnostic that does not rely on trajectory-level mediation claims.
     \item We define the boundary of a strategic interpretation, including an arithmetic operating-point gate: equal-price persistence and high prices are not evidence of harmful coordination without a qualifying operating point, a declared deviation and response rule, and a causal counterfactual.
 \end{enumerate}
 
-Figure~\ref{fig:framework} summarizes the study logic: a display intervention is propagated through model decisions into a joint trajectory, then evaluated at progressively richer evidence surfaces before any strategic interpretation is made.
+Figure~\ref{fig:framework} summarizes the study logic.
 
 \section{Background and Related Work}
 
@@ -60,7 +60,7 @@ Classical multi-agent research separates individual policies from the organizati
 
 \subsection{Coordination under mixed incentives}
 
-Coordination can also emerge from the environment and the learning objective. Centralized-critic methods study mixed cooperative--competitive policies \cite{lowe2017maddpg}; social-influence rewards measure how one agent's action changes another's behavior \cite{jaques2019social}; and autocurricula can produce coordinated tool use without a symbolic language \cite{baker2020tooluse}. These results show that joint behavior can be structured and history-dependent, but they do not make the settlement rule's many-to-one mapping from joint actions to aggregate outcomes an estimand. We add that measurement layer.
+Coordination can also emerge from the environment and the learning objective, as with centralized critics for mixed cooperative--competitive policies \cite{lowe2017maddpg}, social-influence rewards \cite{jaques2019social}, and autocurricula \cite{baker2020tooluse}. These results show structured, history-dependent joint behavior, but they do not make the settlement rule's many-to-one mapping from joint actions to aggregate outcomes an estimand; we add that measurement layer.
 
 \subsection{Algorithmic pricing and collusion claims}
 
@@ -68,7 +68,7 @@ Classical work links imperfect observation and public price information to tacit
 
 \subsection{Generative and language-model agents}
 
-Generative-agent systems make memory, role assignment, conversation, and tool use part of the interaction interface \cite{park2023generative,li2023camel,wu2023autogen}; ReAct and Reflexion couple language-model reasoning to action and verbal feedback \cite{yao2023react,shinn2023reflexion}; and AgentBench evaluates agents across interactive environments \cite{liu2024agentbench}. These frameworks generally report task success rather than whether an aggregate monitor is blind to distinct joint actions. We isolate a minimal display-policy contrast in a controlled economic environment, so the monitor's input surface and the claim it can support are explicit, and we treat welfare, joint structure, allocation, and strategic response as distinct estimands rather than interchangeable proxies.
+Generative-agent frameworks make memory, roles, conversation, and tool use part of the interaction interface \cite{park2023generative,li2023camel,wu2023autogen}, couple language-model reasoning to action and verbal feedback \cite{yao2023react,shinn2023reflexion}, and benchmark agents across environments \cite{liu2024agentbench}. They generally report task success rather than whether an aggregate monitor is blind to distinct joint actions. We isolate a minimal display-policy contrast so that the monitor's input surface, and the claim it can support, are explicit.
 
 \begin{figure*}[t]
   \centering
@@ -139,7 +139,7 @@ Before a T4 test is informative, the target symmetric tie $(p,p)$ must pass an a
 
 \subsection{Closed-loop policy contrast}
 
-The earlier four-arm repeated-pricing study varied whether own and rival price histories were displayed. Its registered rival-history factorial effect averages the rival-history manipulation across the own-history condition; we also retain a post-hoc natural-to-hide-rival simple contrast and report the two estimands separately.
+The earlier four-arm repeated-pricing study varied whether own and rival price histories were displayed (natural, hide-own, hide-rival, hide-both; 44 of 48 blocks complete). Its round 0 was itself a model decision with a prompt identical in every arm, so its starting states are model draws rather than programmed states. Its registered rival-history factorial effect averages the rival-history manipulation across the own-history condition; we also retain a post-hoc natural-to-hide-rival simple contrast and report the two estimands separately.
 
 For the controlled-initial welfare outcome $Y$, with subscripts $h$ for hide-rival and $n$ for natural display, the registered contrasts are
 \begin{align*}
@@ -162,32 +162,11 @@ D_{\mathrm{tie}}=\tfrac{1}{2}[(E_{LH,n}-E_{LH,h})+(E_{HL,n}-E_{HL,h})],
 \]
 where $E$ is the assessment-window equal-price fraction, with a block-level two-sided 95\% $t$ interval; $D_{\mathrm{asym}}$ and $J$ are tested against the protocol's candidate equivalence margin $\delta_W=5$, requiring both Bonferroni intervals to lie in $[-\delta_W,\delta_W]$. The run was executed in two sealed segments: a local ledger-write failure stopped the first, and the continuation was authorized after the interruption and an inspection of interim results; the amendment changed only the ledger-replacement retry window. It recorded 376 complete and 8 failed trajectories, none repaired or imputed.
 
-\begin{table}[t]
-  \centering
-  \caption{Controlled-initial cells in the original run. Round 0 is programmed; the first model decision is round 1.}
-  \label{tab:controlled}
-  \scriptsize
-  \resizebox{\columnwidth}{!}{%
-  \begin{tabular}{@{}lrrrr@{}}
-    \toprule
-    Cell & Natural r1 $(6.0,6.0)$ & Hidden r1 $(6.0,6.0)$ & Natural equal & Hidden equal \\
-    \midrule
-    LL $(6.0,6.0)$ & 46/46 & 48/48 & 920/920 & 960/960 \\
-    LH $(6.0,6.5)$ & 23/48 & 0/47 & 852/960 & 0/940 \\
-    HL $(6.5,6.0)$ & 30/48 & 0/48 & 819/960 & 0/960 \\
-    HH $(6.5,6.5)$ & 0/48 & 0/47 & 960/960 & 940/940 \\
-    \bottomrule
-  \end{tabular}%
-  }
-  \\[-2pt]
-  \parbox{0.96\columnwidth}{\scriptsize Round-1 columns report the exact $(6.0,6.0)$ state, not all equal-price states. Equal-price counts are descriptive assessment-round summaries; denominators differ when a trajectory has an unresolved outcome.}
-\end{table}
-
 \subsection{Model, prompt, and reproducibility}
 
-The controlled-initial runs used the \texttt{deepseek-flash} model from DeepSeek through two separate simultaneous API calls, one per seller, with temperature 0.3, a 256-token limit, forced invocation of the price-selection tool, one format attempt, and no format-repair retry. The system prompt instructed each model to act as an autonomous seller maximizing cumulative profit without a message channel. Each user message supplied sorted JSON fields for the round index, remaining horizon, costs and reservation value, demand rule, market size, allowed prices, and a projected posted-price history. The observation surface did not include realized sales, quantities, rewards or profits, consumer surplus, industry profit, HHI, or any other market-outcome statistic. In the natural-display arm both own and rival posted-price histories were present; in hide-rival the rival price fields were replaced by null while own posted prices remained visible.
+All runs used the \texttt{deepseek-flash} model from DeepSeek with one simultaneous API call per seller per round (temperature 0.3, 256-token limit, forced price-selection tool, one format attempt, no repair). The system prompt asked each model to act as an autonomous seller maximizing cumulative profit without a message channel. Each user message gave sorted JSON fields for the round index, remaining horizon, costs and reservation value, demand rule, market size, allowed prices, and a projected posted-price history, but no realized sales, rewards, profits, welfare, HHI, or other outcome statistic. In hide-rival the rival price fields were null while own posted prices remained visible.
 
-There were 30 rounds per trajectory. The original schedule used seed 20260929, with the environment reset seed equal to the block identifier; no provider-side API seed was recorded, so block pairing matches the deterministic reset and schedule but does not replay provider sampling. The original failed cells were LL-natural (blocks 37 and 41), HH-hide-rival (block 37), and LH-hide-rival (block 47). All 21,982 logged replication calls returned the same model alias and system fingerprint with one attempt each.
+Trajectories had 30 rounds. The original schedule seed was 20260929, and each reset seed equalled the block identifier; no provider seed was recorded, so pairing matches the deterministic reset but not provider sampling. Its failed cells were LL-natural (blocks 37, 41), HH-hide-rival (37), and LH-hide-rival (47). All 21,982 logged replication calls returned the same alias and fingerprint with one attempt each.
 
 \subsection{Offline structural and incentive analyses}
 
@@ -223,9 +202,9 @@ At the block level, we first aggregated assessment rounds within each trajectory
 
 Round 0 was programmed and identical within each initial cell, and the first model decision already separated the arms. In LH, natural display yielded 23 exact ties, 24 $(6.0,6.5)$ states, and one $(6.5,6.0)$ state among 48 completed trajectories, whereas hide-rival yielded $(6.0,6.5)$ in all 47. In HL, natural display yielded 30 $(6.0,6.0)$, 17 $(6.5,6.0)$ and one $(6.5,6.5)$ state; hide-rival yielded 46 $(6.5,6.0)$, one $(6.5,6.5)$ and one $(6.5,5.5)$ state, all among 48.
 
-The same data distinguish freezing from re-pricing. In LH-hide-rival, neither seller changed its round-0 price at round 1 or later; in HL-hide-rival, seller A never changed and seller B changed in 4\% of trajectories. Under natural display, the initially high seller changed at round 1 in 50\% of LH and 62.5\% of HL trajectories, and at some round in 96\% and 94\%; the initially low seller changed at round 1 in 2\% of trajectories in each cell. The welfare support was correspondingly narrow: natural-display LH and HL trajectories had minimum price 6.0 in 97.9\% and 97.3\% of assessment rounds and 6.5 otherwise, and the hide-rival asymmetric cells stayed at 6.0 throughout. A large structural contrast was located inside a small welfare margin.
+The same data distinguish freezing from re-pricing. In LH-hide-rival neither seller ever changed its round-0 price; in HL-hide-rival seller B changed in 4\% of trajectories. Under natural display the initially high seller changed at round 1 in 50\% (LH) and 62.5\% (HL) of trajectories and at some round in 96\% and 94\%, the initially low seller at round 1 in 2\%. LL and HH stayed tied in every assessment round in both arms. Natural-display LH and HL trajectories had minimum price 6.0 in 97.9\% and 97.3\% of assessment rounds, and the hide-rival cells stayed at 6.0 throughout: a large structural contrast inside a small welfare margin.
 
-An offline stress test makes the initial-state alternative explicit. On a separate sealed trajectory set, an imitation rule that copies the rival matched 87.50\% of held-out assessment actions, and a match-if-equal-else-undercut rule matched 86.875\%; neither was an exact generator. Replaying all 100 ordered initial states, the copy rule preserved every start, whereas the undercut rule preserved all equal starts but drove 90/90 unequal starts to the floor. High-price ties and persistence are therefore compatible with simple copying or inertia; they do not identify a strategic mechanism.
+In an offline stress test on a separate sealed trajectory set, copy-the-rival and match-if-equal-else-undercut rules matched 87.50\% and 86.875\% of held-out assessment actions without being exact generators; replayed from all 100 initial states, copying preserved every start. High-price ties and persistence are therefore compatible with copying or inertia and do not identify a strategic mechanism.
 
 \begin{table}[t]
   \centering
@@ -257,11 +236,23 @@ An offline stress test makes the initial-state alternative explicit. On a separa
 
 \subsection{Conditional actions separate matching from undercutting}
 
-When the previous-round rival price was 6.5, the low seller in LH-natural-display chose 6.0 in 258 of 286 seller--round observations and 6.5 in 28; in LH-hide-rival it chose 6.0 in all 1,363. In HL, natural-display seller B chose 6.0 in 297 of 330 observations and 6.5 in 33, whereas hide-rival chose 6.0 in 1,390 of 1,392. In the hide-rival arms this conditioning price was not displayed to the seller, so those counts describe freezing rather than a response. The 6.5 choices are mostly continuations of a few $(6.5,6.5)$ ties rather than upward moves: upward tie-formation events numbered 1 in LH-natural and 4 in HL-natural, against 45 and 57 downward events (Figure~\ref{fig:transitions}). For an upward move from 6.0 against a rival at 6.5, the static payoff falls from the capture profit 222.222 to the tie-split profit 106.944; with simultaneous moves this is a conditional reference, not an observed sacrifice, and without a declared deviation and response design it is not a T4 test.
+When the previous-round rival price was 6.5, the low seller in LH-natural-display chose 6.0 in 258 of 286 seller--round observations and 6.5 in 28; in LH-hide-rival it chose 6.0 in all 1,363. In HL, natural-display seller B chose 6.0 in 297 of 330 observations and 6.5 in 33, whereas hide-rival chose 6.0 in 1,390 of 1,392. In the hide-rival arms this conditioning price was not displayed to the seller, so those counts describe freezing rather than a response. The 6.5 choices are mostly continuations of a few $(6.5,6.5)$ ties rather than upward moves: in the original run, upward tie-formation events numbered 1 in LH-natural and 4 in HL-natural, against 45 and 57 downward events. For an upward move from 6.0 against a rival at 6.5, the static payoff falls from the capture profit 222.222 to the tie-split profit 106.944; with simultaneous moves this is a conditional reference, not an observed sacrifice, and without a declared deviation and response design it is not a T4 test.
 
 \subsection{Independent replication}
 
 Candidate A reproduced the structural pattern (Table~\ref{tab:paired-structure}, Figure~\ref{fig:welfare}B). The protocol primary was $D_{\mathrm{tie}}=0.830$ [0.743, 0.917] over 42 complete blocks, positive in all 42; its missing-outcome completion range [0.792, 0.841] also excludes zero, so the protocol's structural decision rule is met. At round 1, natural display produced exact ties in 15/46 LH and 29/47 HL trajectories versus 0/47 and 0/46 under hide-rival, and neither hide-rival asymmetric cell reached a tie in any assessment round (natural: 757/920 and 798/940). In LH the welfare change was exactly zero in every complete pair, so the entire structural contrast occurred inside the $m=6.0$ class. The registered welfare contrasts were $D_{\mathrm{asym}}=0.226$ (42 blocks; [$-0.299$, 0.751]) and $J=0.237$ (40 blocks; [$-0.315$, 0.789]), both inside $\pm\delta_W$; their completion ranges were [$-3.199$, 4.842] and [$-4.891$, 5.688], and because the range for $J$ exceeds the margin, welfare equivalence is inconclusive under the registered missingness sensitivity. The replication used the same deployment and is not a cross-model test.
+
+\subsection{Structure as a leading indicator of welfare}
+
+The four-arm study shows when structure carries welfare information that welfare itself lacks. We restrict to trajectories whose round-0 state was in the $m=6.0$ class, where a tie and a capture state both have welfare 311.111. Under natural display, the 25 capture starts reached an assessment-window welfare 27.94 units below the 18 tie starts (Welch 95\% [$-30.23$, $-25.66$]); 24 of 25 capture starts, but none of the tie starts, spent most of the window at $m=6.5$ (Fisher exact $p<10^{-10}$). Hide-own showed the same pattern ($-26.88$), whereas hide-rival, where capture states froze, did not ($-2.16$ [$-6.95$, 2.63]). The mechanism is matching direction (Figure~\ref{fig:direction}A): with model-chosen starts and rival prices visible, ties formed upward, the low seller raising to 6.5, 25 times against 4 downward under natural display, the reverse of the programmed-start runs (replication: 0 upward against 53 downward in LH, 3 against 49 in HL). With programmed starts the same tie-versus-capture split predicted almost nothing ($-0.20$ [$-0.60$, 0.20]; Figure~\ref{fig:direction}B). A welfare-equivalent capture state thus flags a pending transition whose welfare sign depends on how agents resolve it, which a welfare monitor cannot anticipate; it also explains the four-arm welfare effect, since hiding rival prices removed the upward matching. The designs differ in programmed versus model-chosen round 0 and in round-1 prompt length, so we do not attribute the reversal to a single factor, and the comparison is post hoc and observational within arm.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\columnwidth]{fig3-direction-and-leading-indicator.pdf}
+  \Description{Panel A: diverging bars of tie-formation events. Programmed starts: 53 downward and 0 upward in LH, 49 downward and 3 upward in HL. Model-chosen starts: 4 downward and 25 upward under natural display, 12 downward and 25 upward under hide-own. Panel B: assessment welfare for tie versus capture starts; with model-chosen starts and visible rival prices, capture starts end near 282 while tie starts stay at 311; with programmed starts both stay near 311.}
+  \caption{Matching direction decides whether structure foreshadows welfare. (A) Tie-formation events with rival prices visible: downward (the high seller cuts) left of zero, upward (the low seller raises) right. Programmed starts are the replication's LH and HL natural-display cells; model-chosen starts are the four-arm natural and hide-own arms. (B) Assessment-window welfare (mean, 95\% interval) of trajectories that started in the $m=6.0$ class as a tie or a capture state; both start at welfare 311.111. Counts give tie/capture trajectories. Post hoc and descriptive.}
+  \label{fig:direction}
+\end{figure}
 
 \subsection{History order depends on rival background}
 
@@ -269,7 +260,7 @@ The fixed-history diagnostic found a background interaction. It used 1,458 logic
 
 \subsection{Welfare contrasts are estimand-specific}
 
-In the original run the registered contrasts were small: $D_{\mathrm{asym}}=0.714$ (47 blocks; Bonferroni [$-0.298$, 1.725]; completion range [0.623, 1.046]) and $J=0.713$ (45 blocks; [$-0.344$, 1.770]; range [$-1.207$, 1.671]). These intervals cross zero, but they are not evidence that display had no effect, because most structural change occurred within a minimum-price class. In the earlier four-arm study, the registered rival-history factorial effect was 4.053 with Bonferroni interval [$-0.314$, 8.420], while the post-hoc hide-rival-minus-natural simple contrast was 11.070 (paired-bootstrap [5.634, 16.340], 44 complete blocks). That study used different cells and starting conditions, so we treat the simple contrast as a declared exploratory deviation, not confirmatory evidence.
+In the original run the registered contrasts were small: $D_{\mathrm{asym}}=0.714$ (47 blocks; Bonferroni [$-0.298$, 1.725]; completion range [0.623, 1.046]) and $J=0.713$ (45 blocks; [$-0.344$, 1.770]; range [$-1.207$, 1.671]). These intervals cross zero, but they are not evidence that display had no effect, because most structural change occurred within a minimum-price class. In the earlier four-arm study, the registered rival-history factorial effect was 4.053 with Bonferroni interval [$-0.314$, 8.420], while the post-hoc hide-rival-minus-natural simple contrast was 11.070 (paired-bootstrap [5.634, 16.340], 44 complete blocks). Its registered interaction was $-14.034$ (Bonferroni [$-22.678$, $-5.390$]): hiding the rival raised welfare by 11.070 when own history was shown and lowered it by 2.964 when own history was hidden. That study used different starting conditions, so we treat the simple contrast as a declared exploratory deviation, not confirmatory evidence.
 
 \subsection{Competence passed, but the local deviation response was null}
 
@@ -277,33 +268,11 @@ The X1 competence gate passed: in each rival-price cell, all 144 terminal calls 
 
 In X2 all 48 blocks were complete, and the responder chose 6.0 at round 11 in every arm (48/48 in each of N0, N1, H0 and H1). The registered strict-undercut and non-accommodating interactions were both 0.000 with degenerate [0, 0] block-bootstrap intervals; for an event observed zero times in 48 blocks the one-sided 95\% Clopper--Pearson upper bound is 6.05\%. Because the hidden arms could not display the shock, the informative comparison is N1 versus N0, which was also null; the protocol sized the design to detect only interactions of roughly 0.25--0.35 or larger. The X2 prelude fails gate condition (iii): at $(6.0,6.0)$ the forced price 5.5 is both the best one-shot deviation and the joint-profit price. The result is a local null at this operating point that keeps T4 unassigned.
 
-\begin{table}[t]
-  \centering
-  \caption{Supplementary mechanism probes. The independent unit is the prompt-ID cluster for X1 and the complete four-arm block for X2.}
-  \label{tab:supplement-probes}
-  \scriptsize
-  \begin{tabular}{@{}llll@{}}
-    \toprule
-    Probe & Unit & Primary estimate & 95\% interval \\
-    \midrule
-    X1 competence & prompt ID & terminal BR = 1.000 & Wilson 0.926 (call-cal. 0.974) \\
-    X1 horizon gap & prompt ID & BR gap = 0.0035 & [0.0000,0.0104] \\
-    X2 deviation response & block & $I_{\mathrm{cut5}}=0.000$ & boot [0.000,0.000]; exact $<.061$ \\
-    \bottomrule
-  \end{tabular}
-\end{table}
 
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=\columnwidth]{fig3-transition-direction.pdf}
-  \Description{Stacked bar chart of tie-formation events by cell and arm: LH natural 45 downward and 1 upward, LH hide-rival none, HL natural 57 downward and 4 upward, HL hide-rival 1 upward.}
-  \caption{Observed downward and upward tie-formation events in the original run's asymmetric cells. Downward matching dominates under natural display; upward events are rare, and repeated ties can later split. Events repeat within trajectories and are descriptive.}
-  \label{fig:transitions}
-\end{figure}
 
 \section{Discussion}
 
-The experiments support a measurement conclusion rather than a cartel conclusion. Within the stated grid, settlement rule, and observed support, public peer-history display affects how sellers occupy joint price states and how rewards are allocated, and this replicates within the tested deployment. In a minimum-price settlement, those changes can be invisible to total welfare and industry profit, so a welfare-only monitor can report no outcome change while a joint-action monitor detects a large structural change. This is a conditional observability boundary, not a general false-negative rate.
+The experiments support a measurement conclusion rather than a cartel conclusion. Within the stated grid, settlement rule, and observed support, public peer-history display affects how sellers occupy joint price states and how rewards are allocated, and this replicates within the tested deployment. In a minimum-price settlement, those changes can be invisible to total welfare and industry profit, so a welfare-only monitor can report no outcome change while a joint-action monitor detects a large structural change. This is a conditional observability boundary, not a general false-negative rate. Measured as the share of the between-arm difference in assessment-round distributions (total variation) that a welfare monitor cannot see, the blind spot is 97--100\% in the controlled-initial cells but 0\% in the four-arm natural-versus-hide-rival contrast, where ties formed at 6.5. Homogeneous Bertrand is the extreme rather than a special case: with three or four sellers the share of allocation-distinct state pairs that welfare cannot separate rises from 0.080 to 0.139 and 0.194, and with a captive share $\theta$ of consumers per seller exact welfare separates ties from capture, but a monitor resolving welfare to 1\% needs $\theta\ge0.11$ to do so, and no welfare monitor can tell which seller captured the market.
 
 The direction of the distributional signal matters. Under natural display the asymmetric cells move toward T3b equal division at a tie; under hide-rival they stay in T3a capture by the low seller. Under this two-seller tie-split rule HHI is a deterministic transform of the equal-price indicator, so it is an allocation encoding rather than an independent result, and neither endpoint is labeled harm by itself.
 
@@ -311,19 +280,19 @@ The economic benchmark makes the strategic question relevant but does not answer
 
 \subsection{Implications for monitor design}
 
-The results imply a compositional monitoring rule. A market-harm monitor should retain the minimum price and welfare, paired with a joint-action monitor that records the ordered pair, equality, and transition direction, and an allocation monitor that retains seller-level rewards and reports capture and division as distinct targets rather than one ``coordination'' score. For intervention studies, round 0 is a programmed baseline, not a negative control; round 1 is the first post-intervention decision, and later rounds form a descriptive persistence window. Conditioning only on later trajectories can create a misleading mediation story when the intervention already changes the first decision.
+The results imply a compositional monitoring rule: retain minimum price and welfare for market harm; record the ordered pair, equality, and transition direction for joint structure, since unequal states within a welfare class are where future welfare changes originate; and retain seller-level rewards, reporting capture and division separately rather than as one ``coordination'' score. In intervention studies a programmed round 0 is a baseline, not a negative control, and conditioning only on later rounds can create a misleading mediation story when the intervention already changes the first decision.
 
 \subsection{What the strategic tests do and do not show}
 
-X1 shows that the model selects the current-profit best response in a controlled one-shot prompt and that a continuing frame does not induce costly matching. X2 supplies the exogenous deviation and matched no-shock counterfactual absent from the main study, but finds no next-round response at an operating point that fails the gate. A stronger strategic claim would require a gate-passing target (for example, a programmed 5.0 or 5.5 tie), a declared deviation and response rule, and evidence that the response is economically deterrent rather than unconditional reversion. The appropriate conclusion is positive about information-dependent joint-action structure and negative about identifying strategic harmful coordination in this design.
+X1 shows current-profit competence and no horizon-induced costly matching. X2 supplies the exogenous deviation and matched counterfactual absent from the main study but finds no next-round response at an operating point that fails the gate. A strategic claim would require a gate-passing target (for example, a programmed 5.0 or 5.5 tie), a declared deviation and response rule, and evidence that the response deters rather than reverts unconditionally.
 
 \subsection{Limitations and reproducibility}
 
-The conclusions are conditional on a homogeneous Bertrand settlement, a price grid capped at 6.5, and one model deployment; the replication shares the model alias and fingerprint and is not a cross-model test. Both closed-loop executions are amended continuations, with failed trajectories retained as missing; the replication continuation followed an inspection of interim results, and the selection record for $\delta_W$ should accompany the protocol. Assessment rounds are repeated within trajectories. The fixed-history and closed-loop studies estimate different quantities and are not concatenated into a single causal chain. Analysis scripts, the certificate generator, manifests, figure sources, and the replication trajectory ledger are supplied as supplementary material; no API key or private credential is part of the artifact.
+The conclusions are conditional on a homogeneous Bertrand settlement, a price grid capped at 6.5, and one model deployment; the replication shares the model alias and fingerprint and is not a cross-model test. Both closed-loop executions are amended continuations, with failed trajectories retained as missing; the replication continuation followed an inspection of interim results, and the selection record for $\delta_W$ should accompany the protocol. Assessment rounds are repeated within trajectories, and the leading-indicator, blindness and settlement analyses are post hoc. The fixed-history and closed-loop studies estimate different quantities and are not concatenated into a single causal chain. Analysis scripts, the certificate generator, manifests, figure sources, and the replication trajectory ledger are supplied as supplementary material; no API key or private credential is part of the artifact.
 
 \section{Conclusion}
 
-History display changes joint-action structure and seller-profit allocation in this generative multi-agent pricing environment without explicit messages, and the structural contrast replicates in an independent run. The same intervention can leave minimum-price welfare aggregates nearly unchanged, so welfare-only supervision is incomplete for this settlement rule and support. X1 established current-profit competence and X2 found no local response to a forced deviation, at an operating point where such a test cannot separate strategic sustainment from anchoring. The evidence supports information-dependent joint behavior and a measurable aggregation blind spot, but not a general monitoring error rate, collusion, or strategic harmful coordination.
+History display changes joint-action structure and seller-profit allocation in this generative multi-agent pricing environment without explicit messages, and the structural contrast replicates. Whether that change reaches welfare depends on how agents resolve unequal states: with programmed starts ties formed downward and welfare barely moved, whereas with model-chosen starts they formed upward and structure foreshadowed a welfare loss. Welfare-only supervision is therefore incomplete. X1 and X2 establish competence and a local null at an operating point that fails the strategic gate, so the evidence supports information-dependent joint behavior and a measurable aggregation blind spot, but not a general monitoring error rate, collusion, or strategic harmful coordination.
 
 \balance
 \bibliographystyle{ACM-Reference-Format}

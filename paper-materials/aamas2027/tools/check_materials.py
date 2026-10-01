@@ -33,10 +33,15 @@ FIGURES = MATERIALS / "figures"
 ORIGINAL = MATERIALS / "analysis" / "controlled-initial-followup-analysis.json"
 REPLICATION = MATERIALS / "analysis" / "A-confirmation-structural-20261001.json"
 CERTIFICATE = MATERIALS / "analysis" / "observability-certificate.json"
+FOUR_ARM = MATERIALS / "analysis" / "four-arm-leading-indicator-20261001.json"
+SETTLEMENT = MATERIALS / "analysis" / "settlement-generalization-20261001.json"
+FROZEN_FOUR_ARM = MATERIALS / "data" / "four-arm-history-channel" / "analysis.json"
 
 sys.path.insert(0, str(HERE))
 import candidate_a_structural  # noqa: E402
+import four_arm_leading_indicator  # noqa: E402
 import observability_certificate  # noqa: E402
+import settlement_generalization  # noqa: E402
 
 PRIVATE = re.compile(
     rb"[A-Za-z]:\\\\(?:Users|work)|[A-Za-z]:/Users/|/home/[a-z]|/Users/[A-Za-z]|anaconda3|"
@@ -88,6 +93,32 @@ def claims() -> list[tuple[str, list[str]]]:
     out.append(("certificate benchmarks", [f(gate["stage_nash_profit_per_seller"]), f(gate["joint_profit_per_seller"]),
                                            f(gate["symmetric_ties"]["6.0"]["calvano_delta"]),
                                            f(gate["symmetric_ties"]["6.5"]["calvano_delta"])]))
+    four = json.loads(FOUR_ARM.read_text(encoding="utf-8"))
+    frozen = json.loads(FROZEN_FOUR_ARM.read_text(encoding="utf-8"))["contrasts"]
+    con = four["registered_reproduction"]["contrasts"]
+    out.append(("four-arm registered contrasts", [f(con["interaction"]), f(con["simple_hide_rival_minus_natural"]),
+                                                  f(-con["simple_hide_both_minus_hide_own"]),
+                                                  *interval(frozen["interaction"]["complete_primary_interval"])]))
+    li = four["leading_indicator"]["four_arm_model_chosen_start"]
+    nat = li["natural"]
+    out.append(("four-arm leading indicator, natural",
+                [f(abs(nat["capture_minus_tie_welfare"]), 2), *interval(nat["welch_95"], 2),
+                 f"{nat['trajectories_mostly_at_m6.5']['capture']} of {nat['n']['capture']}", f"{nat['n']['tie']} tie"]))
+    out.append(("four-arm leading indicator, hide-own and hide-rival",
+                [f(li["hide_own"]["capture_minus_tie_welfare"], 2), f(li["hide_rival"]["capture_minus_tie_welfare"], 2),
+                 *interval(li["hide_rival"]["welch_95"], 2)]))
+    prog = four["leading_indicator"]["replication_programmed_start"]["natural"]
+    out.append(("programmed-start split", [f(prog["capture_minus_tie_welfare"], 2), *interval(prog["welch_95"], 2)]))
+    tf = four["arms"]["natural"]["tie_formation"]
+    out.append(("four-arm tie formation", [f"{tf['upward']} times against {tf['downward']} downward"]))
+    blind = {(b["study"], b["contrast"]): b["blind_share"] for b in four["blindness_metric"]}
+    controlled = [v for (st, _), v in blind.items() if st.startswith("controlled")]
+    out.append(("blindness metric", [f"{round(100 * min(controlled))}--{round(100 * max(controlled))}\\%",
+                                     f"{round(100 * blind[('four-arm (model-chosen start)', 'natural vs hide-rival')])}\\%"]))
+    gen = json.loads(SETTLEMENT.read_text(encoding="utf-8"))
+    shares = [row["blind_share"] for row in gen["n_sellers_homogeneous_bertrand"]]
+    out.append(("settlement generalization", [*(f(x) for x in shares),
+                                              f"\\theta\\ge{gen['theta_needed_to_resolve_tie_vs_capture']['0.01']:.2f}"]))
     return out
 
 
@@ -164,10 +195,13 @@ def main() -> int:
         observability_certificate.check(cert)
     except AssertionError as exc:
         errors.append(f"certificate: {exc!r}")
-    try:
-        candidate_a_structural.check(candidate_a_structural.build())
-    except AssertionError as exc:
-        errors.append(f"candidate A reproduction: {exc!r}")
+    for name, module in (("candidate A reproduction", candidate_a_structural),
+                         ("four-arm reproduction", four_arm_leading_indicator),
+                         ("settlement generalization", settlement_generalization)):
+        try:
+            module.check(module.build())
+        except AssertionError as exc:
+            errors.append(f"{name}: {exc!r}")
     tex = TEX.read_text(encoding="utf-8")
     errors += check_claims(tex)
     errors += check_latex(tex)

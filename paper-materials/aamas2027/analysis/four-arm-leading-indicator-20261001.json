@@ -1,0 +1,414 @@
+{
+  "scope": "offline post-hoc analysis of sealed ledgers; no provider calls; registered estimands unchanged",
+  "sources": [
+    "data/four-arm-history-channel/ledger.json",
+    "data/A-confirmation-cells.json",
+    "analysis/controlled-initial-followup-analysis.json"
+  ],
+  "registered_reproduction": {
+    "complete_blocks": 44,
+    "arm_mean_assessment_welfare": {
+      "natural": 294.57228535353534,
+      "hide_own": 299.14614898989896,
+      "hide_rival": 305.6423611111111,
+      "hide_both": 296.18213383838383
+    },
+    "contrasts": {
+      "hide_rival_marginal": 4.053030303030298,
+      "hide_own_marginal": -2.443181818181815,
+      "interaction": -14.034090909090892,
+      "simple_hide_rival_minus_natural": 11.070075757575744,
+      "simple_hide_both_minus_hide_own": -2.9640151515151483
+    }
+  },
+  "arms": {
+    "natural": {
+      "completed_trajectories": 46,
+      "round0_states": {
+        "(6,6)": 18,
+        "(6,6.5)": 12,
+        "(6.5,6)": 13,
+        "(6.5,6.5)": 3
+      },
+      "round0_prompt_tokens": [
+        554
+      ],
+      "tie_formation": {
+        "downward": 4,
+        "upward": 25,
+        "other": 0,
+        "tie_split": 4
+      },
+      "assessment_states": {
+        "(6,6)": 380,
+        "(6.5,6)": 1,
+        "(6.5,6.5)": 539
+      }
+    },
+    "hide_own": {
+      "completed_trajectories": 46,
+      "round0_states": {
+        "(6,6)": 28,
+        "(6,6.5)": 4,
+        "(6.5,6)": 11,
+        "(6.5,6.5)": 3
+      },
+      "round0_prompt_tokens": [
+        554
+      ],
+      "tie_formation": {
+        "downward": 12,
+        "upward": 25,
+        "other": 0,
+        "tie_split": 23
+      },
+      "assessment_states": {
+        "(6,6)": 501,
+        "(6,6.5)": 10,
+        "(6.5,6)": 8,
+        "(6.5,6.5)": 401
+      }
+    },
+    "hide_rival": {
+      "completed_trajectories": 46,
+      "round0_states": {
+        "(6,6)": 27,
+        "(6,6.5)": 6,
+        "(6.5,6)": 6,
+        "(6.5,6.5)": 7
+      },
+      "round0_prompt_tokens": [
+        554
+      ],
+      "tie_formation": {
+        "downward": 3,
+        "upward": 2,
+        "other": 0,
+        "tie_split": 9
+      },
+      "assessment_states": {
+        "(6,6)": 433,
+        "(6,6.5)": 177,
+        "(6.5,6)": 145,
+        "(6.5,6.5)": 165
+      }
+    },
+    "hide_both": {
+      "completed_trajectories": 47,
+      "round0_states": {
+        "(6,6)": 29,
+        "(6,6.5)": 11,
+        "(6.5,6)": 4,
+        "(6.5,6.5)": 3
+      },
+      "round0_prompt_tokens": [
+        554
+      ],
+      "tie_formation": {
+        "downward": 124,
+        "upward": 181,
+        "other": 6,
+        "tie_split": 298
+      },
+      "assessment_states": {
+        "(4.5,6)": 1,
+        "(5,6.5)": 5,
+        "(6,5)": 1,
+        "(6,6)": 123,
+        "(6,6.5)": 145,
+        "(6.5,5)": 4,
+        "(6.5,6)": 160,
+        "(6.5,6.5)": 501
+      }
+    }
+  },
+  "leading_indicator": {
+    "four_arm_model_chosen_start": {
+      "natural": {
+        "round0_welfare": {
+          "tie": [
+            311.1111111111111
+          ],
+          "capture": [
+            311.1111111111111
+          ]
+        },
+        "n": {
+          "tie": 18,
+          "capture": 25
+        },
+        "mean_assessment_welfare": {
+          "tie": 311.1111111111111,
+          "capture": 283.1694444444445
+        },
+        "assessment_welfare_ci95": {
+          "tie": [
+            311.1111111111111,
+            311.1111111111111
+          ],
+          "capture": [
+            280.8846841279772,
+            285.45420476091175
+          ]
+        },
+        "trajectories_mostly_at_m6.5": {
+          "tie": 0,
+          "capture": 24
+        },
+        "capture_minus_tie_welfare": -27.941666666666606,
+        "welch_95": [
+          -30.22642698313389,
+          -25.65690635019932
+        ],
+        "permutation_p": 4.999750012499375e-05,
+        "fisher_p_mostly_m6.5": 3.123155652246714e-11
+      },
+      "hide_own": {
+        "round0_welfare": {
+          "tie": [
+            311.1111111111111
+          ],
+          "capture": [
+            311.1111111111111
+          ]
+        },
+        "n": {
+          "tie": 28,
+          "capture": 15
+        },
+        "mean_assessment_welfare": {
+          "tie": 308.9236111111111,
+          "capture": 282.0416666666667
+        },
+        "assessment_welfare_ci95": {
+          "tie": [
+            306.218741650039,
+            311.62848057218315
+          ],
+          "capture": [
+            281.85111111111115,
+            282.2322222222222
+          ]
+        },
+        "trajectories_mostly_at_m6.5": {
+          "tie": 2,
+          "capture": 15
+        },
+        "capture_minus_tie_welfare": -26.8819444444444,
+        "welch_95": [
+          -29.593517829251343,
+          -24.170371059637457
+        ],
+        "permutation_p": 4.999750012499375e-05,
+        "fisher_p_mostly_m6.5": 8.974963084877399e-10
+      },
+      "hide_rival": {
+        "round0_welfare": {
+          "tie": [
+            311.1111111111111
+          ],
+          "capture": [
+            311.1111111111111
+          ]
+        },
+        "n": {
+          "tie": 27,
+          "capture": 12
+        },
+        "mean_assessment_welfare": {
+          "tie": 310.84104938271605,
+          "capture": 308.68055555555554
+        },
+        "assessment_welfare_ci95": {
+          "tie": [
+            310.3117283950617,
+            311.3703703703704
+          ],
+          "capture": [
+            303.9166666666667,
+            313.4444444444444
+          ]
+        },
+        "trajectories_mostly_at_m6.5": {
+          "tie": 0,
+          "capture": 1
+        },
+        "capture_minus_tie_welfare": -2.160493827160508,
+        "welch_95": [
+          -6.953699232069659,
+          2.632711577748643
+        ],
+        "permutation_p": 0.31008449577521124,
+        "fisher_p_mostly_m6.5": 0.3076923076923077
+      },
+      "hide_both": {
+        "round0_welfare": {
+          "tie": [
+            311.1111111111111
+          ],
+          "capture": [
+            311.1111111111111
+          ]
+        },
+        "n": {
+          "tie": 29,
+          "capture": 15
+        },
+        "mean_assessment_welfare": {
+          "tie": 295.78783524904213,
+          "capture": 297.1666666666667
+        },
+        "assessment_welfare_ci95": {
+          "tie": [
+            294.82623159057175,
+            296.7494389075125
+          ],
+          "capture": [
+            295.3226032856826,
+            299.0107300476508
+          ]
+        },
+        "trajectories_mostly_at_m6.5": {
+          "tie": 17,
+          "capture": 7
+        },
+        "capture_minus_tie_welfare": 1.3788314176245535,
+        "welch_95": [
+          -0.7008924460337993,
+          3.4585552812829063
+        ],
+        "permutation_p": 0.1641917904104795,
+        "fisher_p_mostly_m6.5": 0.5315914509279925
+      }
+    },
+    "replication_programmed_start": {
+      "natural": {
+        "round0_welfare": {
+          "tie": [
+            311.1111111111111
+          ],
+          "capture": [
+            311.1111111111111
+          ]
+        },
+        "n": {
+          "tie": 48,
+          "capture": 93
+        },
+        "mean_assessment_welfare": {
+          "tie": 311.1111111111111,
+          "capture": 310.9072580645161
+        },
+        "assessment_welfare_ci95": {
+          "tie": [
+            311.1111111111111,
+            311.1111111111111
+          ],
+          "capture": [
+            310.50770609318994,
+            311.30681003584226
+          ]
+        },
+        "trajectories_mostly_at_m6.5": {
+          "tie": 0,
+          "capture": 1
+        },
+        "capture_minus_tie_welfare": -0.20385304659498615,
+        "welch_95": [
+          -0.6034050179211506,
+          0.19569892473117834
+        ],
+        "permutation_p": 1.0,
+        "fisher_p_mostly_m6.5": 1.0
+      },
+      "hide_rival": {
+        "round0_welfare": {
+          "tie": [
+            311.1111111111111
+          ],
+          "capture": [
+            311.1111111111111
+          ]
+        },
+        "n": {
+          "tie": 48,
+          "capture": 93
+        },
+        "mean_assessment_welfare": {
+          "tie": 311.1111111111111,
+          "capture": 311.1111111111111
+        },
+        "assessment_welfare_ci95": {
+          "tie": [
+            311.1111111111111,
+            311.1111111111111
+          ],
+          "capture": [
+            311.1111111111111,
+            311.1111111111111
+          ]
+        },
+        "trajectories_mostly_at_m6.5": {
+          "tie": 0,
+          "capture": 0
+        },
+        "capture_minus_tie_welfare": 0.0,
+        "welch_95": [
+          0.0,
+          0.0
+        ],
+        "permutation_p": 1.0,
+        "fisher_p_mostly_m6.5": 1.0
+      }
+    }
+  },
+  "blindness_metric": [
+    {
+      "study": "controlled-initial (original)",
+      "contrast": "LH: natural vs hide-rival",
+      "tv_ordered_state": 0.8875,
+      "tv_welfare": 0.02083333333333335,
+      "blind_share": 0.9765258215962441
+    },
+    {
+      "study": "controlled-initial (original)",
+      "contrast": "HL: natural vs hide-rival",
+      "tv_ordered_state": 0.853125,
+      "tv_welfare": 0.02708333333333334,
+      "blind_share": 0.9682539682539683
+    },
+    {
+      "study": "controlled-initial (replication)",
+      "contrast": "LH: natural vs hide-rival",
+      "tv_ordered_state": 0.8239130434782609,
+      "tv_welfare": 0.0,
+      "blind_share": 1.0
+    },
+    {
+      "study": "controlled-initial (replication)",
+      "contrast": "HL: natural vs hide-rival",
+      "tv_ordered_state": 0.8489361702127659,
+      "tv_welfare": 0.013829787234042577,
+      "blind_share": 0.9837092731829573
+    },
+    {
+      "study": "four-arm (model-chosen start)",
+      "contrast": "natural vs hide-rival",
+      "tv_ordered_state": 0.40652173913043477,
+      "tv_welfare": 0.40652173913043477,
+      "blind_share": 0.0
+    },
+    {
+      "study": "four-arm (model-chosen start)",
+      "contrast": "hide-own vs hide-both",
+      "tv_ordered_state": 0.41371415356151714,
+      "tv_welfare": 0.10881128584643851,
+      "blind_share": 0.736989211247135
+    }
+  ],
+  "notes": [
+    "Round-0 prompts are identical across four-arm arms, so round-0 states are model draws; the tie-versus-capture comparison is observational within arm.",
+    "Trajectories within an arm come from different blocks and are treated as independent; assessment rounds are aggregated within trajectory first.",
+    "blind_share = 1 - TV(welfare)/TV(ordered state): the share of the between-arm distributional difference that a welfare-only monitor cannot see. Rounds repeat within trajectories, so TV values are descriptive."
+  ]
+}

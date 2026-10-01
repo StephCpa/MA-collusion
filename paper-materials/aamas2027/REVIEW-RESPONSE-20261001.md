@@ -29,7 +29,7 @@ which also reproduces every frozen number exactly:
 
 The structural decision rule is met. The welfare-equivalence decision stays
 inconclusive: the completion range for J, [−4.891, 5.688], exceeds δ_W = 5. The
-replication now appears in the abstract, the contributions, §4.3, §5.4, Table 4,
+replication now appears in the abstract, the contributions, §4.3, §5.4, Table 3,
 Figure 2 and the limitations. It is described as within-deployment (same alias
 and fingerprint on all 21,982 logged calls), not cross-model. The amended
 execution is disclosed, including the interim-result inspection before the
@@ -44,11 +44,11 @@ continuation.
 | 3 | Class collapse: 100 → 10, the 6.5 class a singleton, HHI spanning 0.50–1.00. | The full 10-class table is generated with exact rational arithmetic. In Table 1, the "HHI range 0.50–1.00" column, which implied a continuum, became "HHI values {0.50, 1.00}" ({0.50} for the singleton). | `analysis/observability-certificate.md`, Table 1 |
 | 4 | T3 direction: HHI 1.0 is capture, HHI 0.5 is equal division (the cartel-like pattern). | T3 is split into **T3a capture concentration** and **T3b market division**. Results and the Discussion report direction: under natural display the asymmetric cells move from T3a toward T3b. | §3.2, Table 2, §5.1, §6 |
 | 5 | T1 wording: "structurally unidentified in 3 of 4 cells". | **Partly withdrawn.** Randomization identifies the welfare treatment effect in every cell, so "unidentified" was too strong. What is limited is the support, which is pinned at m ∈ {6.0, 6.5}. The manuscript keeps the accurate wording: "estimable under the block design; … small because assessment-window support is pinned". | Table 2 |
-| 6 | T4 is vacuous at the current operating point because both observed symmetric states lie above the 5.5 joint-profit optimum. | Added an arithmetic **operating-point gate** with three conditions: (i) the tie beats grid-Nash, (ii) a profitable deviation exists, and (iii) the tie is at or below the joint-profit price. The observed 6.0/6.5 ties and the X2 (6.0, 6.0) prelude pass (i)–(ii) and fail (iii). At (6.0, 6.0) the forced 5.5 is both the best one-shot deviation and the joint-profit price. Condition (iii) is stated as a design condition, not a theorem, because repeated-game arguments can sustain ties above the joint-profit price. The ties at 2.5–5.5 pass the gate. | §3.2, Table 2, §5.7, §6, Conclusion; gate table in `observability-certificate.md` |
+| 6 | T4 is vacuous at the current operating point because both observed symmetric states lie above the 5.5 joint-profit optimum. | Added an arithmetic **operating-point gate** with three conditions: (i) the tie beats grid-Nash, (ii) a profitable deviation exists, and (iii) the tie is at or below the joint-profit price. The observed 6.0/6.5 ties and the X2 (6.0, 6.0) prelude pass (i)–(ii) and fail (iii). At (6.0, 6.0) the forced 5.5 is both the best one-shot deviation and the joint-profit price. Condition (iii) is stated as a design condition, not a theorem, because repeated-game arguments can sustain ties above the joint-profit price. The ties at 2.5–5.5 pass the gate. | §3.2, Table 2, §5.8, §6, Conclusion; gate table in `observability-certificate.md` |
 | 7a | The validator hard-codes substantive findings. | `tools/check_materials.py` derives every quoted number from its analysis JSON and fails on drift. A negative test confirmed that it catches changed numbers, missing citations and private paths. | `tools/check_materials.py` |
 | 7b | The certificate is not tied to recorded data. | All 11,375 recorded rounds of the replication ledger were re-settled, with 0 mismatches. | §4.5, certificate |
-| 7c | Doc/manifest drift (the HHI 0.56–0.57 range is absent from the manifest). | HHI is exactly 1 − E/2 under tie-split, so it no longer appears as an independent result. The HHI panel was removed from Figure 2, and Table 4 omits HHI with a caption explaining why. Manuscript numbers are now gated against the analysis files. | Fig. 2, Table 4, `check_materials.py` |
-| 7d | The gates lack a positive control and a minimum detectable effect. | The X2 design sensitivity is now stated (interactions of about 0.25–0.35 or larger). The hidden-rival X2 arms are identified as a structural negative control, because the shock is not displayed and N1 vs N0 is the informative contrast. A positive control for a T4 test needs a new paid run, so it is listed as an author action (A6). | §4.6, §5.7 |
+| 7c | Doc/manifest drift (the HHI 0.56–0.57 range is absent from the manifest). | HHI is exactly 1 − E/2 under tie-split, so it no longer appears as an independent result. The HHI panel was removed from Figure 2, and Table 3 omits HHI with a caption explaining why. Manuscript numbers are now gated against the analysis files. | Fig. 2, Table 3, `check_materials.py` |
+| 7d | The gates lack a positive control and a minimum detectable effect. | The X2 design sensitivity is now stated (interactions of about 0.25–0.35 or larger). The hidden-rival X2 arms are identified as a structural negative control, because the shock is not displayed and N1 vs N0 is the informative contrast. A positive control for a T4 test needs a new paid run, so it is listed as an author action (A6). | §4.6, §5.8 |
 | 7e | The E0–E4 tiers are unused. | Not added to the paper (page budget). T1–T4 plus the gate carry the claim boundary. The target-map document (not in this repository) should either map E0–E4 onto T1–T4 or drop them. | — |
 | 7f | `closed_loop` flag missing. | The paper now separates closed-loop studies (controlled-initial, replication, X2) from single-shot ones (fixed-history, X1) in §4. The flag itself belongs in the target-map manifest, which is not in this repository. | §4 |
 
@@ -79,7 +79,7 @@ continuation.
 | E15 | The supplement still carried E7 and the 0.974 Wilson wording in its evidence-to-claim audit. | Supplement v0.2 built with corrections, the replication ledger and the new tools, plus a regenerated SHA-256 manifest. v0.1 is kept unchanged. |
 
 The page budget holds: the staging PDF is 8 pages including references, with no
-overfull boxes and all citations resolved. The abstract is 242 words.
+overfull boxes and all citations resolved. The abstract is 250 words (after the follow-up revision below).
 
 ## Requires author action (not done here)
 

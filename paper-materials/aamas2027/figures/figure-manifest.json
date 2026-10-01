@@ -30,13 +30,28 @@
       ]
     },
     {
-      "id": "fig3",
+      "id": "fig3-original-retired",
       "files": [
         "fig3-transition-direction.png",
         "fig3-transition-direction.pdf"
       ],
-      "caption": "Observed downward and upward tie-formation events; repeated events are not independent samples."
+      "caption": "Observed downward and upward tie-formation events; repeated events are not independent samples.",
+      "note": "Original-run tie-formation counts; retained for the supplement, not used in the manuscript since 2026-10-01."
+    },
+    {
+      "id": "fig3",
+      "files": [
+        "fig3-direction-and-leading-indicator.png",
+        "fig3-direction-and-leading-indicator.pdf"
+      ],
+      "caption": "Matching direction (programmed vs model-chosen starts) and assessment welfare after welfare-equal tie and capture starts.",
+      "generated": "2026-10-01",
+      "generator": "tools/build_fig3_direction.py",
+      "source_files": [
+        "analysis/A-confirmation-structural-20261001.json",
+        "analysis/four-arm-leading-indicator-20261001.json"
+      ]
     }
   ],
-  "not_inferential": "Figure 3 is a descriptive summary; Figure 2 shows registered and block-paired intervals already reported in the text, with completion ranges as missing-outcome bounds. No new statistical test is introduced."
+  "not_inferential": "Figure 3 is descriptive and post hoc; Figure 2 shows registered and block-paired intervals already reported in the text, with completion ranges as missing-outcome bounds. No new confirmatory test is introduced."
 }

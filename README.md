@@ -13,11 +13,13 @@ This repository contains the anonymous, paper-facing materials for the AAMAS
   qualifications, offline baseline reports, the settlement observability
   certificate and the Candidate A structural analysis.
 - `paper-materials/aamas2027/data/`: the Candidate A analysis, status and
-  trajectory ledger.
+  trajectory ledger, and the four-arm history-channel ledger and analysis.
 - `paper-materials/aamas2027/protocols/`: confirmation and mechanism protocols.
 - `paper-materials/aamas2027/tools/`: offline scripts that regenerate the
-  certificate, the Candidate A analysis and Figure 2, plus a consistency gate.
-- `paper-materials/aamas2027/aamas2027-supplement-v0.2.zip`: anonymous
+  certificate, the Candidate A analysis, the four-arm leading-indicator and
+  blindness analysis, the settlement generalization, the Q-learning baseline
+  and Figures 2–3, plus a consistency gate.
+- `paper-materials/aamas2027/aamas2027-supplement-v0.3.zip`: anonymous
   supplementary package for review (v0.1 is kept unchanged for provenance).
 - `paper-materials/aamas2027/REVIEW-RESPONSE-20261001.md`: response to the
   latest review and the list of corrections in this revision.
@@ -48,7 +50,11 @@ All checks are offline and make no provider calls. From the repository root
 ```text
 python paper-materials/aamas2027/tools/observability_certificate.py --check --write
 python paper-materials/aamas2027/tools/candidate_a_structural.py --check --write
+python paper-materials/aamas2027/tools/four_arm_leading_indicator.py --check --write
+python paper-materials/aamas2027/tools/settlement_generalization.py --check --write
+python paper-materials/aamas2027/tools/qlearning_baseline.py --write      # about 15 minutes
 python paper-materials/aamas2027/tools/build_fig2_replication.py
+python paper-materials/aamas2027/tools/build_fig3_direction.py
 python paper-materials/aamas2027/tools/check_materials.py
 ```
 
