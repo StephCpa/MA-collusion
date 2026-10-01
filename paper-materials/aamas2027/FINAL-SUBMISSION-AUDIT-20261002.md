@@ -17,7 +17,7 @@ resource or an author decision.
 | Four-arm leading indicator | `tools/four_arm_leading_indicator.py --check` | natural capture-minus-tie welfare `-27.942`; blindness metrics reproduced |
 | Classical-agent baseline | `tools/qlearning_baseline.py --render-only` | seeded offline output reproduced; explicitly non-LLM baseline, not pooled with manuscript estimates |
 | Manuscript compilation | local `pdflatex` + BibTeX, three LaTeX passes | 8 pages; no undefined citations/references or overfull boxes |
-| Citation-key integrity | offline extraction of `\\cite{}` keys against the BibTeX file | 25 cited keys, 25 bibliography entries; no missing or uncited entries |
+| Citation-key integrity | offline extraction of `\\cite{}` keys against the BibTeX file plus isolated three-pass LaTeX/BibTeX compile | 25 cited keys, 25 bibliography entries; final pass has no undefined citations/references; BibTeX reports only nonfatal missing publisher/address/page metadata for some proceedings |
 | Claim-evidence matrix integrity | `tools/check_claim_evidence_matrix.py` | 5 claims; all statuses valid and all referenced evidence paths exist |
 | Scope/overclaim scan | manual term scan of manuscript for collusion, causal, false-negative and equilibrium claims | no unqualified upgrade found; strategic and general-monitoring claims remain explicitly bounded |
 | Figure-source integrity | LaTeX `\\includegraphics` paths checked against `figures/` | all 4 manuscript PDFs exist; corresponding PNG/source manifests are present |
