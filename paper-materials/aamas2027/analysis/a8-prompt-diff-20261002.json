@@ -1,0 +1,28 @@
+{
+  "title": "Offline round-1 prompt-difference diagnostic",
+  "date": "2026-10-02",
+  "provider_calls": 0,
+  "comparison": {
+    "four_arm_natural_round1_requests": 94,
+    "controlled_hh_natural_round1_requests": 74,
+    "controlled_reference_initial_state": "HH",
+    "four_arm_initial_state_counts": {
+      "HH": 6,
+      "LL": 38,
+      "LH": 25,
+      "HL": 25
+    }
+  },
+  "matched_initial_state": {
+    "n": 6,
+    "raw_user_message_equal": 0,
+    "semantic_json_equal": 0,
+    "equal_after_numeric_serialization_normalization": 6,
+    "difference": "textual integer-versus-float rendering in the constraint field only",
+    "system_message_equal": true,
+    "model_options_equal": true,
+    "tool_schema_equal": true
+  },
+  "interpretation": "The observed matching-direction reversal is not explained by an additional prompt-content or prompt-length difference conditional on a matched initial state. The remaining comparison is across model-chosen versus programmed initial states and is not identified by this diagnostic.",
+  "provenance_note": "Derived from sealed local request logs; raw request logs are intentionally not included in the public material package."
+}

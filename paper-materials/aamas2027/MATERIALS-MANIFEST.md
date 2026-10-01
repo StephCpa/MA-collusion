@@ -28,6 +28,7 @@
 - four-arm reproduction, leading-indicator test and monitor-blindness metric (`analysis/four-arm-leading-indicator-20261001.*`, new);
 - settlement generalization to 3–4 sellers and captive consumers (`analysis/settlement-generalization-20261001.*`, new);
 - Q-learning classical-agent baseline under the four display arms (`analysis/qlearning-baseline-20261001.*`, new).
+- A8 offline round-1 prompt-difference diagnostic (`analysis/a8-prompt-diff-20261002.*`, derived from sealed local request logs; raw requests excluded).
 
 ## Data
 
