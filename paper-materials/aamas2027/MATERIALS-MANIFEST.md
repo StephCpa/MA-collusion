@@ -31,6 +31,7 @@
 - settlement generalization to 3–4 sellers and captive consumers (`analysis/settlement-generalization-20261001.*`, new);
 - Q-learning classical-agent baseline under the four display arms (`analysis/qlearning-baseline-20261001.*`, new).
 - A8 offline round-1 prompt-difference diagnostic (`analysis/a8-prompt-diff-20261002.*`, derived from sealed local request logs; raw requests excluded).
+- Exact block-sign robustness check for the registered structural primary (`analysis/structural-sign-test-20261002.*`); descriptive only and kept separate from the registered interval.
 
 ## Data
 
@@ -55,7 +56,7 @@
 
 - Candidate A independent-confirmation protocol (execution status note added; frozen text preserved);
 - B1--B4 feedback-surface 2x2 protocol;
-- anonymous AAMAS supplementary ZIP v0.3 (refreshed 2026-10-02; 97 archive entries, 1.34 MB compressed) and v0.1 (unchanged, for provenance); v0.2 is superseded and remains in git history. JSON artifacts in the public ZIP are recursively stripped of provider request IDs, logical request IDs and system fingerprints.
+- anonymous AAMAS supplementary ZIP v0.3 (refreshed 2026-10-02; 99 archive entries, 1.34 MB compressed) and v0.1 (unchanged, for provenance); v0.2 is superseded and remains in git history. JSON artifacts in the public ZIP are recursively stripped of provider request IDs, logical request IDs and system fingerprints.
 
 ## Review response
 

@@ -9,6 +9,7 @@ resource or an author decision.
 | item | evidence | result |
 |---|---|---|
 | Offline statistical and structural checks | `tools/check_materials.py` | `passed=true`, `failures=0` |
+| Structural-primary sign robustness | `analysis/structural-sign-test-20261002.*` | 42/42 positive block signs; exact two-sided sign probability `4.547e-13`; descriptive only |
 | Manuscript compilation | local `pdflatex` + BibTeX, three LaTeX passes | 8 pages; no undefined citations/references or overfull boxes |
 | Anonymity scan | `check_materials.py` plus PDF text inspection | anonymous author line only; no private path, key or named repository in candidate text |
 | Public JSON metadata | `tools/sanitize_request_metadata.py` and `tools/sanitize_four_arm_ledger.py` | provider request IDs, logical request IDs and system fingerprints removed |

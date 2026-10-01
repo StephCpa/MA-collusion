@@ -1,0 +1,10 @@
+{
+  "source": "analysis/A-confirmation-structural-20261001.json",
+  "estimand": "D_tie: natural minus hide_rival equal-price fraction, rounds 10-29, averaged over LH and HL",
+  "complete_blocks": 42,
+  "positive_blocks": 42,
+  "zero_blocks": 0,
+  "negative_blocks": 0,
+  "exact_two_sided_sign_p": 4.547473508864641e-13,
+  "interpretation": "Descriptive robustness check on the registered block signs; it does not replace the registered block-t interval or completion-range analysis."
+}
