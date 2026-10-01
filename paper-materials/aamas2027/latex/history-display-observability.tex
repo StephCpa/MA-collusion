@@ -16,6 +16,9 @@
 \usepackage{enumitem}
 \usepackage{balance}
 \usepackage{url}
+% The current AAMAS template defines \Description for accessible figures;
+% retain a no-op fallback for older local acmart installations used in CI.
+\providecommand{\Description}[1]{}
 \graphicspath{{../figures/}}
 
 \title{When Aggregate Welfare Misses Joint-Action Structure in Multi-Agent Pricing}
