@@ -11,6 +11,10 @@ resource or an author decision.
 | Offline statistical and structural checks | `tools/check_materials.py` | `passed=true`, `failures=0` |
 | Repository test suite | `pytest -q` from the project root | 386 passed in 65.31 s |
 | Structural-primary sign robustness | `analysis/structural-sign-test-20261002.*` | 42/42 positive block signs; exact two-sided sign probability `4.547e-13`; descriptive only |
+| Observability certificate | `tools/observability_certificate.py --check` | 10 T1 classes; 11,375 ledger rounds re-settled; separating observables enumerated |
+| Candidate A reproduction | `tools/candidate_a_structural.py --check` | `D_tie=0.830`; block-t 95% `[0.743, 0.917]`; completion range `[0.792, 0.841]` |
+| Four-arm leading indicator | `tools/four_arm_leading_indicator.py --check` | natural capture-minus-tie welfare `-27.942`; blindness metrics reproduced |
+| Classical-agent baseline | `tools/qlearning_baseline.py --render-only` | seeded offline output reproduced; explicitly non-LLM baseline, not pooled with manuscript estimates |
 | Manuscript compilation | local `pdflatex` + BibTeX, three LaTeX passes | 8 pages; no undefined citations/references or overfull boxes |
 | Anonymity scan | `check_materials.py` plus PDF text inspection | anonymous author line only; no private path, key or named repository in candidate text |
 | Public JSON metadata | `tools/sanitize_request_metadata.py` and `tools/sanitize_four_arm_ledger.py` | provider request IDs, logical request IDs and system fingerprints removed |
