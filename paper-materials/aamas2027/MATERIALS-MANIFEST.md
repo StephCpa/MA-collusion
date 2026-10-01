@@ -49,6 +49,7 @@
 - `tools/qlearning_baseline.py` — seeded Q-learning baseline under the four display arms, with programmed-start and impulse evaluations.
 - `tools/sanitize_controlled_initial_ledger.py`, `tools/controlled_initial_descriptives.py` and `tools/build_original_descriptive_figures.py` — create, summarize and visualize the public controlled-initial ledger without provider metadata.
 - `tools/sanitize_four_arm_ledger.py` and `tools/sanitize_request_metadata.py` — remove provider request IDs, logical request IDs and system fingerprints while retaining fields required by the offline checks.
+- `tools/verify_supplement.py` — independently verifies ZIP manifest hashes and the public request-metadata policy.
 - `tools/build_fig3_direction.py` — regenerates Figure 3.
 - `tools/check_materials.py` — manuscript-to-analysis number check, citation/figure check, anonymity scan, optional PDF page/overfull check.
 
@@ -57,7 +58,7 @@
 - `SUPPLEMENT-README-v0.3.md` — source copy of the anonymous ZIP README, kept synchronized with the current package contents and sanitization policy;
 - Candidate A independent-confirmation protocol (execution status note added; frozen text preserved);
 - B1--B4 feedback-surface 2x2 protocol;
-- anonymous AAMAS supplementary ZIP v0.3 (refreshed 2026-10-02; 99 archive entries, 1.34 MB compressed) and v0.1 (unchanged, for provenance); v0.2 is superseded and remains in git history. JSON artifacts in the public ZIP are recursively stripped of provider request IDs, logical request IDs and system fingerprints.
+- anonymous AAMAS supplementary ZIP v0.3 (refreshed 2026-10-02; 100 archive entries, 1.34 MB compressed) and v0.1 (unchanged, for provenance); v0.2 is superseded and remains in git history. JSON artifacts in the public ZIP are recursively stripped of provider request IDs, logical request IDs and system fingerprints.
 
 ## Review response
 

@@ -34,6 +34,7 @@ python tools/build_fig3_direction.py
 python research/x1_best_response_probe.py --offline-selftest
 python research/x2_forced_deviation.py --selftest
 python research/qualify_x1_x2_statistics.py
+python tools/verify_supplement.py aamas2027-supplement-v0.3.zip
 ```
 
 The live runners are included for provenance but require an explicitly
