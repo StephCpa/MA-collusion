@@ -1,0 +1,65 @@
+{
+  "planned_blocks": 48,
+  "complete_blocks": 44,
+  "inference_unit": "four-arm block",
+  "interval_scope": "complete blocks only; no missingness correction",
+  "contrasts": {
+    "hide_own_marginal": {
+      "complete_mean": -2.4431818181818516,
+      "complete_bootstrap_interval": [
+        -6.902659406565713,
+        2.044704861111099
+      ],
+      "planned_completion_bounds": [
+        -8.934461805555578,
+        1.5603298611110876
+      ],
+      "complete_primary_interval": [
+        -7.119965414344696,
+        2.23360177798099
+      ],
+      "complete_direction_positive": false
+    },
+    "hide_rival_marginal": {
+      "complete_mean": 4.053030303030308,
+      "complete_bootstrap_interval": [
+        -0.12079782196970991,
+        8.146306818181841
+      ],
+      "planned_completion_bounds": [
+        -0.896267361111116,
+        9.598524305555552
+      ],
+      "complete_primary_interval": [
+        -0.31391842729968733,
+        8.41997903336026
+      ],
+      "complete_direction_positive": false
+    },
+    "interaction": {
+      "complete_mean": -14.034090909090997,
+      "complete_bootstrap_interval": [
+        -22.05654198232336,
+        -5.667613636363692
+      ],
+      "planned_completion_bounds": [
+        -24.51822916666676,
+        -3.5286458333334196
+      ],
+      "complete_primary_interval": [
+        -22.678314518640022,
+        -5.38986729954191
+      ],
+      "complete_direction_positive": false
+    }
+  },
+  "analysis_version": "history-channel-v021-replacement",
+  "primary_interval": "block_t_bonferroni_with_zero_variance_support_fallback",
+  "planning_effect": 3.0,
+  "directional_decision_threshold": 0.0,
+  "bootstrap_role": "sensitivity_only",
+  "not_registered": false,
+  "registration": "C:\\work\\博士整理\\多智能体共谋\\artifacts\\history-channel-formal\\20260922-deepseek-flash-v021\\registration.json",
+  "stop_reason": "unclassified_error",
+  "accounted_or_reserved_cny": 20.596208
+}
