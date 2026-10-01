@@ -1,7 +1,7 @@
 # Delivery status — 2026-10-02
 
 The audited submission candidate is available locally on branch
-`submission-candidate-20261002`, latest commit `aa93e47`, with a clean working
+`submission-candidate-20261002`, latest commit `8b1f1c8`, with a clean working
 tree and a passing materials check.
 
 An authorized push to the existing GitHub remote was attempted on 2026-10-02

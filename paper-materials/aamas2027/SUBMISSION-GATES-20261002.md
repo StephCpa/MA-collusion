@@ -11,11 +11,12 @@ It is not a claim that every gate is closed.
 | A4: original controlled-initial raw ledger/builder | partial, substantially resolved | A metadata-free 384-cell ledger, descriptive summarizer and a public replacement figure builder are now included. The private raw request archive and original `build_paper_figures_20260928.py` remain excluded; the original figure counts are still marked as frozen descriptive evidence. |
 | A5: original completion-range support convention | partial | The numerical convention is now reconstructed and documented in `analysis/completion-range-convention-20261002.md`; the original dated pre-analysis selection record is still missing. |
 | A6: gate-passing T4 positive-control run | intentionally not run | Not required for the bounded observability paper. Requires a new paid run and explicit approval if a strategic-maintenance claim is added. |
-| A7: provider request IDs | author decision | Keep them in the private ledger; omit or pseudonymize them in any public supplement unless reviewers specifically need them. |
+| A7: provider request IDs | closed for public package | Provider request IDs, logical request IDs and system fingerprints were removed from the public JSON artifacts and supplement ZIP. Internal raw ledgers remain outside the candidate package. |
 | A8: round-1 prompt comparison | complete | Sanitized result is in `analysis/a8-prompt-diff-20261002.*`; the reversal remains an initial-state/generalization question. |
 
 ## Current package state
 
 The staging source remains an eight-page, double-blind `acmart` build. The
-submission candidate branch has passed `tools/check_materials.py` with zero
-failures, but it is not the final official-template build.
+candidate branch has passed `tools/check_materials.py` with zero failures and
+was compiled locally after adding a compatibility fallback for `\\Description`,
+but it is not the final official-template build.
