@@ -21,6 +21,7 @@ resource or an author decision.
 | Claim-evidence matrix integrity | `tools/check_claim_evidence_matrix.py` | 5 claims; all statuses valid and all referenced evidence paths exist |
 | Scope/overclaim scan | manual term scan of manuscript for collusion, causal, false-negative and equilibrium claims | no unqualified upgrade found; strategic and general-monitoring claims remain explicitly bounded |
 | Figure-source integrity | LaTeX `\\includegraphics` paths checked against `figures/` | all 4 manuscript PDFs exist; corresponding PNG/source manifests are present |
+| PDF delivery check | `pdfinfo` and `pdftotext` on staging PDF | 8 pages, 632,823 bytes; framework, primary estimates, bounded conclusion and references are text-extractable |
 | Anonymity scan | `check_materials.py` plus PDF text inspection | anonymous author line only; no private path, key or named repository in candidate text |
 | Public JSON metadata | `tools/sanitize_request_metadata.py` and `tools/sanitize_four_arm_ledger.py` | provider request IDs, logical request IDs and system fingerprints removed |
 | Supplement integrity | `aamas2027-supplement-v0.3.zip/package-manifest.json` and `tools/verify_supplement.py` | 105 archive entries, 104 manifest files, zero hash/size mismatches and zero metadata-key hits |
