@@ -379,6 +379,13 @@ def render_md(r: dict) -> str:
 
 
 def main() -> int:
+    # Keep diagnostics printable on Windows locales whose default console
+    # codec is GBK. Reports are written as UTF-8 below; this only affects the
+    # terminal stream.
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if reconfigure is not None:
+            reconfigure(encoding="utf-8", errors="replace")
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--sessions", type=int, default=200)
     parser.add_argument("--steps", type=int, default=2_000_000)
