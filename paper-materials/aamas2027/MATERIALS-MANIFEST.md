@@ -53,7 +53,7 @@
 
 - Candidate A independent-confirmation protocol (execution status note added; frozen text preserved);
 - B1--B4 feedback-surface 2x2 protocol;
-- anonymous AAMAS supplementary ZIP v0.3 (current) and v0.1 (unchanged, for provenance); v0.2 is superseded and remains in git history.
+- anonymous AAMAS supplementary ZIP v0.3 (refreshed 2026-10-02; 92 archive entries, 2.16 MB compressed) and v0.1 (unchanged, for provenance); v0.2 is superseded and remains in git history.
 
 ## Review response
 
