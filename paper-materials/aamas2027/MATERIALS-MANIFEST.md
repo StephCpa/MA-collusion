@@ -12,6 +12,7 @@
 - `figures/fig2-welfare-versus-structure.*` (regenerated 2026-10-01 with the replication; `tools/build_fig2_replication.py`)
 - `figures/fig3-direction-and-leading-indicator.*` (new 2026-10-01; `tools/build_fig3_direction.py`)
 - `figures/fig3-transition-direction.*` (original-run counts; retired from the manuscript, kept for the supplement)
+- `figures/original-controlled-initial-descriptives.*` (regenerated from the public metadata-free ledger; descriptive only)
 - `figures/framework-observability.*`
 - accompanying captions and figure manifests.
 
@@ -45,7 +46,7 @@
 - `tools/four_arm_leading_indicator.py` — reproduces the registered four-arm contrasts, runs the leading-indicator test and the blindness metric.
 - `tools/settlement_generalization.py` — exact welfare-blindness arithmetic for more sellers and captive consumers.
 - `tools/qlearning_baseline.py` — seeded Q-learning baseline under the four display arms, with programmed-start and impulse evaluations.
-- `tools/sanitize_controlled_initial_ledger.py` and `tools/controlled_initial_descriptives.py` — create and summarize the public controlled-initial ledger without provider metadata.
+- `tools/sanitize_controlled_initial_ledger.py`, `tools/controlled_initial_descriptives.py` and `tools/build_original_descriptive_figures.py` — create, summarize and visualize the public controlled-initial ledger without provider metadata.
 - `tools/build_fig3_direction.py` — regenerates Figure 3.
 - `tools/check_materials.py` — manuscript-to-analysis number check, citation/figure check, anonymity scan, optional PDF page/overfull check.
 
@@ -53,7 +54,7 @@
 
 - Candidate A independent-confirmation protocol (execution status note added; frozen text preserved);
 - B1--B4 feedback-surface 2x2 protocol;
-- anonymous AAMAS supplementary ZIP v0.3 (refreshed 2026-10-02; 92 archive entries, 2.16 MB compressed) and v0.1 (unchanged, for provenance); v0.2 is superseded and remains in git history.
+- anonymous AAMAS supplementary ZIP v0.3 (refreshed 2026-10-02; 96 archive entries, 2.34 MB compressed) and v0.1 (unchanged, for provenance); v0.2 is superseded and remains in git history.
 
 ## Review response
 
