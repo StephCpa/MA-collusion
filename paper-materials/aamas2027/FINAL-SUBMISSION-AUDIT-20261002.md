@@ -11,6 +11,7 @@ resource or an author decision.
 | Offline statistical and structural checks | `tools/check_materials.py` | `passed=true`, `failures=0` |
 | Repository test suite | `pytest -q` from the project root | 386 passed in 65.31 s |
 | Structural-primary sign robustness | `analysis/structural-sign-test-20261002.*` | 42/42 positive block signs; exact two-sided sign probability `4.547e-13`; descriptive only |
+| Structural leave-one-block-out | `tools/structural_leave_one_block_out.py` | 42 deletion estimates; range `[0.8262, 0.8500]`; all positive |
 | Observability certificate | `tools/observability_certificate.py --check` | 10 T1 classes; 11,375 ledger rounds re-settled; separating observables enumerated |
 | Candidate A reproduction | `tools/candidate_a_structural.py --check` | `D_tie=0.830`; block-t 95% `[0.743, 0.917]`; completion range `[0.792, 0.841]` |
 | Four-arm leading indicator | `tools/four_arm_leading_indicator.py --check` | natural capture-minus-tie welfare `-27.942`; blindness metrics reproduced |
@@ -18,7 +19,7 @@ resource or an author decision.
 | Manuscript compilation | local `pdflatex` + BibTeX, three LaTeX passes | 8 pages; no undefined citations/references or overfull boxes |
 | Anonymity scan | `check_materials.py` plus PDF text inspection | anonymous author line only; no private path, key or named repository in candidate text |
 | Public JSON metadata | `tools/sanitize_request_metadata.py` and `tools/sanitize_four_arm_ledger.py` | provider request IDs, logical request IDs and system fingerprints removed |
-| Supplement integrity | `aamas2027-supplement-v0.3.zip/package-manifest.json` and `tools/verify_supplement.py` | 100 archive entries, 99 manifest files, zero hash/size mismatches and zero metadata-key hits |
+| Supplement integrity | `aamas2027-supplement-v0.3.zip/package-manifest.json` and `tools/verify_supplement.py` | 103 archive entries, 102 manifest files, zero hash/size mismatches and zero metadata-key hits |
 | Offline handoff | `releases/MA-collusion-submission-candidate-20261002.bundle` | verified complete Git bundle; exact commit and SHA-256 are recorded in `releases/README.md` and the adjacent checksum |
 
 The public data therefore supports reproduction of the reported structural,

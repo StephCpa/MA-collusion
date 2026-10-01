@@ -1,0 +1,10 @@
+{
+  "complete_blocks": 42,
+  "full_mean": 0.8303571428571429,
+  "leave_one_out_min": 0.8262195121951219,
+  "leave_one_out_max": 0.85,
+  "leave_one_out_all_positive": true,
+  "most_influential_block": 1,
+  "least_influential_block": 19,
+  "interpretation": "Descriptive sensitivity check; it does not replace the registered block-t interval or completion range."
+}
