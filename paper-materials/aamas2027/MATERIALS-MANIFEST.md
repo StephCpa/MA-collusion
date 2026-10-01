@@ -75,6 +75,7 @@
 - `tools/check_claim_evidence_matrix.py` — verifies that every matrix claim has a valid status, complete boundary fields and existing evidence paths.
 - `AUTHOR-SUBMISSION-DECISIONS-20261002.md` — author-certified submission gate form; intentionally retains unresolved fields as `PENDING`.
 - `RESEARCH-INTERPRETATION-20261002.md` — paper-level synthesis separating established evidence, non-identified claims and a future T4 protocol boundary.
+- `analysis/manuscript-source-divergence-20261002.md` — hash-level audit distinguishing the older workspace draft from the canonical staging source.
 - `NEXT-ACTIONS-20261002.md` — collaborator handoff checklist separating completed work, author decisions and actions that require a new protocol.
 - `INTEGRITY-AUDIT-20261002.md` — claim/evidence, numeric, citation-key and artifact-integrity audit.
 - `DELIVERY-STATUS-20261002.md` — local branch and remote-delivery status.
