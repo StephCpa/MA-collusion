@@ -78,6 +78,7 @@
 - `NEXT-ACTIONS-20261002.md` — collaborator handoff checklist separating completed work, author decisions and actions that require a new protocol.
 - `INTEGRITY-AUDIT-20261002.md` — claim/evidence, numeric, citation-key and artifact-integrity audit.
 - `DELIVERY-STATUS-20261002.md` — local branch and remote-delivery status.
+- The canonical submission manuscript is the staging source under `latex/`; a separate older workspace draft is intentionally not part of the candidate source of truth.
 
 Raw provider request/response logs are excluded by design. The trajectory
 ledger is included because it is the primary data object needed to inspect the

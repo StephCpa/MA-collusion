@@ -16,3 +16,12 @@ git push -u origin submission-candidate-20261002
 
 The public repository must not be linked from a double-blind submission until
 an anonymized mirror is prepared.
+
+## Canonical manuscript location
+
+The submission source of truth is
+`paper-materials/aamas2027/latex/history-display-observability.tex` on this
+candidate branch. A separate workspace copy exists at
+`papers/aamas2027/history-display-observability.tex`; it predates the candidate
+package and is not the submission source. Do not merge edits from that copy
+without an explicit line-by-line review.
