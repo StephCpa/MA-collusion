@@ -60,7 +60,7 @@
 - `SUPPLEMENT-README-v0.3.md` — source copy of the anonymous ZIP README, kept synchronized with the current package contents and sanitization policy;
 - Candidate A independent-confirmation protocol (execution status note added; frozen text preserved);
 - B1--B4 feedback-surface 2x2 protocol;
-- anonymous AAMAS supplementary ZIP v0.3 (refreshed 2026-10-02; 103 archive entries, 1.35 MB compressed) and v0.1 (unchanged, for provenance); v0.2 is superseded and remains in git history. JSON artifacts in the public ZIP are recursively stripped of provider request IDs, logical request IDs and system fingerprints.
+- anonymous AAMAS supplementary ZIP v0.3 (refreshed 2026-10-02; 105 archive entries, 1.35 MB compressed) and v0.1 (unchanged, for provenance); v0.2 is superseded and remains in git history. JSON artifacts in the public ZIP are recursively stripped of provider request IDs, logical request IDs and system fingerprints.
 
 ## Review response
 
@@ -70,6 +70,7 @@
 - `AAMAS-REQUIREMENTS-CHECK-20261002.md` — official submission-rule check, including the AI-assisted methodology disclosure and dual-submission author checks.
 - `analysis/ai-disclosure-evidence-20261002.md` — separates documented experimental-model metadata from author-side AI-assistance fields that still require author certification.
 - `analysis/cross-model-boundary-20261002.md` — records why available Qwen/GLM studies are not pooled with the DeepSeek closed-loop estimand.
+- `analysis/claim-evidence-matrix-20261002.*` — machine-readable scope control linking manuscript claims to reproducing artifacts and interpretation boundaries.
 - `NEXT-ACTIONS-20261002.md` — collaborator handoff checklist separating completed work, author decisions and actions that require a new protocol.
 - `INTEGRITY-AUDIT-20261002.md` — claim/evidence, numeric, citation-key and artifact-integrity audit.
 - `DELIVERY-STATUS-20261002.md` — local branch and remote-delivery status.

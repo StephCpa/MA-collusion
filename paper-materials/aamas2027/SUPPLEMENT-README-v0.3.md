@@ -18,6 +18,7 @@ offline sensitivity analyses and do not replace registered estimands.
 - prompt-difference, leading-indicator and structural sign-robustness analyses;
 - Q-learning baseline, figure builders, protocols and provenance reports;
 - public controlled-initial summaries and figures.
+- claim–evidence matrix tying reported results to reproducing artifacts and explicit interpretation boundaries.
 
 ## Re-run examples
 

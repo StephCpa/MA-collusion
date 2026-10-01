@@ -1,0 +1,44 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Welfare-only observables collapse distinct ordered joint-action states.",
+      "evidence": ["analysis/observability-certificate.json", "tools/observability_certificate.py"],
+      "result": "100 ordered states collapse into 10 T1 classes; seller allocation and equality separate states within classes.",
+      "status": "supported",
+      "boundary": "Settlement-specific; not a general monitor false-negative rate."
+    },
+    {
+      "id": "C2",
+      "claim": "Displaying rival history changes structural persistence while minimum-price welfare can remain nearly unchanged.",
+      "evidence": ["analysis/A-confirmation-structural-20261001.json", "tools/candidate_a_structural.py"],
+      "result": "D_tie=0.830, 95% block-t [0.743, 0.917], completion range [0.792, 0.841].",
+      "status": "supported",
+      "boundary": "Within the tested DeepSeek deployment and registered settlement."
+    },
+    {
+      "id": "C3",
+      "claim": "The registered welfare equivalence conclusion is not identified under the full missing-outcome range.",
+      "evidence": ["analysis/A-confirmation-structural-20261001.json", "analysis/completion-range-convention-20261002.md"],
+      "result": "D_asym and J observed intervals are near zero, but J completion range extends beyond the candidate margin.",
+      "status": "supported",
+      "boundary": "Do not describe this as evidence of zero welfare effect."
+    },
+    {
+      "id": "C4",
+      "claim": "A welfare-equivalent capture state can predict a later welfare loss under model-chosen starts.",
+      "evidence": ["analysis/four-arm-leading-indicator-20261001.json", "tools/four_arm_leading_indicator.py"],
+      "result": "Natural capture-minus-tie assessment welfare is -27.942; the comparison is observational and post hoc.",
+      "status": "supported_as_descriptive",
+      "boundary": "Not a causal mediation claim; programmed-start replication reverses the transition direction."
+    },
+    {
+      "id": "C5",
+      "claim": "The evidence does not establish harmful strategic coordination or collusion.",
+      "evidence": ["analysis/observability-certificate.json", "analysis/qlearning-baseline-20261001.md", "latex/history-display-observability.tex"],
+      "result": "The operating point fails the collusive-surplus gate and the tested forced-deviation probe finds no qualifying response.",
+      "status": "supported_boundary",
+      "boundary": "A T4 claim requires a new gate-passing protocol and counterfactual."
+    }
+  ]
+}
