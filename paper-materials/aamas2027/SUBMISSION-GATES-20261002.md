@@ -5,7 +5,7 @@ It is not a claim that every gate is closed.
 
 | gate | status | evidence / remaining action |
 |---|---|---|
-| A1: pre-launch selection of `delta_W = 5` | open | Attach the dated pre-call selection record, or keep the margin labeled a candidate in the manuscript. |
+| A1: pre-launch selection of `delta_W = 5` | open | A repository-wide search on 2026-10-02 found no dated pre-call selection record. Attach one if it exists elsewhere, or keep the margin labeled a candidate in the manuscript. |
 | A2: official AAMAS template | blocked externally | The organizer ZIP was attempted again on 2026-10-02 and timed out after 45 s. No substitute class was introduced; migrate once the official archive is available. |
 | A3: double-blind repository | open | Do not link the named public repository from an anonymous submission; prepare an anonymized mirror if a supplement URL is required. |
 | A4: original controlled-initial raw ledger/builder | open | Add the ledger and `build_paper_figures_20260928.py`, or explicitly mark the original-run descriptive quantities as frozen-but-not-rederived. |
