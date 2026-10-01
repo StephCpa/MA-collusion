@@ -9,7 +9,7 @@ resource or an author decision.
 | item | evidence | result |
 |---|---|---|
 | Offline statistical and structural checks | `tools/check_materials.py` | `passed=true`, `failures=0` |
-| Repository test suite | `pytest -q` from the project root | 386 passed in 65.31 s |
+| Repository test suite | `pytest -q` from the project root | 386 passed in 64.19 s (2026-10-02 rerun) |
 | Structural-primary sign robustness | `analysis/structural-sign-test-20261002.*` | 42/42 positive block signs; exact two-sided sign probability `4.547e-13`; descriptive only |
 | Structural leave-one-block-out | `tools/structural_leave_one_block_out.py` | 42 deletion estimates; range `[0.8262, 0.8500]`; all positive |
 | Observability certificate | `tools/observability_certificate.py --check` | 10 T1 classes; 11,375 ledger rounds re-settled; separating observables enumerated |
