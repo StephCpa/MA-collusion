@@ -71,6 +71,7 @@
 - `analysis/ai-disclosure-evidence-20261002.md` — separates documented experimental-model metadata from author-side AI-assistance fields that still require author certification.
 - `analysis/cross-model-boundary-20261002.md` — records why available Qwen/GLM studies are not pooled with the DeepSeek closed-loop estimand.
 - `analysis/claim-evidence-matrix-20261002.*` — machine-readable scope control linking manuscript claims to reproducing artifacts and interpretation boundaries.
+- `analysis/reproducibility-rerun-20261002.md` — fresh offline verification log for the manuscript-facing checks and public supplement.
 - `NEXT-ACTIONS-20261002.md` — collaborator handoff checklist separating completed work, author decisions and actions that require a new protocol.
 - `INTEGRITY-AUDIT-20261002.md` — claim/evidence, numeric, citation-key and artifact-integrity audit.
 - `DELIVERY-STATUS-20261002.md` — local branch and remote-delivery status.
