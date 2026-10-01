@@ -34,8 +34,9 @@ current forced-deviation probe found no qualifying response.
 ## Remaining gates
 
 1. Replace the staging `acmart` class with the official AAMAS 2027 template
-   when the organizer archive is available; the current archive request timed
-   out and no substitute has been introduced.
+   when the organizer archive is available; command-line download timed out
+   and direct in-app-browser navigation was blocked, so no substitute has been
+   introduced.
 2. Prepare an anonymized repository or upload-only supplement URL if the
    submission system requires external access. Do not link the named public
    GitHub repository in a double-blind submission.
