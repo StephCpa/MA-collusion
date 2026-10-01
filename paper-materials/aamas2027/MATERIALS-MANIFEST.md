@@ -65,6 +65,7 @@
 - `FINAL-SUBMISSION-AUDIT-20261002.md` — evidence freeze for compilation, anonymity, public metadata sanitization, supplement integrity and the remaining external gates.
 - `AAMAS-REQUIREMENTS-CHECK-20261002.md` — official submission-rule check, including the AI-assisted methodology disclosure and dual-submission author checks.
 - `analysis/ai-disclosure-evidence-20261002.md` — separates documented experimental-model metadata from author-side AI-assistance fields that still require author certification.
+- `analysis/cross-model-boundary-20261002.md` — records why available Qwen/GLM studies are not pooled with the DeepSeek closed-loop estimand.
 - `INTEGRITY-AUDIT-20261002.md` — claim/evidence, numeric, citation-key and artifact-integrity audit.
 - `DELIVERY-STATUS-20261002.md` — local branch and remote-delivery status.
 
