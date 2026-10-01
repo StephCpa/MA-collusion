@@ -343,7 +343,31 @@ def render_md(r: dict) -> str:
         lines.append(f"| {arm} | {im['sessions_with_fixed_point_and_profitable_deviation']} | "
                      f"{im['of_which_gate_passing_symmetric_ties']} | {'—' if low is None else f'{low:.2f}'} | "
                      f"{rsp['unchanged']} | {im['mean_responder_price_drop']:.2f} | {'—' if ret is None else f'{ret:.2f}'} |")
+    nat = r["arms"]["natural"]
+    im = nat["impulse"]
+    c = r["contrasts_natural_vs_hide_rival"]
     lines += [
+        "",
+        "## Interpretation",
+        "",
+        f"- With both prices in the state (natural), Q-learners reached supra-competitive play "
+        f"(profit gain Δ = {nat['limit_path']['profit_gain_delta']:.2f}); with only one of them (hide-own: "
+        "rival price only; hide-rival: own price only) they converged to the (2.0, 2.0) grid-Nash outcome, "
+        "even though they always observe their own profit.",
+        f"- For this agent class the display contrast is visible to a welfare monitor: from the LH and HL "
+        f"starts, hiding the rival raised welfare by {c['LH']['welfare_hide_minus_natural']:.1f} and "
+        f"{c['HL']['welfare_hide_minus_natural']:.1f} units. The LLM's display effect instead stayed inside "
+        "a welfare class. Whether display effects are welfare-visible therefore depends on the agent class.",
+        f"- Positive control for the X2 design: at natural-display fixed points "
+        f"({im['of_which_gate_passing_symmetric_ties']} of {im['sessions_with_fixed_point_and_profitable_deviation']} "
+        f"at gate-passing ties), the one-period forced deviation lowered the responder's next price in "
+        f"{100 * im['share_responder_lowers_price']:.0f}% of sessions, and "
+        f"{100 * im['share_return_to_pre_deviation_within_15']:.0f}% returned to the pre-deviation state "
+        "within 15 periods: the punish-and-return pattern reported for Q-learning pricing agents. The test "
+        "design detects such a response when the agent has learned one.",
+        f"- Caveat: only {100 * nat['share_policy_stable_last_100k']:.0f}% of natural-arm sessions had a greedy "
+        "policy unchanged over the last 100,000 periods, so learning had not fully converged everywhere; the "
+        "limit-path and impulse results use the final greedy policy.",
         "",
         "## Boundary",
         "",
@@ -361,7 +385,14 @@ def main() -> int:
     parser.add_argument("--beta", type=float, default=4e-6)
     parser.add_argument("--seed", type=int, default=20261001)
     parser.add_argument("--write", action="store_true")
+    parser.add_argument("--render-only", action="store_true",
+                        help="re-render the Markdown report from the saved JSON without re-running")
     args = parser.parse_args()
+    if args.render_only:
+        result = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+        OUT_MD.write_text(render_md(result), encoding="utf-8")
+        print(render_md(result))
+        return 0
     result = run(args.sessions, args.steps, args.beta, args.seed)
     if args.write:
         OUT_JSON.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")

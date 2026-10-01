@@ -35,6 +35,7 @@ REPLICATION = MATERIALS / "analysis" / "A-confirmation-structural-20261001.json"
 CERTIFICATE = MATERIALS / "analysis" / "observability-certificate.json"
 FOUR_ARM = MATERIALS / "analysis" / "four-arm-leading-indicator-20261001.json"
 SETTLEMENT = MATERIALS / "analysis" / "settlement-generalization-20261001.json"
+QLEARN = MATERIALS / "analysis" / "qlearning-baseline-20261001.json"
 FROZEN_FOUR_ARM = MATERIALS / "data" / "four-arm-history-channel" / "analysis.json"
 
 sys.path.insert(0, str(HERE))
@@ -115,6 +116,12 @@ def claims() -> list[tuple[str, list[str]]]:
     controlled = [v for (st, _), v in blind.items() if st.startswith("controlled")]
     out.append(("blindness metric", [f"{round(100 * min(controlled))}--{round(100 * max(controlled))}\\%",
                                      f"{round(100 * blind[('four-arm (model-chosen start)', 'natural vs hide-rival')])}\\%"]))
+    ql = json.loads(QLEARN.read_text(encoding="utf-8"))
+    imp = ql["arms"]["natural"]["impulse"]
+    out.append(("Q-learning baseline", [f"{ql['settings']['sessions_per_arm']} seeded sessions",
+                                        f"{round(100 * imp['share_responder_lowers_price'])}\\%",
+                                        f"{round(100 * imp['share_return_to_pre_deviation_within_15'])}\\%",
+                                        f"about {round(ql['contrasts_natural_vs_hide_rival']['LH']['welfare_hide_minus_natural'], -1):.0f} units"]))
     gen = json.loads(SETTLEMENT.read_text(encoding="utf-8"))
     shares = [row["blind_share"] for row in gen["n_sellers_homogeneous_bertrand"]]
     out.append(("settlement generalization", [*(f(x) for x in shares),

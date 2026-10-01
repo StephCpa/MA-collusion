@@ -64,7 +64,7 @@ Coordination can also emerge from the environment and the learning objective, as
 
 \subsection{Algorithmic pricing and collusion claims}
 
-Classical work links imperfect observation and public price information to tacit coordination \cite{stigler1964theory,green1984noncooperative,salop1986practices}. Algorithmic-pricing studies show supra-competitive outcomes from dynamic feedback or correlated experimentation \cite{calvano2020ai,hansen2021frontiers,klein2021autonomous}, with field evidence of higher margins after adoption \cite{assad2024algorithmic}, and LLM pricing experiments report high prices and prompt sensitivity \cite{fish2024algorithmic}. Near-monopoly prices can even arise in equilibrium from strategies that encode no threats \cite{arunachaleswaran2025without}. A high or synchronized price is therefore compatible with several mechanisms. Here the minimum price determines welfare while the ordered pair determines who captures demand, so we enumerate the market's equivalence classes before testing structural or allocation changes. This is a measurement distinction, not a stronger collusion claim.
+Classical work links imperfect observation and public price information to tacit coordination \cite{stigler1964theory,green1984noncooperative,salop1986practices}. Algorithmic-pricing studies show supra-competitive outcomes from dynamic feedback or correlated experimentation \cite{calvano2020ai,hansen2021frontiers,klein2021autonomous}, with field evidence of higher margins after adoption \cite{assad2024algorithmic}, and LLM pricing experiments report high prices and prompt sensitivity \cite{fish2024algorithmic}. Near-monopoly prices can even arise in equilibrium from strategies that encode no threats \cite{arunachaleswaran2025without}. A high or synchronized price is therefore compatible with several mechanisms; we add a measurement distinction between the minimum price, which determines welfare, and the ordered pair, which determines who captures demand.
 
 \subsection{Generative and language-model agents}
 
@@ -178,13 +178,13 @@ Two supplementary probes used the same endpoint and settings. In X1, an external
 
 \subsection{Inference and failure handling}
 
-The block is the independent unit for every inferential contrast; round and seller-round counts are nested descriptive summaries, and post-hoc sensitivities are labeled as such. The analysis ledger distinguishes planned cells, attempted trajectories, completed trajectories, and unresolved outcomes. We do not impute failed trajectories or silently drop their blocks, and descriptive denominators appear next to every repeated-round count. Missing-outcome completion ranges bound the planned 48-block estimand: observed partial rounds are retained and unresolved rounds are set to the extremes of the grid welfare support [281.9, 444.4] (or [0, 1] for equal-price fractions). They are bounds, not confidence intervals. The fixed-history diagnostic remains a separate single-shot estimand, because a trajectory-level association cannot, by itself, establish that a displayed history mediated a welfare change.
+The block is the independent unit for every inferential contrast; round and seller-round counts are nested descriptive summaries, and post-hoc sensitivities are labeled as such. The analysis ledger distinguishes planned cells, attempted trajectories, completed trajectories, and unresolved outcomes. We do not impute failed trajectories or silently drop their blocks, and descriptive denominators appear next to every repeated-round count. Missing-outcome completion ranges bound the planned 48-block estimand: observed partial rounds are retained and unresolved rounds are set to the extremes of the grid welfare support [281.9, 444.4] (or [0, 1] for equal-price fractions). They are bounds, not confidence intervals.
 
 \section{Results}
 
 \subsection{Settlement-induced observability classes}
 
-The 100 ordered joint states collapsed into 10 minimum-price equivalence classes. For example, $(6.0,6.5)$ and $(6.0,6.0)$ both yielded $m=6.0$, $W=311.111$, $CS=88.889$, and $\Pi=222.222$. Their seller-profit vectors were $(222.222,0)$ and $(111.111,111.111)$, and their profit HHI values were 1.00 and 0.50. Recorded $(6.0,6.5)$ rounds reproduced these quantities, including the logged seller rewards. This is a conditional observability result for the stated settlement rule and grid, not a general false-negative rate for welfare monitoring.
+The 100 ordered joint states collapsed into 10 minimum-price equivalence classes. For example, $(6.0,6.5)$ and $(6.0,6.0)$ both yielded $m=6.0$, $W=311.111$, $CS=88.889$, and $\Pi=222.222$. Their seller-profit vectors were $(222.222,0)$ and $(111.111,111.111)$, and their profit HHI values were 1.00 and 0.50. Recorded $(6.0,6.5)$ rounds reproduced these quantities, including the logged seller rewards.
 
 \begin{figure*}[t]
   \centering
@@ -256,7 +256,7 @@ The four-arm study shows when structure carries welfare information that welfare
 
 \subsection{History order depends on rival background}
 
-The fixed-history diagnostic found a background interaction. It used 1,458 logical units arranged as 27 conditions with 54 matched blocks each; repeated requests within a block were not independent. At an own last price of 6.0, changing the rival background from visible all-6.5 to hidden changed the ordering effect by 0.546 price units, with the 42-comparison correction giving [0.394, 0.698]. The compared ten-entry histories differed only in prefix order or composition while holding the final own value fixed. This identifies background-dependent action conditioning in the tested templates, not the model's internal rule or a dynamic punishment mechanism.
+The fixed-history diagnostic (27 conditions with 54 matched blocks each) found a background interaction. At an own last price of 6.0, changing the rival background from visible all-6.5 to hidden changed the ordering effect by 0.546 price units; after correction for the family of 42 comparisons the interval is [0.394, 0.698]. This identifies action conditioning that depends on the rival background in the tested templates, not the model's internal rule or a dynamic punishment mechanism.
 
 \subsection{Welfare contrasts are estimand-specific}
 
@@ -284,7 +284,7 @@ The results imply a compositional monitoring rule: retain minimum price and welf
 
 \subsection{What the strategic tests do and do not show}
 
-X1 shows current-profit competence and no horizon-induced costly matching. X2 supplies the exogenous deviation and matched counterfactual absent from the main study but finds no next-round response at an operating point that fails the gate. A strategic claim would require a gate-passing target (for example, a programmed 5.0 or 5.5 tie), a declared deviation and response rule, and evidence that the response deters rather than reverts unconditionally.
+X1 shows current-profit competence and no horizon-induced costly matching. X2 supplies the exogenous deviation and matched counterfactual absent from the main study but finds no next-round response at an operating point that fails the gate. The test itself can register a response: applied to tabular Q-learners in this environment (200 seeded sessions per arm), the same one-period impulse lowered the responder's next price in 85\% of natural-display sessions, almost all at gate-passing ties, and 99\% returned to the pre-deviation state within 15 periods. Those Q-learners also show that welfare visibility depends on the agent class: with only one price in their state they converged to the $(2.0,2.0)$ Nash outcome, so for them hiding the rival changed welfare by about 40 units rather than structure within a welfare class. A strategic claim would require a gate-passing target (for example, a programmed 5.0 or 5.5 tie), a declared deviation and response rule, and evidence that the response deters rather than reverts unconditionally.
 
 \subsection{Limitations and reproducibility}
 

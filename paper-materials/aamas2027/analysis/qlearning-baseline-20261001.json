@@ -1,0 +1,559 @@
+{
+  "settings": {
+    "sessions_per_arm": 200,
+    "steps": 2000000,
+    "alpha": 0.15,
+    "delta": 0.95,
+    "beta": 4e-06,
+    "seed": 20261001,
+    "grid": [
+      2.0,
+      2.5,
+      3.0,
+      3.5,
+      4.0,
+      4.5,
+      5.0,
+      5.5,
+      6.0,
+      6.5
+    ]
+  },
+  "arms": {
+    "natural": {
+      "final_epsilon": 0.00033546262790251185,
+      "share_policy_stable_last_100k": 0.52,
+      "limit_path": {
+        "mean_price": 3.904827876984127,
+        "tie_fraction": 0.6579543650793651,
+        "mean_welfare": 404.04220954585537,
+        "profit_gain_delta": 0.621294420149012,
+        "share_fixed_point": 0.53,
+        "share_symmetric_fixed_point": 0.53,
+        "symmetric_fixed_point_prices": {
+          "2.0": 9,
+          "2.5": 4,
+          "3.0": 15,
+          "3.5": 24,
+          "4.0": 17,
+          "4.5": 15,
+          "5.0": 10,
+          "5.5": 7,
+          "6.0": 3,
+          "6.5": 2
+        }
+      },
+      "programmed_starts": {
+        "LL": {
+          "equal_fraction": {
+            "mean": 0.652,
+            "ci95": [
+              0.5929508494650899,
+              0.7110491505349101
+            ]
+          },
+          "min_price": {
+            "mean": 3.64275,
+            "ci95": [
+              3.5195235119126913,
+              3.7659764880873086
+            ]
+          },
+          "welfare": {
+            "mean": 404.3187499999999,
+            "ci95": [
+              400.2212067924524,
+              408.4162932075474
+            ]
+          }
+        },
+        "LH": {
+          "equal_fraction": {
+            "mean": 0.6532499999999999,
+            "ci95": [
+              0.5941386136562726,
+              0.7123613863437271
+            ]
+          },
+          "min_price": {
+            "mean": 3.64725,
+            "ci95": [
+              3.5236441003363583,
+              3.770855899663642
+            ]
+          },
+          "welfare": {
+            "mean": 404.19652777777776,
+            "ci95": [
+              400.0878608914637,
+              408.3051946640918
+            ]
+          }
+        },
+        "HL": {
+          "equal_fraction": {
+            "mean": 0.65325,
+            "ci95": [
+              0.5942407577675817,
+              0.7122592422324183
+            ]
+          },
+          "min_price": {
+            "mean": 3.651875,
+            "ci95": [
+              3.529215576727826,
+              3.774534423272174
+            ]
+          },
+          "welfare": {
+            "mean": 404.0788194444444,
+            "ci95": [
+              399.99227685113755,
+              408.1653620377512
+            ]
+          }
+        },
+        "HH": {
+          "equal_fraction": {
+            "mean": 0.652,
+            "ci95": [
+              0.5928202247639878,
+              0.7111797752360123
+            ]
+          },
+          "min_price": {
+            "mean": 3.6467499999999995,
+            "ci95": [
+              3.5232346581844216,
+              3.7702653418155774
+            ]
+          },
+          "welfare": {
+            "mean": 404.1798611111111,
+            "ci95": [
+              400.0730982288867,
+              408.2866239933355
+            ]
+          }
+        }
+      },
+      "impulse": {
+        "sessions_with_fixed_point_and_profitable_deviation": 97,
+        "of_which_gate_passing_symmetric_ties": 92,
+        "responder_next_period": {
+          "punish": 72,
+          "match": 10,
+          "lower": 0,
+          "unchanged": 9,
+          "raise": 6
+        },
+        "share_responder_lowers_price": 0.845360824742268,
+        "mean_responder_price_drop": 1.8109756097560976,
+        "share_return_to_pre_deviation_within_15": 0.9896907216494846
+      },
+      "seconds": 257.2
+    },
+    "hide_own": {
+      "final_epsilon": 0.00033546262790251185,
+      "share_policy_stable_last_100k": 0.105,
+      "limit_path": {
+        "mean_price": 2.0,
+        "tie_fraction": 1.0,
+        "mean_welfare": 444.4444444444444,
+        "profit_gain_delta": 0.0,
+        "share_fixed_point": 1.0,
+        "share_symmetric_fixed_point": 1.0,
+        "symmetric_fixed_point_prices": {
+          "2.0": 200
+        }
+      },
+      "programmed_starts": {
+        "LL": {
+          "equal_fraction": {
+            "mean": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "min_price": {
+            "mean": 2.0,
+            "ci95": [
+              2.0,
+              2.0
+            ]
+          },
+          "welfare": {
+            "mean": 444.4444444444444,
+            "ci95": [
+              444.4444444444444,
+              444.4444444444444
+            ]
+          }
+        },
+        "LH": {
+          "equal_fraction": {
+            "mean": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "min_price": {
+            "mean": 2.0,
+            "ci95": [
+              2.0,
+              2.0
+            ]
+          },
+          "welfare": {
+            "mean": 444.4444444444444,
+            "ci95": [
+              444.4444444444444,
+              444.4444444444444
+            ]
+          }
+        },
+        "HL": {
+          "equal_fraction": {
+            "mean": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "min_price": {
+            "mean": 2.0,
+            "ci95": [
+              2.0,
+              2.0
+            ]
+          },
+          "welfare": {
+            "mean": 444.4444444444444,
+            "ci95": [
+              444.4444444444444,
+              444.4444444444444
+            ]
+          }
+        },
+        "HH": {
+          "equal_fraction": {
+            "mean": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "min_price": {
+            "mean": 2.0,
+            "ci95": [
+              2.0,
+              2.0
+            ]
+          },
+          "welfare": {
+            "mean": 444.4444444444444,
+            "ci95": [
+              444.4444444444444,
+              444.4444444444444
+            ]
+          }
+        }
+      },
+      "impulse": {
+        "sessions_with_fixed_point_and_profitable_deviation": 0,
+        "of_which_gate_passing_symmetric_ties": 0,
+        "responder_next_period": {
+          "punish": 0,
+          "match": 0,
+          "lower": 0,
+          "unchanged": 0,
+          "raise": 0
+        },
+        "share_responder_lowers_price": null,
+        "mean_responder_price_drop": 0.0,
+        "share_return_to_pre_deviation_within_15": null
+      },
+      "seconds": 204.5
+    },
+    "hide_rival": {
+      "final_epsilon": 0.00033546262790251185,
+      "share_policy_stable_last_100k": 0.26,
+      "limit_path": {
+        "mean_price": 2.0,
+        "tie_fraction": 1.0,
+        "mean_welfare": 444.4444444444444,
+        "profit_gain_delta": 0.0,
+        "share_fixed_point": 1.0,
+        "share_symmetric_fixed_point": 1.0,
+        "symmetric_fixed_point_prices": {
+          "2.0": 200
+        }
+      },
+      "programmed_starts": {
+        "LL": {
+          "equal_fraction": {
+            "mean": 0.985,
+            "ci95": [
+              0.9681114144580417,
+              1.0018885855419581
+            ]
+          },
+          "min_price": {
+            "mean": 2.0,
+            "ci95": [
+              2.0,
+              2.0
+            ]
+          },
+          "welfare": {
+            "mean": 444.4444444444444,
+            "ci95": [
+              444.4444444444444,
+              444.4444444444444
+            ]
+          }
+        },
+        "LH": {
+          "equal_fraction": {
+            "mean": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "min_price": {
+            "mean": 2.0,
+            "ci95": [
+              2.0,
+              2.0
+            ]
+          },
+          "welfare": {
+            "mean": 444.4444444444444,
+            "ci95": [
+              444.4444444444444,
+              444.4444444444444
+            ]
+          }
+        },
+        "HL": {
+          "equal_fraction": {
+            "mean": 0.985,
+            "ci95": [
+              0.9681114144580417,
+              1.0018885855419581
+            ]
+          },
+          "min_price": {
+            "mean": 2.0,
+            "ci95": [
+              2.0,
+              2.0
+            ]
+          },
+          "welfare": {
+            "mean": 444.4444444444444,
+            "ci95": [
+              444.4444444444444,
+              444.4444444444444
+            ]
+          }
+        },
+        "HH": {
+          "equal_fraction": {
+            "mean": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "min_price": {
+            "mean": 2.0,
+            "ci95": [
+              2.0,
+              2.0
+            ]
+          },
+          "welfare": {
+            "mean": 444.4444444444444,
+            "ci95": [
+              444.4444444444444,
+              444.4444444444444
+            ]
+          }
+        }
+      },
+      "impulse": {
+        "sessions_with_fixed_point_and_profitable_deviation": 0,
+        "of_which_gate_passing_symmetric_ties": 0,
+        "responder_next_period": {
+          "punish": 0,
+          "match": 0,
+          "lower": 0,
+          "unchanged": 0,
+          "raise": 0
+        },
+        "share_responder_lowers_price": null,
+        "mean_responder_price_drop": 0.0,
+        "share_return_to_pre_deviation_within_15": null
+      },
+      "seconds": 215.9
+    },
+    "hide_both": {
+      "final_epsilon": 0.00033546262790251185,
+      "share_policy_stable_last_100k": 0.975,
+      "limit_path": {
+        "mean_price": 2.1425,
+        "tie_fraction": 1.0,
+        "mean_welfare": 440.25694444444446,
+        "profit_gain_delta": 0.043163265306122446,
+        "share_fixed_point": 1.0,
+        "share_symmetric_fixed_point": 1.0,
+        "symmetric_fixed_point_prices": {
+          "2.0": 191,
+          "4.5": 3,
+          "5.0": 2,
+          "5.5": 3,
+          "6.5": 1
+        }
+      },
+      "programmed_starts": {
+        "LL": {
+          "equal_fraction": {
+            "mean": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "min_price": {
+            "mean": 2.1425,
+            "ci95": [
+              2.0494570394249902,
+              2.23554296057501
+            ]
+          },
+          "welfare": {
+            "mean": 440.25694444444446,
+            "ci95": [
+              437.4296084022114,
+              443.0842804866775
+            ]
+          }
+        },
+        "LH": {
+          "equal_fraction": {
+            "mean": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "min_price": {
+            "mean": 2.1425,
+            "ci95": [
+              2.0494570394249902,
+              2.23554296057501
+            ]
+          },
+          "welfare": {
+            "mean": 440.25694444444446,
+            "ci95": [
+              437.4296084022114,
+              443.0842804866775
+            ]
+          }
+        },
+        "HL": {
+          "equal_fraction": {
+            "mean": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "min_price": {
+            "mean": 2.1425,
+            "ci95": [
+              2.0494570394249902,
+              2.23554296057501
+            ]
+          },
+          "welfare": {
+            "mean": 440.25694444444446,
+            "ci95": [
+              437.4296084022114,
+              443.0842804866775
+            ]
+          }
+        },
+        "HH": {
+          "equal_fraction": {
+            "mean": 1.0,
+            "ci95": [
+              1.0,
+              1.0
+            ]
+          },
+          "min_price": {
+            "mean": 2.1425,
+            "ci95": [
+              2.0494570394249902,
+              2.23554296057501
+            ]
+          },
+          "welfare": {
+            "mean": 440.25694444444446,
+            "ci95": [
+              437.4296084022114,
+              443.0842804866775
+            ]
+          }
+        }
+      },
+      "impulse": {
+        "sessions_with_fixed_point_and_profitable_deviation": 9,
+        "of_which_gate_passing_symmetric_ties": 8,
+        "responder_next_period": {
+          "punish": 0,
+          "match": 0,
+          "lower": 0,
+          "unchanged": 9,
+          "raise": 0
+        },
+        "share_responder_lowers_price": 0.0,
+        "mean_responder_price_drop": 0.0,
+        "share_return_to_pre_deviation_within_15": 1.0
+      },
+      "seconds": 207.5
+    }
+  },
+  "contrasts_natural_vs_hide_rival": {
+    "LH": {
+      "equal_fraction_natural_minus_hide": -0.3467500000000001,
+      "equal_fraction_95": [
+        -0.40586138634372737,
+        -0.28763861365627286
+      ],
+      "welfare_hide_minus_natural": 40.24791666666664,
+      "welfare_95": [
+        36.1392497803526,
+        44.35658355298068
+      ]
+    },
+    "HL": {
+      "equal_fraction_natural_minus_hide": -0.33175,
+      "equal_fraction_95": [
+        -0.3931284570549982,
+        -0.27037154294500176
+      ],
+      "welfare_hide_minus_natural": 40.36562500000002,
+      "welfare_95": [
+        36.27908240669322,
+        44.452167593306825
+      ]
+    }
+  }
+}
