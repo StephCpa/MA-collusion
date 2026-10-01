@@ -1,0 +1,116 @@
+{
+  "schema": "controlled-initial-descriptives-v1",
+  "scope": "descriptive summaries only; assessment rounds 10--29; transitions include observed prefixes",
+  "cells": {
+    "HH-hide_rival": {
+      "complete_trajectories": 47,
+      "assessment_rounds": 940,
+      "round1_tie_count": 47,
+      "assessment_tie_rounds": 940,
+      "assessment_state_counts": {
+        "(6.5,6.5)": 940
+      }
+    },
+    "HH-natural": {
+      "complete_trajectories": 48,
+      "assessment_rounds": 960,
+      "round1_tie_count": 48,
+      "assessment_tie_rounds": 960,
+      "assessment_state_counts": {
+        "(6.5,6.5)": 960
+      }
+    },
+    "HL-hide_rival": {
+      "complete_trajectories": 48,
+      "assessment_rounds": 960,
+      "round1_tie_count": 1,
+      "assessment_tie_rounds": 0,
+      "assessment_state_counts": {
+        "(6.5,6)": 960
+      }
+    },
+    "HL-natural": {
+      "complete_trajectories": 48,
+      "assessment_rounds": 960,
+      "round1_tie_count": 31,
+      "assessment_tie_rounds": 819,
+      "assessment_state_counts": {
+        "(6,6)": 793,
+        "(6.5,6)": 141,
+        "(6.5,6.5)": 26
+      }
+    },
+    "LH-hide_rival": {
+      "complete_trajectories": 47,
+      "assessment_rounds": 940,
+      "round1_tie_count": 0,
+      "assessment_tie_rounds": 0,
+      "assessment_state_counts": {
+        "(6,6.5)": 940
+      }
+    },
+    "LH-natural": {
+      "complete_trajectories": 48,
+      "assessment_rounds": 960,
+      "round1_tie_count": 23,
+      "assessment_tie_rounds": 852,
+      "assessment_state_counts": {
+        "(6,6)": 832,
+        "(6,6.5)": 108,
+        "(6.5,6.5)": 20
+      }
+    },
+    "LL-hide_rival": {
+      "complete_trajectories": 48,
+      "assessment_rounds": 960,
+      "round1_tie_count": 48,
+      "assessment_tie_rounds": 960,
+      "assessment_state_counts": {
+        "(6,6)": 960
+      }
+    },
+    "LL-natural": {
+      "complete_trajectories": 46,
+      "assessment_rounds": 920,
+      "round1_tie_count": 46,
+      "assessment_tie_rounds": 920,
+      "assessment_state_counts": {
+        "(6,6)": 920
+      }
+    }
+  },
+  "transitions": {
+    "HH-hide_rival": {
+      "tie_formation_counts": {}
+    },
+    "HH-natural": {
+      "tie_formation_counts": {}
+    },
+    "HL-hide_rival": {
+      "tie_formation_counts": {
+        "upward_matching": 1
+      }
+    },
+    "HL-natural": {
+      "tie_formation_counts": {
+        "downward_matching": 57,
+        "upward_matching": 4
+      }
+    },
+    "LH-hide_rival": {
+      "tie_formation_counts": {}
+    },
+    "LH-natural": {
+      "tie_formation_counts": {
+        "downward_matching": 45,
+        "upward_matching": 1
+      }
+    },
+    "LL-hide_rival": {
+      "tie_formation_counts": {}
+    },
+    "LL-natural": {
+      "tie_formation_counts": {}
+    }
+  }
+}
