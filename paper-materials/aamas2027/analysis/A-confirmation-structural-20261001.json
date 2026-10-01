@@ -1,0 +1,465 @@
+{
+  "scope": "offline re-analysis of the sealed Candidate A ledger; no provider calls; frozen data/A-confirmation-analysis.json is read, never written",
+  "source_ledger": "data/A-confirmation-cells.json",
+  "assessment_window": "rounds 10-29",
+  "completion_range_note": "missing-outcome bounds on the planned 48-block estimand; observed partial rounds retained; not confidence intervals and not imputations",
+  "registered_welfare": {
+    "D_asym": {
+      "estimand": "hide_rival minus natural (registered sign convention)",
+      "complete_blocks": 42,
+      "mean": 0.22569444444444423,
+      "bonferroni_block_t_95": [
+        -0.2994340013192469,
+        0.7508228902081353
+      ],
+      "completion_range": {
+        "full_grid_welfare_support": [
+          -3.1987847222222237,
+          4.8415798611111125
+        ],
+        "observed_run_welfare_support": [
+          -0.6987847222222214,
+          0.7443576388888881
+        ]
+      },
+      "equivalence": {
+        "3.0": {
+          "observed_ci_within_margin": true,
+          "registered_completion_range_within_margin": false
+        },
+        "5.0": {
+          "observed_ci_within_margin": true,
+          "registered_completion_range_within_margin": true
+        },
+        "10.0": {
+          "observed_ci_within_margin": true,
+          "registered_completion_range_within_margin": true
+        }
+      }
+    },
+    "J": {
+      "estimand": "hide_rival minus natural (registered sign convention)",
+      "complete_blocks": 40,
+      "mean": 0.23697916666666644,
+      "bonferroni_block_t_95": [
+        -0.3154818960519594,
+        0.7894402293852922
+      ],
+      "completion_range": {
+        "full_grid_welfare_support": [
+          -4.891493055555557,
+          5.6879340277777795
+        ],
+        "observed_run_welfare_support": [
+          -1.0026041666666654,
+          0.8962673611111102
+        ]
+      },
+      "equivalence": {
+        "3.0": {
+          "observed_ci_within_margin": true,
+          "registered_completion_range_within_margin": false
+        },
+        "5.0": {
+          "observed_ci_within_margin": true,
+          "registered_completion_range_within_margin": false
+        },
+        "10.0": {
+          "observed_ci_within_margin": true,
+          "registered_completion_range_within_margin": true
+        }
+      }
+    }
+  },
+  "structural_primary": {
+    "LH": {
+      "complete_pairs": 45,
+      "mean": 0.8188888888888889,
+      "block_t_95": [
+        0.7117903172307606,
+        0.9259874605470172
+      ],
+      "bootstrap_95": [
+        0.7111111111111111,
+        0.9166666666666666
+      ],
+      "signs": {
+        "positive": 42,
+        "zero": 3,
+        "negative": 0
+      },
+      "minimum_price_natural_minus_hide": {
+        "mean": 0.0,
+        "block_t_95": [
+          0.0,
+          0.0
+        ],
+        "signs": {
+          "positive": 0,
+          "zero": 45,
+          "negative": 0
+        }
+      }
+    },
+    "HL": {
+      "complete_pairs": 45,
+      "mean": 0.8422222222222222,
+      "block_t_95": [
+        0.7391415514940545,
+        0.9453028929503899
+      ],
+      "bootstrap_95": [
+        0.7366666666666667,
+        0.9333333333333333
+      ],
+      "signs": {
+        "positive": 41,
+        "zero": 4,
+        "negative": 0
+      },
+      "minimum_price_natural_minus_hide": {
+        "mean": 0.007222222222222226,
+        "block_t_95": [
+          -0.007333210259871594,
+          0.021777654704316047
+        ],
+        "signs": {
+          "positive": 1,
+          "zero": 44,
+          "negative": 0
+        }
+      }
+    },
+    "D_tie": {
+      "estimand": "natural minus hide_rival equal-price fraction, rounds 10-29, averaged over LH and HL",
+      "complete_blocks": 42,
+      "mean": 0.8303571428571429,
+      "block_t_95": [
+        0.7434256746222462,
+        0.9172886110920396
+      ],
+      "bootstrap_95": [
+        0.7428571428571429,
+        0.9083333333333333
+      ],
+      "signs": {
+        "positive": 42,
+        "zero": 0,
+        "negative": 0
+      },
+      "completion_range": [
+        0.7916666666666666,
+        0.8411458333333334
+      ],
+      "structural_confirmation": true
+    }
+  },
+  "descriptive_welfare_deltas_hide_minus_natural": {
+    "LL": {
+      "complete_pairs": 48,
+      "delta_mean": 0.0
+    },
+    "LH": {
+      "complete_pairs": 45,
+      "delta_mean": 0.0
+    },
+    "HL": {
+      "complete_pairs": 45,
+      "delta_mean": 0.4212962962962959
+    },
+    "HH": {
+      "complete_pairs": 46,
+      "delta_mean": 0.0
+    }
+  },
+  "cells": {
+    "LL-natural": {
+      "completed": 48,
+      "failed": 0,
+      "failed_blocks": [],
+      "round1_states": {
+        "(6,6)": 48
+      },
+      "assessment_states": {
+        "(6,6)": 960
+      },
+      "assessment_equal_rounds": [
+        960,
+        960
+      ],
+      "mean_assessment_equal_fraction": 1.0,
+      "mean_assessment_welfare": 311.1111111111111,
+      "first_change_rate": null,
+      "ever_change_rate": null,
+      "tie_formation_events": {
+        "downward": 0,
+        "upward": 0,
+        "other": 0
+      },
+      "after_previous_rival_6_5": {}
+    },
+    "LL-hide_rival": {
+      "completed": 48,
+      "failed": 0,
+      "failed_blocks": [],
+      "round1_states": {
+        "(6,6)": 48
+      },
+      "assessment_states": {
+        "(6,6)": 960
+      },
+      "assessment_equal_rounds": [
+        960,
+        960
+      ],
+      "mean_assessment_equal_fraction": 1.0,
+      "mean_assessment_welfare": 311.1111111111111,
+      "first_change_rate": null,
+      "ever_change_rate": null,
+      "tie_formation_events": {
+        "downward": 0,
+        "upward": 0,
+        "other": 0
+      },
+      "after_previous_rival_6_5": {}
+    },
+    "LH-natural": {
+      "completed": 46,
+      "failed": 2,
+      "failed_blocks": [
+        26,
+        38
+      ],
+      "round1_states": {
+        "(6,6)": 15,
+        "(6,6.5)": 30,
+        "(6.5,6)": 1
+      },
+      "assessment_states": {
+        "(6,6)": 757,
+        "(6,6.5)": 162,
+        "(6.5,6)": 1
+      },
+      "assessment_equal_rounds": [
+        757,
+        920
+      ],
+      "mean_assessment_equal_fraction": 0.8228260869565217,
+      "mean_assessment_welfare": 311.1111111111111,
+      "first_change_rate": {
+        "initially_high_seller": 0.34782608695652173,
+        "initially_low_seller": 0.021739130434782608
+      },
+      "ever_change_rate": {
+        "initially_high_seller": 0.9565217391304348,
+        "initially_low_seller": 0.043478260869565216
+      },
+      "tie_formation_events": {
+        "downward": 53,
+        "upward": 0,
+        "other": 0
+      },
+      "after_previous_rival_6_5": {
+        "seller_a|own_prev=6": {
+          "6": 367,
+          "6.5": 1
+        },
+        "seller_b|own_prev=6": {
+          "6": 2
+        }
+      }
+    },
+    "LH-hide_rival": {
+      "completed": 47,
+      "failed": 1,
+      "failed_blocks": [
+        40
+      ],
+      "round1_states": {
+        "(6,6.5)": 47
+      },
+      "assessment_states": {
+        "(6,6.5)": 940
+      },
+      "assessment_equal_rounds": [
+        0,
+        940
+      ],
+      "mean_assessment_equal_fraction": 0.0,
+      "mean_assessment_welfare": 311.1111111111111,
+      "first_change_rate": {
+        "initially_high_seller": 0.0,
+        "initially_low_seller": 0.0
+      },
+      "ever_change_rate": {
+        "initially_high_seller": 0.0,
+        "initially_low_seller": 0.0
+      },
+      "tie_formation_events": {
+        "downward": 0,
+        "upward": 0,
+        "other": 0
+      },
+      "after_previous_rival_6_5": {
+        "seller_a|own_prev=6": {
+          "6": 1363
+        }
+      }
+    },
+    "HL-natural": {
+      "completed": 47,
+      "failed": 1,
+      "failed_blocks": [
+        16
+      ],
+      "round1_states": {
+        "(6,6)": 29,
+        "(6.5,6)": 18
+      },
+      "assessment_states": {
+        "(6,6)": 785,
+        "(6.5,6)": 142,
+        "(6.5,6.5)": 13
+      },
+      "assessment_equal_rounds": [
+        798,
+        940
+      ],
+      "mean_assessment_equal_fraction": 0.8489361702127659,
+      "mean_assessment_welfare": 310.70774231678485,
+      "first_change_rate": {
+        "initially_high_seller": 0.6170212765957447,
+        "initially_low_seller": 0.0
+      },
+      "ever_change_rate": {
+        "initially_high_seller": 0.9148936170212766,
+        "initially_low_seller": 0.02127659574468085
+      },
+      "tie_formation_events": {
+        "downward": 49,
+        "upward": 3,
+        "other": 0
+      },
+      "after_previous_rival_6_5": {
+        "seller_a|own_prev=6.5": {
+          "6.5": 12
+        },
+        "seller_b|own_prev=6": {
+          "6": 289,
+          "6.5": 3
+        },
+        "seller_b|own_prev=6.5": {
+          "6": 2,
+          "6.5": 10
+        }
+      }
+    },
+    "HL-hide_rival": {
+      "completed": 46,
+      "failed": 2,
+      "failed_blocks": [
+        11,
+        35
+      ],
+      "round1_states": {
+        "(6.5,6)": 46
+      },
+      "assessment_states": {
+        "(6.5,6)": 920
+      },
+      "assessment_equal_rounds": [
+        0,
+        920
+      ],
+      "mean_assessment_equal_fraction": 0.0,
+      "mean_assessment_welfare": 311.1111111111111,
+      "first_change_rate": {
+        "initially_high_seller": 0.0,
+        "initially_low_seller": 0.0
+      },
+      "ever_change_rate": {
+        "initially_high_seller": 0.0,
+        "initially_low_seller": 0.0
+      },
+      "tie_formation_events": {
+        "downward": 0,
+        "upward": 0,
+        "other": 0
+      },
+      "after_previous_rival_6_5": {
+        "seller_b|own_prev=6": {
+          "6": 1334
+        }
+      }
+    },
+    "HH-natural": {
+      "completed": 47,
+      "failed": 1,
+      "failed_blocks": [
+        12
+      ],
+      "round1_states": {
+        "(6.5,6.5)": 47
+      },
+      "assessment_states": {
+        "(6.5,6.5)": 940
+      },
+      "assessment_equal_rounds": [
+        940,
+        940
+      ],
+      "mean_assessment_equal_fraction": 1.0,
+      "mean_assessment_welfare": 281.94444444444446,
+      "first_change_rate": null,
+      "ever_change_rate": null,
+      "tie_formation_events": {
+        "downward": 0,
+        "upward": 0,
+        "other": 0
+      },
+      "after_previous_rival_6_5": {
+        "seller_a|own_prev=6.5": {
+          "6.5": 1363
+        },
+        "seller_b|own_prev=6.5": {
+          "6.5": 1363
+        }
+      }
+    },
+    "HH-hide_rival": {
+      "completed": 47,
+      "failed": 1,
+      "failed_blocks": [
+        17
+      ],
+      "round1_states": {
+        "(6.5,6.5)": 47
+      },
+      "assessment_states": {
+        "(6.5,6.5)": 940
+      },
+      "assessment_equal_rounds": [
+        940,
+        940
+      ],
+      "mean_assessment_equal_fraction": 1.0,
+      "mean_assessment_welfare": 281.94444444444446,
+      "first_change_rate": null,
+      "ever_change_rate": null,
+      "tie_formation_events": {
+        "downward": 0,
+        "upward": 0,
+        "other": 0
+      },
+      "after_previous_rival_6_5": {
+        "seller_a|own_prev=6.5": {
+          "6.5": 1363
+        },
+        "seller_b|own_prev=6.5": {
+          "6.5": 1363
+        }
+      }
+    }
+  },
+  "correction_note": "The 2026-10-01 result record labelled descriptive_deltas as equal-price persistence. They are hide_rival-minus-natural assessment-window welfare deltas over complete pairs (reproduced in descriptive_welfare_deltas_hide_minus_natural)."
+}

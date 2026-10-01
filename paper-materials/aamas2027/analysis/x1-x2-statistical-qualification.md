@@ -17,9 +17,13 @@ estimand.
   conservative 48/48 cluster-level Wilson lower bound is 0.926. The former is
   a delivery calibration, not a population interval; neither is evidence of
   strategic rationality.
-- Continuing-minus-terminal best-response gaps: 0.000 at rival 6.0,
-  0.006944 at rival 6.5, and pooled 0.003472. The corresponding 95% cluster
-  bootstrap intervals are [0, 0], [0, 0.020833], and [0, 0.010417].
+- Terminal-minus-continuing best-response gaps (the protocol's
+  `BR_gap = P(BR | terminal) - P(BR | continuing)`; terminal BR = 1.000 and
+  continuing BR = 0.993 at rival 6.5): 0.000 at rival 6.0, 0.006944 at rival
+  6.5, and pooled 0.003472. The corresponding 95% cluster bootstrap intervals
+  are [0, 0], [0, 0.020833], and [0, 0.010417]. (Corrected 2026-10-01: an
+  earlier version labelled these "continuing-minus-terminal"; the values are
+  unchanged.)
 - Forbearance/matching gap: 0.000 with [0, 0]. Because every observed action
   was non-matching, all cluster resamples have the same value. The interval is
   a degenerate bootstrap support interval, not a proof of a zero population

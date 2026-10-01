@@ -2,9 +2,9 @@
   "generated": "2026-09-28",
   "paid_calls": 0,
   "source_files": [
-    "research\\results\\controlled-initial-structure-audit-20260927\\audit.json",
-    "research\\results\\controlled-initial-supervision-targets-20260928\\target_manifest.json",
-    "research\\results\\review-followup-20260927\\checks.json"
+    "research/results/controlled-initial-structure-audit-20260927/audit.json",
+    "research/results/controlled-initial-supervision-targets-20260928/target_manifest.json",
+    "research/results/review-followup-20260927/checks.json"
   ],
   "figures": [
     {
@@ -21,7 +21,13 @@
         "fig2-welfare-versus-structure.png",
         "fig2-welfare-versus-structure.pdf"
       ],
-      "caption": "Block-level welfare contrasts alongside descriptive equal-price and profit-concentration summaries."
+      "caption": "Registered welfare contrasts and block-paired structural contrasts, original run and Candidate A replication.",
+      "generated": "2026-10-01",
+      "generator": "tools/build_fig2_replication.py",
+      "source_files": [
+        "analysis/controlled-initial-followup-analysis.json",
+        "analysis/A-confirmation-structural-20261001.json"
+      ]
     },
     {
       "id": "fig3",
@@ -32,5 +38,5 @@
       "caption": "Observed downward and upward tie-formation events; repeated events are not independent samples."
     }
   ],
-  "not_inferential": "Figures 2B\u2013C and Figure 3 are descriptive summaries; no new statistical test is introduced."
+  "not_inferential": "Figure 3 is a descriptive summary; Figure 2 shows registered and block-paired intervals already reported in the text, with completion ranges as missing-outcome bounds. No new statistical test is introduced."
 }

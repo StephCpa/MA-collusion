@@ -24,7 +24,7 @@ The imitation-like rules (`match_if_equal_else_copy_rival`, `match_if_equal_else
 | `match_if_equal_else_undercut` | 10/10 | 90/90 | 90/90 | 9 |
 | `inertia_own_price` | 10/10 | 0/90 | 0/90 | 0 |
 
-The copying rule preserves every initial pair, including (6.0, 6.0), (6.5, 6.5), and (6.0, 6.5); it can therefore sustain high-price ties without strategic punishment. Match-if-equal-else-undercut preserves all ten equal-price starts (including high and mid prices) but drives most unequal starts to the floor. Myopic best response and mechanical undercutting drive every grid start to the floor. This demonstrates why the observed high-price absorbing states do not, by themselves, identify collusion or a strategic response.
+The copying rule preserves every initial pair, including (6.0, 6.0), (6.5, 6.5), and (6.0, 6.5); it can therefore sustain high-price ties without strategic punishment. Match-if-equal-else-undercut preserves all ten equal-price starts (including high and mid prices) but drives most unequal starts to the floor. Myopic best response and mechanical undercutting drive every grid start to the floor. This demonstrates why the observed persistent high-price states do not, by themselves, identify collusion or a strategic response. (Wording revised 2026-10-01: the earlier text called these states "absorbing", which the evidence does not establish.)
 
 ## Observed unequal-state transitions
 

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+# LaTeX build products (the staging PDF is committed explicitly)
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz

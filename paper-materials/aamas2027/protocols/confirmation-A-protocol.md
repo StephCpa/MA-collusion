@@ -1,7 +1,15 @@
 # Candidate A: independent confirmation and practical-equivalence protocol
 
-**Status:** offline candidate only; not registered and not launched.  No model
-calls are authorized by this document.
+**Status (updated 2026-10-01):** executed as an amended two-segment run
+(376/384 complete, 8 failed; see `analysis/A-confirmation-result-20261001.md`
+and `analysis/A-confirmation-structural-20261001.md`).  The protocol text
+below is preserved as frozen before launch; it was not edited after the
+results were seen.  Its original status line read: "offline candidate only;
+not registered and not launched.  No model calls are authorized by this
+document."  The record of when $\delta_W=5$ was selected (required below
+"before any call") is not included in these materials and should be attached
+from the launch manifest; until it is, the paper describes $\delta_W=5$ as the
+protocol's candidate margin.
 
 ## Purpose
 

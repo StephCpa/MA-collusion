@@ -1,0 +1,389 @@
+{
+  "scope": "offline arithmetic certificate; no provider calls",
+  "grid": [
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5
+  ],
+  "t1_surface": [
+    "market_min",
+    "quantity",
+    "consumer_surplus",
+    "industry_profit",
+    "welfare"
+  ],
+  "joint_states": 100,
+  "t1_classes": 10,
+  "class_table": [
+    {
+      "market_min": 2.0,
+      "states": 19,
+      "welfare": 444.44444444444446,
+      "consumer_surplus": 355.55555555555554,
+      "industry_profit": 88.88888888888889,
+      "attainable_profit_hhi": [
+        0.5,
+        1.0
+      ],
+      "separating_observables": [
+        "equal_price",
+        "profit_hhi",
+        "seller_a_profit",
+        "seller_b_profit",
+        "share_disparity"
+      ]
+    },
+    {
+      "market_min": 2.5,
+      "states": 17,
+      "welfare": 437.5,
+      "consumer_surplus": 312.5,
+      "industry_profit": 125.0,
+      "attainable_profit_hhi": [
+        0.5,
+        1.0
+      ],
+      "separating_observables": [
+        "equal_price",
+        "profit_hhi",
+        "seller_a_profit",
+        "seller_b_profit",
+        "share_disparity"
+      ]
+    },
+    {
+      "market_min": 3.0,
+      "states": 15,
+      "welfare": 427.77777777777777,
+      "consumer_surplus": 272.22222222222223,
+      "industry_profit": 155.55555555555554,
+      "attainable_profit_hhi": [
+        0.5,
+        1.0
+      ],
+      "separating_observables": [
+        "equal_price",
+        "profit_hhi",
+        "seller_a_profit",
+        "seller_b_profit",
+        "share_disparity"
+      ]
+    },
+    {
+      "market_min": 3.5,
+      "states": 13,
+      "welfare": 415.27777777777777,
+      "consumer_surplus": 234.72222222222223,
+      "industry_profit": 180.55555555555554,
+      "attainable_profit_hhi": [
+        0.5,
+        1.0
+      ],
+      "separating_observables": [
+        "equal_price",
+        "profit_hhi",
+        "seller_a_profit",
+        "seller_b_profit",
+        "share_disparity"
+      ]
+    },
+    {
+      "market_min": 4.0,
+      "states": 11,
+      "welfare": 400.0,
+      "consumer_surplus": 200.0,
+      "industry_profit": 200.0,
+      "attainable_profit_hhi": [
+        0.5,
+        1.0
+      ],
+      "separating_observables": [
+        "equal_price",
+        "profit_hhi",
+        "seller_a_profit",
+        "seller_b_profit",
+        "share_disparity"
+      ]
+    },
+    {
+      "market_min": 4.5,
+      "states": 9,
+      "welfare": 381.94444444444446,
+      "consumer_surplus": 168.05555555555554,
+      "industry_profit": 213.88888888888889,
+      "attainable_profit_hhi": [
+        0.5,
+        1.0
+      ],
+      "separating_observables": [
+        "equal_price",
+        "profit_hhi",
+        "seller_a_profit",
+        "seller_b_profit",
+        "share_disparity"
+      ]
+    },
+    {
+      "market_min": 5.0,
+      "states": 7,
+      "welfare": 361.1111111111111,
+      "consumer_surplus": 138.88888888888889,
+      "industry_profit": 222.22222222222223,
+      "attainable_profit_hhi": [
+        0.5,
+        1.0
+      ],
+      "separating_observables": [
+        "equal_price",
+        "profit_hhi",
+        "seller_a_profit",
+        "seller_b_profit",
+        "share_disparity"
+      ]
+    },
+    {
+      "market_min": 5.5,
+      "states": 5,
+      "welfare": 337.5,
+      "consumer_surplus": 112.5,
+      "industry_profit": 225.0,
+      "attainable_profit_hhi": [
+        0.5,
+        1.0
+      ],
+      "separating_observables": [
+        "equal_price",
+        "profit_hhi",
+        "seller_a_profit",
+        "seller_b_profit",
+        "share_disparity"
+      ]
+    },
+    {
+      "market_min": 6.0,
+      "states": 3,
+      "welfare": 311.1111111111111,
+      "consumer_surplus": 88.88888888888889,
+      "industry_profit": 222.22222222222223,
+      "attainable_profit_hhi": [
+        0.5,
+        1.0
+      ],
+      "separating_observables": [
+        "equal_price",
+        "profit_hhi",
+        "seller_a_profit",
+        "seller_b_profit",
+        "share_disparity"
+      ]
+    },
+    {
+      "market_min": 6.5,
+      "states": 1,
+      "welfare": 281.94444444444446,
+      "consumer_surplus": 68.05555555555556,
+      "industry_profit": 213.88888888888889,
+      "attainable_profit_hhi": [
+        0.5
+      ],
+      "separating_observables": []
+    }
+  ],
+  "certificate_6.0_6.5_vs_6.0_6.0": {
+    "state_x": [
+      6.0,
+      6.5
+    ],
+    "state_y": [
+      6.0,
+      6.0
+    ],
+    "same_observables": [
+      "consumer_surplus",
+      "industry_profit",
+      "market_min",
+      "quantity",
+      "welfare"
+    ],
+    "different_observables": [
+      "equal_price",
+      "profit_hhi",
+      "seller_a_profit",
+      "seller_b_profit",
+      "share_disparity"
+    ],
+    "values_x": {
+      "market_min": 6.0,
+      "quantity": 44.44444444444444,
+      "consumer_surplus": 88.88888888888889,
+      "industry_profit": 222.22222222222223,
+      "welfare": 311.1111111111111,
+      "seller_a_profit": 222.22222222222223,
+      "seller_b_profit": 0.0,
+      "profit_hhi": 1.0,
+      "equal_price": 0.0,
+      "share_disparity": 1.0
+    },
+    "values_y": {
+      "market_min": 6.0,
+      "quantity": 44.44444444444444,
+      "consumer_surplus": 88.88888888888889,
+      "industry_profit": 222.22222222222223,
+      "welfare": 311.1111111111111,
+      "seller_a_profit": 111.11111111111111,
+      "seller_b_profit": 111.11111111111111,
+      "profit_hhi": 0.5,
+      "equal_price": 1.0,
+      "share_disparity": 0.0
+    }
+  },
+  "operating_point_gate": {
+    "stage_nash": [
+      2.0,
+      2.0
+    ],
+    "stage_nash_profit_per_seller": 44.44444444444444,
+    "joint_profit_price": 5.5,
+    "joint_profit_per_seller": 112.5,
+    "symmetric_ties": {
+      "2.0": {
+        "tie_profit_per_seller": 44.44444444444444,
+        "best_one_shot_deviation": 2.0,
+        "deviation_profit": 44.44444444444444,
+        "deviation_gain": 0.0,
+        "calvano_delta": 0.0,
+        "supra_competitive": false,
+        "profitable_deviation": false,
+        "at_or_below_joint_profit_price": true,
+        "gate_passed": false
+      },
+      "2.5": {
+        "tie_profit_per_seller": 62.5,
+        "best_one_shot_deviation": 2.0,
+        "deviation_profit": 88.88888888888889,
+        "deviation_gain": 26.38888888888889,
+        "calvano_delta": 0.2653061224489796,
+        "supra_competitive": true,
+        "profitable_deviation": true,
+        "at_or_below_joint_profit_price": true,
+        "gate_passed": true
+      },
+      "3.0": {
+        "tie_profit_per_seller": 77.77777777777777,
+        "best_one_shot_deviation": 2.5,
+        "deviation_profit": 125.0,
+        "deviation_gain": 47.22222222222222,
+        "calvano_delta": 0.4897959183673469,
+        "supra_competitive": true,
+        "profitable_deviation": true,
+        "at_or_below_joint_profit_price": true,
+        "gate_passed": true
+      },
+      "3.5": {
+        "tie_profit_per_seller": 90.27777777777777,
+        "best_one_shot_deviation": 3.0,
+        "deviation_profit": 155.55555555555554,
+        "deviation_gain": 65.27777777777777,
+        "calvano_delta": 0.673469387755102,
+        "supra_competitive": true,
+        "profitable_deviation": true,
+        "at_or_below_joint_profit_price": true,
+        "gate_passed": true
+      },
+      "4.0": {
+        "tie_profit_per_seller": 100.0,
+        "best_one_shot_deviation": 3.5,
+        "deviation_profit": 180.55555555555554,
+        "deviation_gain": 80.55555555555556,
+        "calvano_delta": 0.8163265306122449,
+        "supra_competitive": true,
+        "profitable_deviation": true,
+        "at_or_below_joint_profit_price": true,
+        "gate_passed": true
+      },
+      "4.5": {
+        "tie_profit_per_seller": 106.94444444444444,
+        "best_one_shot_deviation": 4.0,
+        "deviation_profit": 200.0,
+        "deviation_gain": 93.05555555555556,
+        "calvano_delta": 0.9183673469387755,
+        "supra_competitive": true,
+        "profitable_deviation": true,
+        "at_or_below_joint_profit_price": true,
+        "gate_passed": true
+      },
+      "5.0": {
+        "tie_profit_per_seller": 111.11111111111111,
+        "best_one_shot_deviation": 4.5,
+        "deviation_profit": 213.88888888888889,
+        "deviation_gain": 102.77777777777777,
+        "calvano_delta": 0.9795918367346939,
+        "supra_competitive": true,
+        "profitable_deviation": true,
+        "at_or_below_joint_profit_price": true,
+        "gate_passed": true
+      },
+      "5.5": {
+        "tie_profit_per_seller": 112.5,
+        "best_one_shot_deviation": 5.0,
+        "deviation_profit": 222.22222222222223,
+        "deviation_gain": 109.72222222222223,
+        "calvano_delta": 1.0,
+        "supra_competitive": true,
+        "profitable_deviation": true,
+        "at_or_below_joint_profit_price": true,
+        "gate_passed": true
+      },
+      "6.0": {
+        "tie_profit_per_seller": 111.11111111111111,
+        "best_one_shot_deviation": 5.5,
+        "deviation_profit": 225.0,
+        "deviation_gain": 113.88888888888889,
+        "calvano_delta": 0.9795918367346939,
+        "supra_competitive": true,
+        "profitable_deviation": true,
+        "at_or_below_joint_profit_price": false,
+        "gate_passed": false
+      },
+      "6.5": {
+        "tie_profit_per_seller": 106.94444444444444,
+        "best_one_shot_deviation": 5.5,
+        "deviation_profit": 225.0,
+        "deviation_gain": 118.05555555555556,
+        "calvano_delta": 0.9183673469387755,
+        "supra_competitive": true,
+        "profitable_deviation": true,
+        "at_or_below_joint_profit_price": false,
+        "gate_passed": false
+      }
+    }
+  },
+  "ledger_validation": {
+    "ledger": "data/A-confirmation-cells.json",
+    "available": true,
+    "rounds_checked": 11375,
+    "rounds_mismatched": 0,
+    "example_recorded_6.0_6.5_round": {
+      "cell": "LH-hide_rival",
+      "block": 1,
+      "round": 0,
+      "logged": {
+        "seller_a_profit": 222.22222222222223,
+        "seller_b_profit": 0.0,
+        "welfare": 311.1111111111111
+      },
+      "derived": {
+        "seller_a_profit": 222.22222222222223,
+        "seller_b_profit": 0.0,
+        "welfare": 311.1111111111111
+      }
+    }
+  }
+}

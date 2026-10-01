@@ -88,7 +88,10 @@ Run:
 
 ```powershell
 $env:PYTHONPATH='src;research'
-& 'C:/Users/76790/anaconda3/python.exe' research/derive_controlled_initial_followup_20260928.py
+python research/derive_controlled_initial_followup_20260928.py
 ```
+
+(The interpreter path was replaced by `python` on 2026-10-01 to remove a local
+user path from the anonymous materials; the command is otherwise unchanged.)
 
 Outputs are `analysis.json` and this report. Raw ledgers and registered analyses are not overwritten.

@@ -2,9 +2,9 @@
   "scope": "Post-hoc offline derived analysis; no new provider calls; not a registered confirmatory endpoint.",
   "paid_calls": 0,
   "sources": {
-    "continuation_cells": "C:\\work\\\u535a\u58eb\u6574\u7406\\\u591a\u667a\u80fd\u4f53\u5171\u8c0b\\artifacts\\controlled-initial-history\\20260927-deepseek-flash-v02-continuation1\\run\\cells.json",
-    "structure_audit": "C:\\work\\\u535a\u58eb\u6574\u7406\\\u591a\u667a\u80fd\u4f53\u5171\u8c0b\\research\\results\\controlled-initial-structure-audit-20260927\\audit.json",
-    "old_four_arm_analysis": "C:\\work\\\u535a\u58eb\u6574\u7406\\\u591a\u667a\u80fd\u4f53\u5171\u8c0b\\artifacts\\history-channel-formal\\20260922-deepseek-flash-v021\\analysis.json"
+    "continuation_cells": "artifacts/controlled-initial-history/20260927-deepseek-flash-v02-continuation1/run/cells.json",
+    "structure_audit": "research/results/controlled-initial-structure-audit-20260927/audit.json",
+    "old_four_arm_analysis": "artifacts/history-channel-formal/20260922-deepseek-flash-v021/analysis.json"
   },
   "windows": {
     "round0": "programmed initial state",
