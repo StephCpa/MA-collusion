@@ -1,33 +1,125 @@
 {
-  "generated": "2026-09-28",
+  "generated": "2026-10-02",
   "paid_calls": 0,
-  "source_files": [
-    "research/results/controlled-initial-structure-audit-20260927/audit.json",
-    "research/results/controlled-initial-supervision-targets-20260928/target_manifest.json",
-    "research/results/review-followup-20260927/checks.json"
-  ],
+  "style": "tools/figstyle.py: shared palette, 6-8 pt text at final size, TrueType text, timestamp-free PDFs (byte-reproducible).",
+  "quality_audit": "analysis/figure-qa-20261002/README.md",
   "figures": [
     {
       "id": "fig1",
+      "manuscript_label": "fig:framework",
       "files": [
-        "fig1-equivalence-and-structure.png",
-        "fig1-equivalence-and-structure.pdf"
+        "fig1-framework-evidence-map.png",
+        "fig1-framework-evidence-map.pdf"
       ],
-      "caption": "Aggregate-equivalent states and asymmetric-cell joint-state counts."
+      "caption": "Study framework and evidence map: display policy, three monitor surfaces (T1-T3), the T1 blind spot, the gated T4 claim and the evidence for each layer.",
+      "generated": "2026-10-02",
+      "generator": "tools/build_fig1_framework.py",
+      "source_files": [],
+      "note": "Replaces framework-observability.* (retired below)."
     },
     {
       "id": "fig2",
+      "manuscript_label": "fig:classes",
+      "files": [
+        "fig2-observability-boundary.png",
+        "fig2-observability-boundary.pdf"
+      ],
+      "caption": "The settlement rule creates welfare classes that hide allocation: welfare over all 100 states, the three allocations of the m = 6.0 class, and assessment-window composition of the asymmetric cells.",
+      "generated": "2026-10-02",
+      "generator": "tools/build_fig2_observability.py",
+      "source_files": [
+        "tools/observability_certificate.py",
+        "analysis/structure-dynamics-20261002.json"
+      ],
+      "note": "Replaces fig1-equivalence-and-structure.* (retired below)."
+    },
+    {
+      "id": "fig3",
+      "manuscript_label": "fig:dynamics",
+      "files": [
+        "fig-dynamics-structure-welfare.png",
+        "fig-dynamics-structure-welfare.pdf"
+      ],
+      "caption": "Structure diverges at the first model decision while welfare barely moves: per-round structural and welfare contrasts and block-level structural contrasts.",
+      "generated": "2026-10-02",
+      "generator": "tools/build_fig_dynamics.py",
+      "source_files": [
+        "analysis/structure-dynamics-20261002.json"
+      ]
+    },
+    {
+      "id": "fig4",
       "files": [
         "fig2-welfare-versus-structure.png",
         "fig2-welfare-versus-structure.pdf"
       ],
       "caption": "Registered welfare contrasts and block-paired structural contrasts, original run and Candidate A replication.",
-      "generated": "2026-10-01",
+      "generated": "2026-10-02",
       "generator": "tools/build_fig2_replication.py",
       "source_files": [
         "analysis/controlled-initial-followup-analysis.json",
         "analysis/A-confirmation-structural-20261001.json"
+      ],
+      "manuscript_label": "fig:welfare",
+      "note": "Grid lines, the margin label and the shaded-band edge removed on 2026-10-02 after the collision audit; values unchanged."
+    },
+    {
+      "id": "fig5",
+      "files": [
+        "fig3-direction-and-leading-indicator.png",
+        "fig3-direction-and-leading-indicator.pdf"
+      ],
+      "caption": "Matching direction (programmed vs model-chosen starts) and assessment welfare after welfare-equal tie and capture starts.",
+      "generated": "2026-10-02",
+      "generator": "tools/build_fig3_direction.py",
+      "source_files": [
+        "analysis/A-confirmation-structural-20261001.json",
+        "analysis/four-arm-leading-indicator-20261001.json"
+      ],
+      "manuscript_label": "fig:direction",
+      "note": "Grid lines removed on 2026-10-02 after the collision audit; values unchanged."
+    },
+    {
+      "id": "fig6",
+      "manuscript_label": "fig:conditions",
+      "files": [
+        "fig-boundary-conditions.png",
+        "fig-boundary-conditions.pdf"
+      ],
+      "caption": "When display effects are invisible to welfare: agent class (language model vs Q-learning), captive consumers, and number of sellers.",
+      "generated": "2026-10-02",
+      "generator": "tools/build_fig_boundary.py",
+      "source_files": [
+        "analysis/structure-dynamics-20261002.json",
+        "analysis/qlearning-baseline-20261001.json",
+        "tools/settlement_generalization.py"
       ]
+    }
+  ],
+  "retired": [
+    {
+      "id": "fig1-retired-20261002",
+      "files": [
+        "fig1-equivalence-and-structure.png",
+        "fig1-equivalence-and-structure.pdf"
+      ],
+      "caption": "Aggregate-equivalent states and asymmetric-cell joint-state counts.",
+      "note": "Former Figure 1 (generated 2026-09-28 by a sealed author-side script from the sources listed in source_files); superseded by fig2-observability-boundary.*, kept for provenance.",
+      "source_files": [
+        "research/results/controlled-initial-structure-audit-20260927/audit.json",
+        "research/results/controlled-initial-supervision-targets-20260928/target_manifest.json",
+        "research/results/review-followup-20260927/checks.json"
+      ]
+    },
+    {
+      "id": "framework-retired-20261002",
+      "files": [
+        "framework-observability.png",
+        "framework-observability.pdf",
+        "framework-manifest.json"
+      ],
+      "caption": "Former framework figure.",
+      "note": "Superseded by fig1-framework-evidence-map.*; kept for provenance."
     },
     {
       "id": "fig3-original-retired",
@@ -37,21 +129,7 @@
       ],
       "caption": "Observed downward and upward tie-formation events; repeated events are not independent samples.",
       "note": "Original-run tie-formation counts; retained for the supplement, not used in the manuscript since 2026-10-01."
-    },
-    {
-      "id": "fig3",
-      "files": [
-        "fig3-direction-and-leading-indicator.png",
-        "fig3-direction-and-leading-indicator.pdf"
-      ],
-      "caption": "Matching direction (programmed vs model-chosen starts) and assessment welfare after welfare-equal tie and capture starts.",
-      "generated": "2026-10-01",
-      "generator": "tools/build_fig3_direction.py",
-      "source_files": [
-        "analysis/A-confirmation-structural-20261001.json",
-        "analysis/four-arm-leading-indicator-20261001.json"
-      ]
     }
   ],
-  "not_inferential": "Figure 3 is descriptive and post hoc; Figure 2 shows registered and block-paired intervals already reported in the text, with completion ranges as missing-outcome bounds. No new confirmatory test is introduced."
+  "not_inferential": "Figures 2C, 3 and 5 are descriptive and post hoc; Figure 4 shows registered and block-paired intervals already reported in the text, with completion ranges as missing-outcome bounds; Figure 6 panels B and C are exact arithmetic and panel A combines reported language-model contrasts with the Q-learning baseline. No new confirmatory test is introduced."
 }

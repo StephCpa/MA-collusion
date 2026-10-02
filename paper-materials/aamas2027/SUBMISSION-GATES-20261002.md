@@ -16,7 +16,8 @@ It is not a claim that every gate is closed.
 
 ## Current package state
 
-The staging source remains an eight-page, double-blind `acmart` build. The
+The staging source remains a double-blind `acmart` build whose main text ends
+on page 8, with references continuing onto page 9 as the AAMAS rules allow. The
 candidate branch has passed `tools/check_materials.py` with zero failures and
 was compiled locally after adding a compatibility fallback for `\\Description`,
 but it is not the final official-template build.

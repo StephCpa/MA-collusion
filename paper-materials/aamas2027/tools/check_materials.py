@@ -8,8 +8,9 @@ Fails (exit 1) if any of the following drift:
 3. a citation key is missing from the bibliography, or a figure is missing;
 4. a private path, user name, e-mail address or key-like string appears in any
    text file of the materials or the supplement ZIP;
-5. (optional, with --pdf) the compiled staging PDF exceeds 8 pages or reports
-   overfull boxes.
+5. (optional, with --pdf) the main text of the compiled staging PDF runs past
+   page 8 (AAMAS 2027: at most 8 pages of main text; references may continue
+   on further pages), or the LaTeX log reports overfull boxes.
 
 Offline only.  Run from the repository root:
 
@@ -37,6 +38,10 @@ FOUR_ARM = MATERIALS / "analysis" / "four-arm-leading-indicator-20261001.json"
 SETTLEMENT = MATERIALS / "analysis" / "settlement-generalization-20261001.json"
 QLEARN = MATERIALS / "analysis" / "qlearning-baseline-20261001.json"
 FROZEN_FOUR_ARM = MATERIALS / "data" / "four-arm-history-channel" / "analysis.json"
+DYNAMICS = MATERIALS / "analysis" / "structure-dynamics-20261002.json"
+SIGN_TEST = MATERIALS / "analysis" / "structural-sign-test-20261002.json"
+LEAVE_ONE_OUT = MATERIALS / "analysis" / "structural-leave-one-block-out-20261002.json"
+MAIN_TEXT_PAGE_LIMIT = 8
 
 sys.path.insert(0, str(HERE))
 import candidate_a_structural  # noqa: E402
@@ -126,6 +131,22 @@ def claims() -> list[tuple[str, list[str]]]:
     shares = [row["blind_share"] for row in gen["n_sellers_homogeneous_bertrand"]]
     out.append(("settlement generalization", [*(f(x) for x in shares),
                                               f"\\theta\\ge{gen['theta_needed_to_resolve_tie_vs_capture']['0.01']:.2f}"]))
+    dyn = json.loads(DYNAMICS.read_text(encoding="utf-8"))["runs"]
+    o, r = dyn["original"], dyn["replication"]
+    out.append(("dynamics, round-1 paired contrasts by cell",
+                [f(run["paired_difference_by_round"][cell]["tie_diff"][1]) for run in (o, r) for cell in ("LH", "HL")]))
+    po, pr = o["asymmetric_pooled"], r["asymmetric_pooled"]
+    out.append(("dynamics, pooled asymmetric contrast",
+                [f(po["tie"][1]), f(pr["tie"][1]), f(sum(po["block_tie_window"]) / po["blocks"]),
+                 f"{po['blocks_tie_positive']} of {po['blocks']} original blocks",
+                 f"{po['blocks_welfare_exactly_zero']} of {po['blocks']} original and "
+                 f"{pr['blocks_welfare_exactly_zero']} of {pr['blocks']} replication blocks"]))
+    sign = json.loads(SIGN_TEST.read_text(encoding="utf-8"))
+    loo = json.loads(LEAVE_ONE_OUT.read_text(encoding="utf-8"))
+    mantissa, exponent = f"{sign['exact_two_sided_sign_p']:.3e}".split("e")
+    out.append(("structural robustness checks",
+                [f"{mantissa}\\times10^{{{int(exponent)}}}", f"{sign['positive_blocks']} positive blocks",
+                 f(loo["leave_one_out_min"]), f(loo["leave_one_out_max"])]))
     return out
 
 
@@ -176,12 +197,30 @@ def check_private() -> list[str]:
     return errors
 
 
+def references_page(pdf: Path, pages: int) -> tuple[int | None, bool]:
+    """First page carrying the REFERENCES heading, and whether body text precedes it there."""
+    for page in range(1, pages + 1):
+        text = subprocess.check_output(["pdftotext", "-f", str(page), "-l", str(page), str(pdf), "-"],
+                                       text=True, errors="replace")
+        lines = [ln.strip() for ln in text.splitlines()]
+        if "REFERENCES" in lines:
+            before = lines[:lines.index("REFERENCES")]
+            # Ignore running heads, review line numbers and blank lines.
+            body = [ln for ln in before if ln and not ln.isdigit() and "AAMAS" not in ln
+                    and not ln.startswith("When Aggregate Welfare") and ln != "Anon."]
+            return page, bool(body)
+    return None, False
+
+
 def check_pdf(pdf: Path, log: Path | None) -> list[str]:
     errors = []
     info = subprocess.check_output(["pdfinfo", str(pdf)], text=True, errors="replace")
     pages = int(re.search(r"^Pages:\s+(\d+)", info, re.M).group(1))
-    if pages > 8:
-        errors.append(f"staging PDF has {pages} pages")
+    ref_page, text_before = references_page(pdf, pages)
+    if ref_page is None:
+        errors.append("no REFERENCES heading found in staging PDF")
+    elif ref_page > MAIN_TEXT_PAGE_LIMIT + 1 or (ref_page == MAIN_TEXT_PAGE_LIMIT + 1 and text_before):
+        errors.append(f"main text runs onto page {ref_page} (limit {MAIN_TEXT_PAGE_LIMIT})")
     if log is not None:
         text = log.read_text(encoding="utf-8", errors="replace")
         if "Overfull \\hbox" in text:

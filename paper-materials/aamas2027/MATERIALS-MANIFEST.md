@@ -2,19 +2,23 @@
 
 ## Manuscript
 
-- `latex/history-display-observability.tex` — anonymous eight-page staging source (revised 2026-10-01).
-- `latex/history-display-observability.bib` — bibliography used by the source.
-- `latex/history-display-observability-staging.pdf` — compiled staging build (acmart, 8 pages including references).
+- `latex/history-display-observability.tex` — anonymous staging source (enriched 2026-10-02: expanded introduction and related work, recoverability proposition, dynamics and boundary-condition results, restructured discussion).
+- `latex/history-display-observability.bib` — bibliography used by the source (46 entries, all cited).
+- `latex/history-display-observability-staging.pdf` — compiled staging build (acmart; main text ends on page 8 and the references continue onto page 9, as the AAMAS 2027 rules allow).
 
 ## Figures
 
-- `figures/fig1-equivalence-and-structure.*` (original run)
-- `figures/fig2-welfare-versus-structure.*` (regenerated 2026-10-01 with the replication; `tools/build_fig2_replication.py`)
-- `figures/fig3-direction-and-leading-indicator.*` (new 2026-10-01; `tools/build_fig3_direction.py`)
-- `figures/fig3-transition-direction.*` (original-run counts; retired from the manuscript, kept for the supplement)
-- `figures/original-controlled-initial-descriptives.*` (regenerated from the public metadata-free ledger; descriptive only)
-- `figures/framework-observability.*`
-- accompanying captions and figure manifests.
+Manuscript order (2026-10-02); see `figures/figure-manifest.json` and `figures/captions.md`.
+
+- Figure 1 `figures/fig1-framework-evidence-map.*` — framework and evidence map (new; `tools/build_fig1_framework.py`).
+- Figure 2 `figures/fig2-observability-boundary.*` — welfare classes, the m = 6.0 allocations and assessment-window composition (new; `tools/build_fig2_observability.py`).
+- Figure 3 `figures/fig-dynamics-structure-welfare.*` — per-round and per-block structural and welfare contrasts (new; `tools/build_fig_dynamics.py`).
+- Figure 4 `figures/fig2-welfare-versus-structure.*` — registered welfare and structural contrasts (`tools/build_fig2_replication.py`; restyled 2026-10-02).
+- Figure 5 `figures/fig3-direction-and-leading-indicator.*` — matching direction and leading indicator (`tools/build_fig3_direction.py`; restyled 2026-10-02).
+- Figure 6 `figures/fig-boundary-conditions.*` — agent class, captive consumers and number of sellers (new; `tools/build_fig_boundary.py`).
+- Retired, kept for provenance: `figures/framework-observability.*` with `framework-manifest.json`, `figures/fig1-equivalence-and-structure.*`, `figures/fig3-transition-direction.*`.
+- `figures/original-controlled-initial-descriptives.*` (regenerated from the public metadata-free ledger; descriptive only; supplement).
+- `analysis/figure-qa-20261002/` — font-floor, collision and panel-alignment audit of the six manuscript figures.
 
 ## Evidence and analysis
 
@@ -33,6 +37,7 @@
 - A8 offline round-1 prompt-difference diagnostic (`analysis/a8-prompt-diff-20261002.*`, derived from sealed local request logs; raw requests excluded).
 - Exact block-sign robustness check for the registered structural primary (`analysis/structural-sign-test-20261002.*`); descriptive only and kept separate from the registered interval.
 - Leave-one-block-out structural sensitivity (`analysis/structural-leave-one-block-out-20261002.*`), with all 42 deletion estimates remaining positive.
+- Structure dynamics for both controlled-initial runs (`analysis/structure-dynamics-20261002.*`): per-round equal-price and welfare contrasts with block-bootstrap bands, block-level window contrasts and assessment-window composition; descriptive.
 
 ## Data
 
@@ -44,7 +49,7 @@
 
 - `tools/observability_certificate.py` — derives the T1 partition and separating observables, evaluates the T4 operating-point gate, re-settles every ledger round.
 - `tools/candidate_a_structural.py` — reproduces `data/A-confirmation-analysis.json` exactly (never writes it) and computes the protocol structural primary `D_tie`.
-- `tools/build_fig2_replication.py` — regenerates Figure 2 byte-reproducibly.
+- `tools/build_fig2_replication.py` — regenerates Figure 4 (file stem `fig2-welfare-versus-structure`) byte-reproducibly.
 - `tools/four_arm_leading_indicator.py` — reproduces the registered four-arm contrasts, runs the leading-indicator test and the blindness metric.
 - `tools/settlement_generalization.py` — exact welfare-blindness arithmetic for more sellers and captive consumers.
 - `tools/qlearning_baseline.py` — seeded Q-learning baseline under the four display arms, with programmed-start and impulse evaluations.
@@ -52,15 +57,18 @@
 - `tools/sanitize_four_arm_ledger.py` and `tools/sanitize_request_metadata.py` — remove provider request IDs, logical request IDs and system fingerprints while retaining fields required by the offline checks.
 - `tools/verify_supplement.py` — independently verifies ZIP manifest hashes and the public request-metadata policy.
 - `tools/structural_leave_one_block_out.py` — recomputes the registered structural primary after deleting each complete block in turn.
-- `tools/build_fig3_direction.py` — regenerates Figure 3.
-- `tools/check_materials.py` — manuscript-to-analysis number check, citation/figure check, anonymity scan, optional PDF page/overfull check.
+- `tools/build_fig3_direction.py` — regenerates Figure 5 (file stem `fig3-direction-and-leading-indicator`).
+- `tools/figstyle.py` — shared palette, font sizes and byte-stable export for all manuscript figures; optional panel-alignment gate.
+- `tools/build_fig1_framework.py`, `tools/build_fig2_observability.py`, `tools/build_fig_dynamics.py`, `tools/build_fig_boundary.py` — regenerate Figures 1, 2, 3 and 6.
+- `tools/structure_dynamics.py` — computes the per-round and block-level dynamics from the public ledgers and checks them against the frozen paired sensitivities and the replication primary.
+- `tools/check_materials.py` — manuscript-to-analysis number check (including the dynamics and robustness numbers), citation/figure check, anonymity scan, optional PDF check that the main text ends by page 8 and the log has no overfull boxes.
 
 ## Protocols and supplement
 
-- `SUPPLEMENT-README-v0.3.md` — source copy of the anonymous ZIP README, kept synchronized with the current package contents and sanitization policy;
+- `SUPPLEMENT-README-v0.4.md` — source copy of the current anonymous ZIP README (`SUPPLEMENT-README-v0.3.md` is the v0.3 copy);
 - Candidate A independent-confirmation protocol (execution status note added; frozen text preserved);
 - B1--B4 feedback-surface 2x2 protocol;
-- anonymous AAMAS supplementary ZIP v0.3 (refreshed 2026-10-02; 105 archive entries, 1.35 MB compressed) and v0.1 (unchanged, for provenance); v0.2 is superseded and remains in git history. JSON artifacts in the public ZIP are recursively stripped of provider request IDs, logical request IDs and system fingerprints.
+- anonymous AAMAS supplementary ZIP v0.4 (2026-10-02; 121 archive entries, 1.48 MB compressed; v0.3 plus the new figure builders, figure PDFs, structure-dynamics analysis, figure QA and the extended claim matrix), with v0.3 and v0.1 kept unchanged for provenance; v0.2 is superseded and remains in git history. JSON artifacts in the public ZIP are recursively stripped of provider request IDs, logical request IDs and system fingerprints.
 
 ## Review response
 

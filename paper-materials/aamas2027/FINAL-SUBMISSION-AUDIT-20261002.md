@@ -4,6 +4,11 @@ This record freezes what has been verified for the current AAMAS candidate. It
 separates evidence that is complete from gates that still require an external
 resource or an author decision.
 
+Later on 2026-10-02 the manuscript was enriched and its figures redesigned; the
+PDF, supplement and figure rows below describe the earlier freeze. The current
+PDF fingerprint, supplement v0.4 and the re-run checks are recorded in
+`CHANGELOG-20261002.md` under "Manuscript enrichment and figure redesign".
+
 ## Verified locally
 
 | item | evidence | result |

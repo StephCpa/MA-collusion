@@ -41,7 +41,6 @@ def style(ax) -> None:
     ax.spines["bottom"].set_color(MUTED)
     ax.tick_params(axis="x", colors=MUTED, labelsize=7, length=2)
     ax.tick_params(axis="y", length=0, labelsize=7, labelcolor=INK)
-    ax.grid(axis="x", color=GRID, linewidth=0.6)
     ax.set_axisbelow(True)
 
 

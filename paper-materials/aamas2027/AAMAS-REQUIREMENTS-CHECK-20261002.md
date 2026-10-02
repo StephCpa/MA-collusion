@@ -6,9 +6,9 @@ accessed 2026-10-02.
 | requirement | current evidence | status |
 |---|---|---|
 | English, double-blind PDF | `latex/history-display-observability-staging.pdf`; anonymous author line and local anonymity scan | satisfied in staging |
-| Main-track length | local PDF compilation reports 8 pages; references are separate | satisfied in staging |
+| Main-track length | at most 8 pages of main text, references unlimited; the staging PDF's main text ends on page 8 and the references continue onto page 9 (checked by `tools/check_materials.py --pdf`, updated 2026-10-02) | satisfied in staging |
 | LaTeX mandatory | `latex/history-display-observability.tex` | satisfied in staging |
-| Supplement is one ZIP and ≤25 MB | `aamas2027-supplement-v0.3.zip`, 1.34 MB compressed | satisfied |
+| Supplement is one ZIP and ≤25 MB | `aamas2027-supplement-v0.4.zip`, 1.48 MB compressed (v0.3 kept for provenance) | satisfied |
 | Supplement does not compromise anonymity | recursive private-path/key scan and provider-metadata sanitization | satisfied for current package |
 | Official formatting template | organizer ZIP link is published, but download timed out from this environment | pending external access |
 | AI-assisted methodology disclosure | the policy requires tool/version and prompt details when AI helped create hypotheses or methods | author completion required |

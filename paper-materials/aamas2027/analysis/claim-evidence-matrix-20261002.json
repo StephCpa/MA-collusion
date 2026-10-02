@@ -39,6 +39,22 @@
       "result": "The operating point fails the collusive-surplus gate and the tested forced-deviation probe finds no qualifying response.",
       "status": "supported_boundary",
       "boundary": "A T4 claim requires a new gate-passing protocol and counterfactual."
+    },
+    {
+      "id": "C6",
+      "claim": "The structural display effect appears at the first model decision and is not carried by a few blocks.",
+      "evidence": ["analysis/structure-dynamics-20261002.json", "tools/structure_dynamics.py", "analysis/structural-sign-test-20261002.json", "analysis/structural-leave-one-block-out-20261002.json"],
+      "result": "Pooled round-1 equal-price contrast 0.553 (original) and 0.476 (replication); window means 0.868 and 0.830; structural contrast positive in 46/47 and 42/42 blocks; welfare contrast exactly zero in 43/47 and 41/42 blocks; exact sign test p = 4.547e-13; leave-one-block-out range 0.826-0.850.",
+      "status": "supported_as_descriptive",
+      "boundary": "Per-round bands are descriptive because rounds repeat within trajectories; original-run contrasts are post-hoc sensitivities, and the sign test does not replace the registered interval."
+    },
+    {
+      "id": "C7",
+      "claim": "Whether a display effect is invisible to welfare depends on the agent class and the market rule.",
+      "evidence": ["analysis/qlearning-baseline-20261001.json", "analysis/settlement-generalization-20261001.json", "analysis/four-arm-leading-indicator-20261001.json", "tools/build_fig_boundary.py"],
+      "result": "Q-learners: hiding the rival changes welfare by about 40 units and the equal-price fraction by -0.35/-0.33; welfare-blind share of allocation-distinct pairs 0.080/0.139/0.194 for 2/3/4 sellers; with captive share theta, a 1% welfare monitor needs theta >= 0.11 to separate the (6.0,6.0) tie from the (6.0,6.5) capture state, and a 5% monitor cannot at any feasible theta.",
+      "status": "supported_boundary",
+      "boundary": "Simulation and exact arithmetic; shows where the blind spot can vanish, not how other language-model deployments behave."
     }
   ]
 }

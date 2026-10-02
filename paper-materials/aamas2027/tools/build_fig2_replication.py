@@ -64,7 +64,6 @@ def style_axis(ax) -> None:
     ax.spines["bottom"].set_color(MUTED)
     ax.tick_params(axis="x", colors=MUTED, labelsize=7, length=2)
     ax.tick_params(axis="y", length=0, labelsize=7.5, labelcolor=INK)
-    ax.grid(axis="x", color=GRID, linewidth=0.6)
     ax.set_axisbelow(True)
 
 
@@ -96,12 +95,11 @@ def main() -> None:
     plt.rcParams.update({"font.family": "DejaVu Sans", "pdf.fonttype": 42, "ps.fonttype": 42})
     fig, (ax_w, ax_s) = plt.subplots(2, 1, figsize=(3.4, 3.0), gridspec_kw={"height_ratios": [2, 3]})
 
-    ax_w.axvspan(-DELTA_W, DELTA_W, color=MARGIN_FILL, zorder=0)
+    ax_w.axvspan(-DELTA_W, DELTA_W, color=MARGIN_FILL, zorder=0, linewidth=0)
     ax_w.axvline(0, color=MUTED, linewidth=0.8, zorder=1)
     draw_rows(ax_w, welfare, ["D_asym", "J"], [r"$D_{\mathrm{asym}}$", r"$J$"], ".2f")
     ax_w.set_xlim(-7.5, 10.5)
     ax_w.set_xticks([-5, 0, 5])
-    ax_w.text(-DELTA_W + 0.15, 1.42, r"$\pm\delta_W=5$ margin", fontsize=6, color=MUTED, va="bottom")
     ax_w.set_title("A  Registered welfare contrasts (hide-rival − natural)", fontsize=7.5, loc="left", color=INK)
     style_axis(ax_w)
 
