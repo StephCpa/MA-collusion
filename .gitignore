@@ -9,3 +9,6 @@ __pycache__/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+
+# Local linked checkout used while preparing the submission; do not commit it
+github-upload-submission/
