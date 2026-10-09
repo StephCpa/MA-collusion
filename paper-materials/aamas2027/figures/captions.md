@@ -4,15 +4,21 @@ Manuscript figure numbers as of 2026-10-02. File names keep their earlier
 stems where a figure was only restyled; `figure-manifest.json` maps each
 manuscript figure to its files, generator and sources.
 
-## Figure 1. Study framework and evidence map (new 2026-10-02)
+## Figure 1. The same trajectories, seen by two monitors (redesigned 2026-10-09)
 
-File: `fig1-framework-evidence-map.*`. A display policy changes what each
-language-model seller sees, and the joint trajectory is read through three
-monitor surfaces. Market outcome (T1) is a function of the minimum price; joint
-structure (T2) and allocation (T3) are not, so differences inside a welfare
-class (dashed outline) are invisible to a T1-only monitor. Strategic harm (T4)
-also requires a gate-passing target tie, a declared deviation and response
-rule, and a counterfactual. The bottom row lists the evidence for each layer.
+File: `fig1-framework-evidence-map.*` (stem kept for stable references). Left:
+the setup (two language-model sellers without messages or profit feedback;
+natural vs hide-rival display). Centre: replication data for the asymmetric
+cells (LH and HL averaged), rounds 1–29, per-round means over completed
+trajectories; shading marks the assessment window. On the full grid-welfare
+scale (282–444), a welfare monitor (T1) shows both display arms at the same
+welfare, whereas a joint-state monitor (T2, T3) shows the equal-price rate
+diverging from the first model decision. The quoted contrasts are the
+registered block-level `D_asym` (0.23) and `D_tie` (0.83), read from
+`analysis/A-confirmation-structural-20261001.json`. Right: what each target
+recovers for the (6.0, 6.0) and (6.0, 6.5) states; T4 is a side note because
+the study does not test it. The 2026-10-02 version (text boxes, gate list and
+a row of study counts) is in git history.
 
 ## Figure 2. The settlement rule creates welfare classes that hide allocation (new 2026-10-02)
 

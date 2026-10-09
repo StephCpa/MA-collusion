@@ -11,11 +11,14 @@
         "fig1-framework-evidence-map.png",
         "fig1-framework-evidence-map.pdf"
       ],
-      "caption": "Study framework and evidence map: display policy, three monitor surfaces (T1-T3), the T1 blind spot, the gated T4 claim and the evidence for each layer.",
-      "generated": "2026-10-02",
+      "caption": "The same trajectories, seen by two monitors: setup, replication per-round welfare and equal-price rate by display arm (T1 vs T2/T3 view), what each target recovers, and T4 as an untested side note.",
+      "generated": "2026-10-09",
       "generator": "tools/build_fig1_framework.py",
-      "source_files": [],
-      "note": "Replaces framework-observability.* (retired below)."
+      "source_files": [
+        "analysis/structure-dynamics-20261002.json",
+        "analysis/A-confirmation-structural-20261001.json"
+      ],
+      "note": "Redesigned 2026-10-09 (central data panels replace the text-only flowchart and the study-count row). Replaces framework-observability.* (retired below)."
     },
     {
       "id": "fig2",

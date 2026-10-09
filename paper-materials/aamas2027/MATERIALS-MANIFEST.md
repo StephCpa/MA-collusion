@@ -10,7 +10,7 @@
 
 Manuscript order (2026-10-02); see `figures/figure-manifest.json` and `figures/captions.md`.
 
-- Figure 1 `figures/fig1-framework-evidence-map.*` — framework and evidence map (new; `tools/build_fig1_framework.py`).
+- Figure 1 `figures/fig1-framework-evidence-map.*` — the same replication trajectories seen by a welfare monitor and a joint-state monitor, with the T1–T3 targets and T4 as a side note (redesigned 2026-10-09; `tools/build_fig1_framework.py`).
 - Figure 2 `figures/fig2-observability-boundary.*` — welfare classes, the m = 6.0 allocations and assessment-window composition (new; `tools/build_fig2_observability.py`).
 - Figure 3 `figures/fig-dynamics-structure-welfare.*` — per-round and per-block structural and welfare contrasts (new; `tools/build_fig_dynamics.py`).
 - Figure 4 `figures/fig2-welfare-versus-structure.*` — registered welfare and structural contrasts (`tools/build_fig2_replication.py`; restyled 2026-10-02).
